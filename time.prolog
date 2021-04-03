@@ -13,7 +13,15 @@ time_text(Hour, 30) --> "puoli ", {next_24h_wrapped(Hour, NextHour)}, hour_text(
 time_text(Hour, Min) --> {Min #> 0, Min #< 30}, first_half_minute_text(Min), " yli ", hour_text(Hour).
 
 % Second half
-time_text(Hour, Min) --> {Min #> 30, Min #< 60, MinLeft #= 60 - Min}, second_half_minute_text(MinLeft), " vaille ", hour_text(Hour).
+time_text(Hour, Min) --> {
+    Min #> 30,
+    Min #< 60,
+    MinLeft #= 60 - Min,
+    next_24h_wrapped(Hour, NextHour)
+  },
+  second_half_minute_text(MinLeft),
+  " vaille ",
+  hour_text(NextHour).
 
 next_24h_wrapped(H, N) :- H in 0..22, N #= H + 1.
 next_24h_wrapped(23, 0).

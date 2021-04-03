@@ -57,13 +57,15 @@ cardinal_number(Form, N) -->
   mid_cardinal_number(Form, 1_000_000_000, N9),
   mid_cardinal_number(Form, 1_000_000, N6),
   mid_cardinal_number(Form, 1_000, N3),
-  mid_cardinal_number(Form, 100, N2),
-  mid_cardinal_number(Form, 10, N1),
-  primitive_cardinal_number(Form, N0).
+  mid_cardinal_number(Form, 1_00, N2),
+  mid_cardinal_number(Form, 1_0, N1),
+  mid_cardinal_number(Form, 1, N0).
 
 mid_cardinal_number(_, _, 0) --> "".
-mid_cardinal_number(Form, Scale, 1) --> primitive_cardinal_number(Form, Scale).
-mid_cardinal_number({Case, Plurality}, Scale, N) --> { N #> 1}, cardinal_number({Case, Plurality}, N), primitive_cardinal_number({partitive, Plurality}, Scale).
+mid_cardinal_number(Form, Scale, 1) --> {Scale #> 1}, primitive_cardinal_number(Form, Scale).
+mid_cardinal_number(Form, 1, N) --> {N #> 0}, primitive_cardinal_number(Form, N).
+mid_cardinal_number({nominative, singular}, Scale, N) --> { Scale #> 1, N #> 1}, cardinal_number({nominative, singular}, N), primitive_cardinal_number({partitive, singular}, Scale).
+mid_cardinal_number(Form, Scale, N) --> { Form \= {nominative, singular}, Scale #> 1, N #> 1}, cardinal_number(Form, N), primitive_cardinal_number(Form, Scale).
 
 primitive_cardinal_number({nominative, singular}, 0) --> "nolla".
 primitive_cardinal_number({nominative, singular}, 1) --> "yksi".
