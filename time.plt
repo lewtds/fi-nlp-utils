@@ -1,1470 +1,1492 @@
 :- begin_tests(time).
 :- use_module(time).
-
-test('0:0') :- phrase(time_text(0, 0), `nolla`).
-test('0:0') :- phrase(time_text(0, 0), `tasan nolla`).
-test('0:1') :- phrase(time_text(0, 1), `yksi yli nolla`).
-test('0:2') :- phrase(time_text(0, 2), `kaksi yli nolla`).
-test('0:3') :- phrase(time_text(0, 3), `kolme yli nolla`).
-test('0:4') :- phrase(time_text(0, 4), `neljä yli nolla`).
-test('0:5') :- phrase(time_text(0, 5), `viisi yli nolla`).
-test('0:6') :- phrase(time_text(0, 6), `kuusi yli nolla`).
-test('0:7') :- phrase(time_text(0, 7), `seitsemän yli nolla`).
-test('0:8') :- phrase(time_text(0, 8), `kahdeksan yli nolla`).
-test('0:9') :- phrase(time_text(0, 9), `yhdeksän yli nolla`).
-test('0:10') :- phrase(time_text(0, 10), `kymmenen yli nolla`).
-test('0:11') :- phrase(time_text(0, 11), `yksi-toista yli nolla`).
-test('0:12') :- phrase(time_text(0, 12), `kaksi-toista yli nolla`).
-test('0:13') :- phrase(time_text(0, 13), `kolme-toista yli nolla`).
-test('0:14') :- phrase(time_text(0, 14), `neljä-toista yli nolla`).
-test('0:15') :- phrase(time_text(0, 15), `vartin yli nolla`).
-test('0:15') :- phrase(time_text(0, 15), `viisi-toista yli nolla`).
-test('0:16') :- phrase(time_text(0, 16), `kuusi-toista yli nolla`).
-test('0:17') :- phrase(time_text(0, 17), `seitsemän-toista yli nolla`).
-test('0:18') :- phrase(time_text(0, 18), `kahdeksan-toista yli nolla`).
-test('0:19') :- phrase(time_text(0, 19), `yhdeksän-toista yli nolla`).
-test('0:20') :- phrase(time_text(0, 20), `kaksi-kymmenen yli nolla`).
-test('0:21') :- phrase(time_text(0, 21), `kaksi-kymmentä-yksi yli nolla`).
-test('0:22') :- phrase(time_text(0, 22), `kaksi-kymmentä-kaksi yli nolla`).
-test('0:23') :- phrase(time_text(0, 23), `kaksi-kymmentä-kolme yli nolla`).
-test('0:24') :- phrase(time_text(0, 24), `kaksi-kymmentä-neljä yli nolla`).
-test('0:25') :- phrase(time_text(0, 25), `kaksi-kymmentä-viisi yli nolla`).
-test('0:26') :- phrase(time_text(0, 26), `kaksi-kymmentä-kuusi yli nolla`).
-test('0:27') :- phrase(time_text(0, 27), `kaksi-kymmentä-seitsemän yli nolla`).
-test('0:28') :- phrase(time_text(0, 28), `kaksi-kymmentä-kahdeksan yli nolla`).
-test('0:29') :- phrase(time_text(0, 29), `kaksi-kymmentä-yhdeksän yli nolla`).
-test('0:31') :- phrase(time_text(0, 31), `kahta-kymmentä-yhdeksää vaille nolla`).
-test('0:32') :- phrase(time_text(0, 32), `kahta-kymmentä-kahdeksaa vaille nolla`).
-test('0:33') :- phrase(time_text(0, 33), `kahta-kymmentä-seitsemää vaille nolla`).
-test('0:34') :- phrase(time_text(0, 34), `kahta-kymmentä-kuutta vaille nolla`).
-test('0:35') :- phrase(time_text(0, 35), `kahta-kymmentä-viittä vaille nolla`).
-test('0:36') :- phrase(time_text(0, 36), `kahta-kymmentä-neljää vaille nolla`).
-test('0:37') :- phrase(time_text(0, 37), `kahta-kymmentä-kolmea vaille nolla`).
-test('0:38') :- phrase(time_text(0, 38), `kahta-kymmentä-kahta vaille nolla`).
-test('0:39') :- phrase(time_text(0, 39), `kahta-kymmentä-yktä vaille nolla`).
-test('0:40') :- phrase(time_text(0, 40), `kahta-kymmentä vaille nolla`).
-test('0:41') :- phrase(time_text(0, 41), `yhdeksää-toista vaille nolla`).
-test('0:42') :- phrase(time_text(0, 42), `kahdeksaa-toista vaille nolla`).
-test('0:43') :- phrase(time_text(0, 43), `seitsemää-toista vaille nolla`).
-test('0:44') :- phrase(time_text(0, 44), `kuutta-toista vaille nolla`).
-test('0:45') :- phrase(time_text(0, 45), `viittä-toista vaille nolla`).
-test('0:46') :- phrase(time_text(0, 46), `neljää-toista vaille nolla`).
-test('0:47') :- phrase(time_text(0, 47), `kolmea-toista vaille nolla`).
-test('0:48') :- phrase(time_text(0, 48), `kahta-toista vaille nolla`).
-test('0:49') :- phrase(time_text(0, 49), `yktä-toista vaille nolla`).
-test('0:50') :- phrase(time_text(0, 50), `kymmentä vaille nolla`).
-test('0:51') :- phrase(time_text(0, 51), `yhdeksää vaille nolla`).
-test('0:52') :- phrase(time_text(0, 52), `kahdeksaa vaille nolla`).
-test('0:53') :- phrase(time_text(0, 53), `seitsemää vaille nolla`).
-test('0:54') :- phrase(time_text(0, 54), `kuutta vaille nolla`).
-test('0:55') :- phrase(time_text(0, 55), `viittä vaille nolla`).
-test('0:56') :- phrase(time_text(0, 56), `neljää vaille nolla`).
-test('0:57') :- phrase(time_text(0, 57), `kolmea vaille nolla`).
-test('0:58') :- phrase(time_text(0, 58), `kahta vaille nolla`).
-test('0:59') :- phrase(time_text(0, 59), `yktä vaille nolla`).
-test('1:0') :- phrase(time_text(1, 0), `tasan yksi`).
-test('1:0') :- phrase(time_text(1, 0), `yksi`).
-test('1:1') :- phrase(time_text(1, 1), `yksi yli yksi`).
-test('1:2') :- phrase(time_text(1, 2), `kaksi yli yksi`).
-test('1:3') :- phrase(time_text(1, 3), `kolme yli yksi`).
-test('1:4') :- phrase(time_text(1, 4), `neljä yli yksi`).
-test('1:5') :- phrase(time_text(1, 5), `viisi yli yksi`).
-test('1:6') :- phrase(time_text(1, 6), `kuusi yli yksi`).
-test('1:7') :- phrase(time_text(1, 7), `seitsemän yli yksi`).
-test('1:8') :- phrase(time_text(1, 8), `kahdeksan yli yksi`).
-test('1:9') :- phrase(time_text(1, 9), `yhdeksän yli yksi`).
-test('1:10') :- phrase(time_text(1, 10), `kymmenen yli yksi`).
-test('1:11') :- phrase(time_text(1, 11), `yksi-toista yli yksi`).
-test('1:12') :- phrase(time_text(1, 12), `kaksi-toista yli yksi`).
-test('1:13') :- phrase(time_text(1, 13), `kolme-toista yli yksi`).
-test('1:14') :- phrase(time_text(1, 14), `neljä-toista yli yksi`).
-test('1:15') :- phrase(time_text(1, 15), `vartin yli yksi`).
-test('1:15') :- phrase(time_text(1, 15), `viisi-toista yli yksi`).
-test('1:16') :- phrase(time_text(1, 16), `kuusi-toista yli yksi`).
-test('1:17') :- phrase(time_text(1, 17), `seitsemän-toista yli yksi`).
-test('1:18') :- phrase(time_text(1, 18), `kahdeksan-toista yli yksi`).
-test('1:19') :- phrase(time_text(1, 19), `yhdeksän-toista yli yksi`).
-test('1:20') :- phrase(time_text(1, 20), `kaksi-kymmenen yli yksi`).
-test('1:21') :- phrase(time_text(1, 21), `kaksi-kymmentä-yksi yli yksi`).
-test('1:22') :- phrase(time_text(1, 22), `kaksi-kymmentä-kaksi yli yksi`).
-test('1:23') :- phrase(time_text(1, 23), `kaksi-kymmentä-kolme yli yksi`).
-test('1:24') :- phrase(time_text(1, 24), `kaksi-kymmentä-neljä yli yksi`).
-test('1:25') :- phrase(time_text(1, 25), `kaksi-kymmentä-viisi yli yksi`).
-test('1:26') :- phrase(time_text(1, 26), `kaksi-kymmentä-kuusi yli yksi`).
-test('1:27') :- phrase(time_text(1, 27), `kaksi-kymmentä-seitsemän yli yksi`).
-test('1:28') :- phrase(time_text(1, 28), `kaksi-kymmentä-kahdeksan yli yksi`).
-test('1:29') :- phrase(time_text(1, 29), `kaksi-kymmentä-yhdeksän yli yksi`).
-test('1:31') :- phrase(time_text(1, 31), `kahta-kymmentä-yhdeksää vaille yksi`).
-test('1:32') :- phrase(time_text(1, 32), `kahta-kymmentä-kahdeksaa vaille yksi`).
-test('1:33') :- phrase(time_text(1, 33), `kahta-kymmentä-seitsemää vaille yksi`).
-test('1:34') :- phrase(time_text(1, 34), `kahta-kymmentä-kuutta vaille yksi`).
-test('1:35') :- phrase(time_text(1, 35), `kahta-kymmentä-viittä vaille yksi`).
-test('1:36') :- phrase(time_text(1, 36), `kahta-kymmentä-neljää vaille yksi`).
-test('1:37') :- phrase(time_text(1, 37), `kahta-kymmentä-kolmea vaille yksi`).
-test('1:38') :- phrase(time_text(1, 38), `kahta-kymmentä-kahta vaille yksi`).
-test('1:39') :- phrase(time_text(1, 39), `kahta-kymmentä-yktä vaille yksi`).
-test('1:40') :- phrase(time_text(1, 40), `kahta-kymmentä vaille yksi`).
-test('1:41') :- phrase(time_text(1, 41), `yhdeksää-toista vaille yksi`).
-test('1:42') :- phrase(time_text(1, 42), `kahdeksaa-toista vaille yksi`).
-test('1:43') :- phrase(time_text(1, 43), `seitsemää-toista vaille yksi`).
-test('1:44') :- phrase(time_text(1, 44), `kuutta-toista vaille yksi`).
-test('1:45') :- phrase(time_text(1, 45), `viittä-toista vaille yksi`).
-test('1:46') :- phrase(time_text(1, 46), `neljää-toista vaille yksi`).
-test('1:47') :- phrase(time_text(1, 47), `kolmea-toista vaille yksi`).
-test('1:48') :- phrase(time_text(1, 48), `kahta-toista vaille yksi`).
-test('1:49') :- phrase(time_text(1, 49), `yktä-toista vaille yksi`).
-test('1:50') :- phrase(time_text(1, 50), `kymmentä vaille yksi`).
-test('1:51') :- phrase(time_text(1, 51), `yhdeksää vaille yksi`).
-test('1:52') :- phrase(time_text(1, 52), `kahdeksaa vaille yksi`).
-test('1:53') :- phrase(time_text(1, 53), `seitsemää vaille yksi`).
-test('1:54') :- phrase(time_text(1, 54), `kuutta vaille yksi`).
-test('1:55') :- phrase(time_text(1, 55), `viittä vaille yksi`).
-test('1:56') :- phrase(time_text(1, 56), `neljää vaille yksi`).
-test('1:57') :- phrase(time_text(1, 57), `kolmea vaille yksi`).
-test('1:58') :- phrase(time_text(1, 58), `kahta vaille yksi`).
-test('1:59') :- phrase(time_text(1, 59), `yktä vaille yksi`).
-test('2:0') :- phrase(time_text(2, 0), `kaksi`).
-test('2:0') :- phrase(time_text(2, 0), `tasan kaksi`).
-test('2:1') :- phrase(time_text(2, 1), `yksi yli kaksi`).
-test('2:2') :- phrase(time_text(2, 2), `kaksi yli kaksi`).
-test('2:3') :- phrase(time_text(2, 3), `kolme yli kaksi`).
-test('2:4') :- phrase(time_text(2, 4), `neljä yli kaksi`).
-test('2:5') :- phrase(time_text(2, 5), `viisi yli kaksi`).
-test('2:6') :- phrase(time_text(2, 6), `kuusi yli kaksi`).
-test('2:7') :- phrase(time_text(2, 7), `seitsemän yli kaksi`).
-test('2:8') :- phrase(time_text(2, 8), `kahdeksan yli kaksi`).
-test('2:9') :- phrase(time_text(2, 9), `yhdeksän yli kaksi`).
-test('2:10') :- phrase(time_text(2, 10), `kymmenen yli kaksi`).
-test('2:11') :- phrase(time_text(2, 11), `yksi-toista yli kaksi`).
-test('2:12') :- phrase(time_text(2, 12), `kaksi-toista yli kaksi`).
-test('2:13') :- phrase(time_text(2, 13), `kolme-toista yli kaksi`).
-test('2:14') :- phrase(time_text(2, 14), `neljä-toista yli kaksi`).
-test('2:15') :- phrase(time_text(2, 15), `vartin yli kaksi`).
-test('2:15') :- phrase(time_text(2, 15), `viisi-toista yli kaksi`).
-test('2:16') :- phrase(time_text(2, 16), `kuusi-toista yli kaksi`).
-test('2:17') :- phrase(time_text(2, 17), `seitsemän-toista yli kaksi`).
-test('2:18') :- phrase(time_text(2, 18), `kahdeksan-toista yli kaksi`).
-test('2:19') :- phrase(time_text(2, 19), `yhdeksän-toista yli kaksi`).
-test('2:20') :- phrase(time_text(2, 20), `kaksi-kymmenen yli kaksi`).
-test('2:21') :- phrase(time_text(2, 21), `kaksi-kymmentä-yksi yli kaksi`).
-test('2:22') :- phrase(time_text(2, 22), `kaksi-kymmentä-kaksi yli kaksi`).
-test('2:23') :- phrase(time_text(2, 23), `kaksi-kymmentä-kolme yli kaksi`).
-test('2:24') :- phrase(time_text(2, 24), `kaksi-kymmentä-neljä yli kaksi`).
-test('2:25') :- phrase(time_text(2, 25), `kaksi-kymmentä-viisi yli kaksi`).
-test('2:26') :- phrase(time_text(2, 26), `kaksi-kymmentä-kuusi yli kaksi`).
-test('2:27') :- phrase(time_text(2, 27), `kaksi-kymmentä-seitsemän yli kaksi`).
-test('2:28') :- phrase(time_text(2, 28), `kaksi-kymmentä-kahdeksan yli kaksi`).
-test('2:29') :- phrase(time_text(2, 29), `kaksi-kymmentä-yhdeksän yli kaksi`).
-test('2:31') :- phrase(time_text(2, 31), `kahta-kymmentä-yhdeksää vaille kaksi`).
-test('2:32') :- phrase(time_text(2, 32), `kahta-kymmentä-kahdeksaa vaille kaksi`).
-test('2:33') :- phrase(time_text(2, 33), `kahta-kymmentä-seitsemää vaille kaksi`).
-test('2:34') :- phrase(time_text(2, 34), `kahta-kymmentä-kuutta vaille kaksi`).
-test('2:35') :- phrase(time_text(2, 35), `kahta-kymmentä-viittä vaille kaksi`).
-test('2:36') :- phrase(time_text(2, 36), `kahta-kymmentä-neljää vaille kaksi`).
-test('2:37') :- phrase(time_text(2, 37), `kahta-kymmentä-kolmea vaille kaksi`).
-test('2:38') :- phrase(time_text(2, 38), `kahta-kymmentä-kahta vaille kaksi`).
-test('2:39') :- phrase(time_text(2, 39), `kahta-kymmentä-yktä vaille kaksi`).
-test('2:40') :- phrase(time_text(2, 40), `kahta-kymmentä vaille kaksi`).
-test('2:41') :- phrase(time_text(2, 41), `yhdeksää-toista vaille kaksi`).
-test('2:42') :- phrase(time_text(2, 42), `kahdeksaa-toista vaille kaksi`).
-test('2:43') :- phrase(time_text(2, 43), `seitsemää-toista vaille kaksi`).
-test('2:44') :- phrase(time_text(2, 44), `kuutta-toista vaille kaksi`).
-test('2:45') :- phrase(time_text(2, 45), `viittä-toista vaille kaksi`).
-test('2:46') :- phrase(time_text(2, 46), `neljää-toista vaille kaksi`).
-test('2:47') :- phrase(time_text(2, 47), `kolmea-toista vaille kaksi`).
-test('2:48') :- phrase(time_text(2, 48), `kahta-toista vaille kaksi`).
-test('2:49') :- phrase(time_text(2, 49), `yktä-toista vaille kaksi`).
-test('2:50') :- phrase(time_text(2, 50), `kymmentä vaille kaksi`).
-test('2:51') :- phrase(time_text(2, 51), `yhdeksää vaille kaksi`).
-test('2:52') :- phrase(time_text(2, 52), `kahdeksaa vaille kaksi`).
-test('2:53') :- phrase(time_text(2, 53), `seitsemää vaille kaksi`).
-test('2:54') :- phrase(time_text(2, 54), `kuutta vaille kaksi`).
-test('2:55') :- phrase(time_text(2, 55), `viittä vaille kaksi`).
-test('2:56') :- phrase(time_text(2, 56), `neljää vaille kaksi`).
-test('2:57') :- phrase(time_text(2, 57), `kolmea vaille kaksi`).
-test('2:58') :- phrase(time_text(2, 58), `kahta vaille kaksi`).
-test('2:59') :- phrase(time_text(2, 59), `yktä vaille kaksi`).
-test('3:0') :- phrase(time_text(3, 0), `kolme`).
-test('3:0') :- phrase(time_text(3, 0), `tasan kolme`).
-test('3:1') :- phrase(time_text(3, 1), `yksi yli kolme`).
-test('3:2') :- phrase(time_text(3, 2), `kaksi yli kolme`).
-test('3:3') :- phrase(time_text(3, 3), `kolme yli kolme`).
-test('3:4') :- phrase(time_text(3, 4), `neljä yli kolme`).
-test('3:5') :- phrase(time_text(3, 5), `viisi yli kolme`).
-test('3:6') :- phrase(time_text(3, 6), `kuusi yli kolme`).
-test('3:7') :- phrase(time_text(3, 7), `seitsemän yli kolme`).
-test('3:8') :- phrase(time_text(3, 8), `kahdeksan yli kolme`).
-test('3:9') :- phrase(time_text(3, 9), `yhdeksän yli kolme`).
-test('3:10') :- phrase(time_text(3, 10), `kymmenen yli kolme`).
-test('3:11') :- phrase(time_text(3, 11), `yksi-toista yli kolme`).
-test('3:12') :- phrase(time_text(3, 12), `kaksi-toista yli kolme`).
-test('3:13') :- phrase(time_text(3, 13), `kolme-toista yli kolme`).
-test('3:14') :- phrase(time_text(3, 14), `neljä-toista yli kolme`).
-test('3:15') :- phrase(time_text(3, 15), `vartin yli kolme`).
-test('3:15') :- phrase(time_text(3, 15), `viisi-toista yli kolme`).
-test('3:16') :- phrase(time_text(3, 16), `kuusi-toista yli kolme`).
-test('3:17') :- phrase(time_text(3, 17), `seitsemän-toista yli kolme`).
-test('3:18') :- phrase(time_text(3, 18), `kahdeksan-toista yli kolme`).
-test('3:19') :- phrase(time_text(3, 19), `yhdeksän-toista yli kolme`).
-test('3:20') :- phrase(time_text(3, 20), `kaksi-kymmenen yli kolme`).
-test('3:21') :- phrase(time_text(3, 21), `kaksi-kymmentä-yksi yli kolme`).
-test('3:22') :- phrase(time_text(3, 22), `kaksi-kymmentä-kaksi yli kolme`).
-test('3:23') :- phrase(time_text(3, 23), `kaksi-kymmentä-kolme yli kolme`).
-test('3:24') :- phrase(time_text(3, 24), `kaksi-kymmentä-neljä yli kolme`).
-test('3:25') :- phrase(time_text(3, 25), `kaksi-kymmentä-viisi yli kolme`).
-test('3:26') :- phrase(time_text(3, 26), `kaksi-kymmentä-kuusi yli kolme`).
-test('3:27') :- phrase(time_text(3, 27), `kaksi-kymmentä-seitsemän yli kolme`).
-test('3:28') :- phrase(time_text(3, 28), `kaksi-kymmentä-kahdeksan yli kolme`).
-test('3:29') :- phrase(time_text(3, 29), `kaksi-kymmentä-yhdeksän yli kolme`).
-test('3:31') :- phrase(time_text(3, 31), `kahta-kymmentä-yhdeksää vaille kolme`).
-test('3:32') :- phrase(time_text(3, 32), `kahta-kymmentä-kahdeksaa vaille kolme`).
-test('3:33') :- phrase(time_text(3, 33), `kahta-kymmentä-seitsemää vaille kolme`).
-test('3:34') :- phrase(time_text(3, 34), `kahta-kymmentä-kuutta vaille kolme`).
-test('3:35') :- phrase(time_text(3, 35), `kahta-kymmentä-viittä vaille kolme`).
-test('3:36') :- phrase(time_text(3, 36), `kahta-kymmentä-neljää vaille kolme`).
-test('3:37') :- phrase(time_text(3, 37), `kahta-kymmentä-kolmea vaille kolme`).
-test('3:38') :- phrase(time_text(3, 38), `kahta-kymmentä-kahta vaille kolme`).
-test('3:39') :- phrase(time_text(3, 39), `kahta-kymmentä-yktä vaille kolme`).
-test('3:40') :- phrase(time_text(3, 40), `kahta-kymmentä vaille kolme`).
-test('3:41') :- phrase(time_text(3, 41), `yhdeksää-toista vaille kolme`).
-test('3:42') :- phrase(time_text(3, 42), `kahdeksaa-toista vaille kolme`).
-test('3:43') :- phrase(time_text(3, 43), `seitsemää-toista vaille kolme`).
-test('3:44') :- phrase(time_text(3, 44), `kuutta-toista vaille kolme`).
-test('3:45') :- phrase(time_text(3, 45), `viittä-toista vaille kolme`).
-test('3:46') :- phrase(time_text(3, 46), `neljää-toista vaille kolme`).
-test('3:47') :- phrase(time_text(3, 47), `kolmea-toista vaille kolme`).
-test('3:48') :- phrase(time_text(3, 48), `kahta-toista vaille kolme`).
-test('3:49') :- phrase(time_text(3, 49), `yktä-toista vaille kolme`).
-test('3:50') :- phrase(time_text(3, 50), `kymmentä vaille kolme`).
-test('3:51') :- phrase(time_text(3, 51), `yhdeksää vaille kolme`).
-test('3:52') :- phrase(time_text(3, 52), `kahdeksaa vaille kolme`).
-test('3:53') :- phrase(time_text(3, 53), `seitsemää vaille kolme`).
-test('3:54') :- phrase(time_text(3, 54), `kuutta vaille kolme`).
-test('3:55') :- phrase(time_text(3, 55), `viittä vaille kolme`).
-test('3:56') :- phrase(time_text(3, 56), `neljää vaille kolme`).
-test('3:57') :- phrase(time_text(3, 57), `kolmea vaille kolme`).
-test('3:58') :- phrase(time_text(3, 58), `kahta vaille kolme`).
-test('3:59') :- phrase(time_text(3, 59), `yktä vaille kolme`).
-test('4:0') :- phrase(time_text(4, 0), `neljä`).
-test('4:0') :- phrase(time_text(4, 0), `tasan neljä`).
-test('4:1') :- phrase(time_text(4, 1), `yksi yli neljä`).
-test('4:2') :- phrase(time_text(4, 2), `kaksi yli neljä`).
-test('4:3') :- phrase(time_text(4, 3), `kolme yli neljä`).
-test('4:4') :- phrase(time_text(4, 4), `neljä yli neljä`).
-test('4:5') :- phrase(time_text(4, 5), `viisi yli neljä`).
-test('4:6') :- phrase(time_text(4, 6), `kuusi yli neljä`).
-test('4:7') :- phrase(time_text(4, 7), `seitsemän yli neljä`).
-test('4:8') :- phrase(time_text(4, 8), `kahdeksan yli neljä`).
-test('4:9') :- phrase(time_text(4, 9), `yhdeksän yli neljä`).
-test('4:10') :- phrase(time_text(4, 10), `kymmenen yli neljä`).
-test('4:11') :- phrase(time_text(4, 11), `yksi-toista yli neljä`).
-test('4:12') :- phrase(time_text(4, 12), `kaksi-toista yli neljä`).
-test('4:13') :- phrase(time_text(4, 13), `kolme-toista yli neljä`).
-test('4:14') :- phrase(time_text(4, 14), `neljä-toista yli neljä`).
-test('4:15') :- phrase(time_text(4, 15), `vartin yli neljä`).
-test('4:15') :- phrase(time_text(4, 15), `viisi-toista yli neljä`).
-test('4:16') :- phrase(time_text(4, 16), `kuusi-toista yli neljä`).
-test('4:17') :- phrase(time_text(4, 17), `seitsemän-toista yli neljä`).
-test('4:18') :- phrase(time_text(4, 18), `kahdeksan-toista yli neljä`).
-test('4:19') :- phrase(time_text(4, 19), `yhdeksän-toista yli neljä`).
-test('4:20') :- phrase(time_text(4, 20), `kaksi-kymmenen yli neljä`).
-test('4:21') :- phrase(time_text(4, 21), `kaksi-kymmentä-yksi yli neljä`).
-test('4:22') :- phrase(time_text(4, 22), `kaksi-kymmentä-kaksi yli neljä`).
-test('4:23') :- phrase(time_text(4, 23), `kaksi-kymmentä-kolme yli neljä`).
-test('4:24') :- phrase(time_text(4, 24), `kaksi-kymmentä-neljä yli neljä`).
-test('4:25') :- phrase(time_text(4, 25), `kaksi-kymmentä-viisi yli neljä`).
-test('4:26') :- phrase(time_text(4, 26), `kaksi-kymmentä-kuusi yli neljä`).
-test('4:27') :- phrase(time_text(4, 27), `kaksi-kymmentä-seitsemän yli neljä`).
-test('4:28') :- phrase(time_text(4, 28), `kaksi-kymmentä-kahdeksan yli neljä`).
-test('4:29') :- phrase(time_text(4, 29), `kaksi-kymmentä-yhdeksän yli neljä`).
-test('4:31') :- phrase(time_text(4, 31), `kahta-kymmentä-yhdeksää vaille neljä`).
-test('4:32') :- phrase(time_text(4, 32), `kahta-kymmentä-kahdeksaa vaille neljä`).
-test('4:33') :- phrase(time_text(4, 33), `kahta-kymmentä-seitsemää vaille neljä`).
-test('4:34') :- phrase(time_text(4, 34), `kahta-kymmentä-kuutta vaille neljä`).
-test('4:35') :- phrase(time_text(4, 35), `kahta-kymmentä-viittä vaille neljä`).
-test('4:36') :- phrase(time_text(4, 36), `kahta-kymmentä-neljää vaille neljä`).
-test('4:37') :- phrase(time_text(4, 37), `kahta-kymmentä-kolmea vaille neljä`).
-test('4:38') :- phrase(time_text(4, 38), `kahta-kymmentä-kahta vaille neljä`).
-test('4:39') :- phrase(time_text(4, 39), `kahta-kymmentä-yktä vaille neljä`).
-test('4:40') :- phrase(time_text(4, 40), `kahta-kymmentä vaille neljä`).
-test('4:41') :- phrase(time_text(4, 41), `yhdeksää-toista vaille neljä`).
-test('4:42') :- phrase(time_text(4, 42), `kahdeksaa-toista vaille neljä`).
-test('4:43') :- phrase(time_text(4, 43), `seitsemää-toista vaille neljä`).
-test('4:44') :- phrase(time_text(4, 44), `kuutta-toista vaille neljä`).
-test('4:45') :- phrase(time_text(4, 45), `viittä-toista vaille neljä`).
-test('4:46') :- phrase(time_text(4, 46), `neljää-toista vaille neljä`).
-test('4:47') :- phrase(time_text(4, 47), `kolmea-toista vaille neljä`).
-test('4:48') :- phrase(time_text(4, 48), `kahta-toista vaille neljä`).
-test('4:49') :- phrase(time_text(4, 49), `yktä-toista vaille neljä`).
-test('4:50') :- phrase(time_text(4, 50), `kymmentä vaille neljä`).
-test('4:51') :- phrase(time_text(4, 51), `yhdeksää vaille neljä`).
-test('4:52') :- phrase(time_text(4, 52), `kahdeksaa vaille neljä`).
-test('4:53') :- phrase(time_text(4, 53), `seitsemää vaille neljä`).
-test('4:54') :- phrase(time_text(4, 54), `kuutta vaille neljä`).
-test('4:55') :- phrase(time_text(4, 55), `viittä vaille neljä`).
-test('4:56') :- phrase(time_text(4, 56), `neljää vaille neljä`).
-test('4:57') :- phrase(time_text(4, 57), `kolmea vaille neljä`).
-test('4:58') :- phrase(time_text(4, 58), `kahta vaille neljä`).
-test('4:59') :- phrase(time_text(4, 59), `yktä vaille neljä`).
-test('5:0') :- phrase(time_text(5, 0), `tasan viisi`).
-test('5:0') :- phrase(time_text(5, 0), `viisi`).
-test('5:1') :- phrase(time_text(5, 1), `yksi yli viisi`).
-test('5:2') :- phrase(time_text(5, 2), `kaksi yli viisi`).
-test('5:3') :- phrase(time_text(5, 3), `kolme yli viisi`).
-test('5:4') :- phrase(time_text(5, 4), `neljä yli viisi`).
-test('5:5') :- phrase(time_text(5, 5), `viisi yli viisi`).
-test('5:6') :- phrase(time_text(5, 6), `kuusi yli viisi`).
-test('5:7') :- phrase(time_text(5, 7), `seitsemän yli viisi`).
-test('5:8') :- phrase(time_text(5, 8), `kahdeksan yli viisi`).
-test('5:9') :- phrase(time_text(5, 9), `yhdeksän yli viisi`).
-test('5:10') :- phrase(time_text(5, 10), `kymmenen yli viisi`).
-test('5:11') :- phrase(time_text(5, 11), `yksi-toista yli viisi`).
-test('5:12') :- phrase(time_text(5, 12), `kaksi-toista yli viisi`).
-test('5:13') :- phrase(time_text(5, 13), `kolme-toista yli viisi`).
-test('5:14') :- phrase(time_text(5, 14), `neljä-toista yli viisi`).
-test('5:15') :- phrase(time_text(5, 15), `vartin yli viisi`).
-test('5:15') :- phrase(time_text(5, 15), `viisi-toista yli viisi`).
-test('5:16') :- phrase(time_text(5, 16), `kuusi-toista yli viisi`).
-test('5:17') :- phrase(time_text(5, 17), `seitsemän-toista yli viisi`).
-test('5:18') :- phrase(time_text(5, 18), `kahdeksan-toista yli viisi`).
-test('5:19') :- phrase(time_text(5, 19), `yhdeksän-toista yli viisi`).
-test('5:20') :- phrase(time_text(5, 20), `kaksi-kymmenen yli viisi`).
-test('5:21') :- phrase(time_text(5, 21), `kaksi-kymmentä-yksi yli viisi`).
-test('5:22') :- phrase(time_text(5, 22), `kaksi-kymmentä-kaksi yli viisi`).
-test('5:23') :- phrase(time_text(5, 23), `kaksi-kymmentä-kolme yli viisi`).
-test('5:24') :- phrase(time_text(5, 24), `kaksi-kymmentä-neljä yli viisi`).
-test('5:25') :- phrase(time_text(5, 25), `kaksi-kymmentä-viisi yli viisi`).
-test('5:26') :- phrase(time_text(5, 26), `kaksi-kymmentä-kuusi yli viisi`).
-test('5:27') :- phrase(time_text(5, 27), `kaksi-kymmentä-seitsemän yli viisi`).
-test('5:28') :- phrase(time_text(5, 28), `kaksi-kymmentä-kahdeksan yli viisi`).
-test('5:29') :- phrase(time_text(5, 29), `kaksi-kymmentä-yhdeksän yli viisi`).
-test('5:31') :- phrase(time_text(5, 31), `kahta-kymmentä-yhdeksää vaille viisi`).
-test('5:32') :- phrase(time_text(5, 32), `kahta-kymmentä-kahdeksaa vaille viisi`).
-test('5:33') :- phrase(time_text(5, 33), `kahta-kymmentä-seitsemää vaille viisi`).
-test('5:34') :- phrase(time_text(5, 34), `kahta-kymmentä-kuutta vaille viisi`).
-test('5:35') :- phrase(time_text(5, 35), `kahta-kymmentä-viittä vaille viisi`).
-test('5:36') :- phrase(time_text(5, 36), `kahta-kymmentä-neljää vaille viisi`).
-test('5:37') :- phrase(time_text(5, 37), `kahta-kymmentä-kolmea vaille viisi`).
-test('5:38') :- phrase(time_text(5, 38), `kahta-kymmentä-kahta vaille viisi`).
-test('5:39') :- phrase(time_text(5, 39), `kahta-kymmentä-yktä vaille viisi`).
-test('5:40') :- phrase(time_text(5, 40), `kahta-kymmentä vaille viisi`).
-test('5:41') :- phrase(time_text(5, 41), `yhdeksää-toista vaille viisi`).
-test('5:42') :- phrase(time_text(5, 42), `kahdeksaa-toista vaille viisi`).
-test('5:43') :- phrase(time_text(5, 43), `seitsemää-toista vaille viisi`).
-test('5:44') :- phrase(time_text(5, 44), `kuutta-toista vaille viisi`).
-test('5:45') :- phrase(time_text(5, 45), `viittä-toista vaille viisi`).
-test('5:46') :- phrase(time_text(5, 46), `neljää-toista vaille viisi`).
-test('5:47') :- phrase(time_text(5, 47), `kolmea-toista vaille viisi`).
-test('5:48') :- phrase(time_text(5, 48), `kahta-toista vaille viisi`).
-test('5:49') :- phrase(time_text(5, 49), `yktä-toista vaille viisi`).
-test('5:50') :- phrase(time_text(5, 50), `kymmentä vaille viisi`).
-test('5:51') :- phrase(time_text(5, 51), `yhdeksää vaille viisi`).
-test('5:52') :- phrase(time_text(5, 52), `kahdeksaa vaille viisi`).
-test('5:53') :- phrase(time_text(5, 53), `seitsemää vaille viisi`).
-test('5:54') :- phrase(time_text(5, 54), `kuutta vaille viisi`).
-test('5:55') :- phrase(time_text(5, 55), `viittä vaille viisi`).
-test('5:56') :- phrase(time_text(5, 56), `neljää vaille viisi`).
-test('5:57') :- phrase(time_text(5, 57), `kolmea vaille viisi`).
-test('5:58') :- phrase(time_text(5, 58), `kahta vaille viisi`).
-test('5:59') :- phrase(time_text(5, 59), `yktä vaille viisi`).
-test('6:0') :- phrase(time_text(6, 0), `kuusi`).
-test('6:0') :- phrase(time_text(6, 0), `tasan kuusi`).
-test('6:1') :- phrase(time_text(6, 1), `yksi yli kuusi`).
-test('6:2') :- phrase(time_text(6, 2), `kaksi yli kuusi`).
-test('6:3') :- phrase(time_text(6, 3), `kolme yli kuusi`).
-test('6:4') :- phrase(time_text(6, 4), `neljä yli kuusi`).
-test('6:5') :- phrase(time_text(6, 5), `viisi yli kuusi`).
-test('6:6') :- phrase(time_text(6, 6), `kuusi yli kuusi`).
-test('6:7') :- phrase(time_text(6, 7), `seitsemän yli kuusi`).
-test('6:8') :- phrase(time_text(6, 8), `kahdeksan yli kuusi`).
-test('6:9') :- phrase(time_text(6, 9), `yhdeksän yli kuusi`).
-test('6:10') :- phrase(time_text(6, 10), `kymmenen yli kuusi`).
-test('6:11') :- phrase(time_text(6, 11), `yksi-toista yli kuusi`).
-test('6:12') :- phrase(time_text(6, 12), `kaksi-toista yli kuusi`).
-test('6:13') :- phrase(time_text(6, 13), `kolme-toista yli kuusi`).
-test('6:14') :- phrase(time_text(6, 14), `neljä-toista yli kuusi`).
-test('6:15') :- phrase(time_text(6, 15), `vartin yli kuusi`).
-test('6:15') :- phrase(time_text(6, 15), `viisi-toista yli kuusi`).
-test('6:16') :- phrase(time_text(6, 16), `kuusi-toista yli kuusi`).
-test('6:17') :- phrase(time_text(6, 17), `seitsemän-toista yli kuusi`).
-test('6:18') :- phrase(time_text(6, 18), `kahdeksan-toista yli kuusi`).
-test('6:19') :- phrase(time_text(6, 19), `yhdeksän-toista yli kuusi`).
-test('6:20') :- phrase(time_text(6, 20), `kaksi-kymmenen yli kuusi`).
-test('6:21') :- phrase(time_text(6, 21), `kaksi-kymmentä-yksi yli kuusi`).
-test('6:22') :- phrase(time_text(6, 22), `kaksi-kymmentä-kaksi yli kuusi`).
-test('6:23') :- phrase(time_text(6, 23), `kaksi-kymmentä-kolme yli kuusi`).
-test('6:24') :- phrase(time_text(6, 24), `kaksi-kymmentä-neljä yli kuusi`).
-test('6:25') :- phrase(time_text(6, 25), `kaksi-kymmentä-viisi yli kuusi`).
-test('6:26') :- phrase(time_text(6, 26), `kaksi-kymmentä-kuusi yli kuusi`).
-test('6:27') :- phrase(time_text(6, 27), `kaksi-kymmentä-seitsemän yli kuusi`).
-test('6:28') :- phrase(time_text(6, 28), `kaksi-kymmentä-kahdeksan yli kuusi`).
-test('6:29') :- phrase(time_text(6, 29), `kaksi-kymmentä-yhdeksän yli kuusi`).
-test('6:31') :- phrase(time_text(6, 31), `kahta-kymmentä-yhdeksää vaille kuusi`).
-test('6:32') :- phrase(time_text(6, 32), `kahta-kymmentä-kahdeksaa vaille kuusi`).
-test('6:33') :- phrase(time_text(6, 33), `kahta-kymmentä-seitsemää vaille kuusi`).
-test('6:34') :- phrase(time_text(6, 34), `kahta-kymmentä-kuutta vaille kuusi`).
-test('6:35') :- phrase(time_text(6, 35), `kahta-kymmentä-viittä vaille kuusi`).
-test('6:36') :- phrase(time_text(6, 36), `kahta-kymmentä-neljää vaille kuusi`).
-test('6:37') :- phrase(time_text(6, 37), `kahta-kymmentä-kolmea vaille kuusi`).
-test('6:38') :- phrase(time_text(6, 38), `kahta-kymmentä-kahta vaille kuusi`).
-test('6:39') :- phrase(time_text(6, 39), `kahta-kymmentä-yktä vaille kuusi`).
-test('6:40') :- phrase(time_text(6, 40), `kahta-kymmentä vaille kuusi`).
-test('6:41') :- phrase(time_text(6, 41), `yhdeksää-toista vaille kuusi`).
-test('6:42') :- phrase(time_text(6, 42), `kahdeksaa-toista vaille kuusi`).
-test('6:43') :- phrase(time_text(6, 43), `seitsemää-toista vaille kuusi`).
-test('6:44') :- phrase(time_text(6, 44), `kuutta-toista vaille kuusi`).
-test('6:45') :- phrase(time_text(6, 45), `viittä-toista vaille kuusi`).
-test('6:46') :- phrase(time_text(6, 46), `neljää-toista vaille kuusi`).
-test('6:47') :- phrase(time_text(6, 47), `kolmea-toista vaille kuusi`).
-test('6:48') :- phrase(time_text(6, 48), `kahta-toista vaille kuusi`).
-test('6:49') :- phrase(time_text(6, 49), `yktä-toista vaille kuusi`).
-test('6:50') :- phrase(time_text(6, 50), `kymmentä vaille kuusi`).
-test('6:51') :- phrase(time_text(6, 51), `yhdeksää vaille kuusi`).
-test('6:52') :- phrase(time_text(6, 52), `kahdeksaa vaille kuusi`).
-test('6:53') :- phrase(time_text(6, 53), `seitsemää vaille kuusi`).
-test('6:54') :- phrase(time_text(6, 54), `kuutta vaille kuusi`).
-test('6:55') :- phrase(time_text(6, 55), `viittä vaille kuusi`).
-test('6:56') :- phrase(time_text(6, 56), `neljää vaille kuusi`).
-test('6:57') :- phrase(time_text(6, 57), `kolmea vaille kuusi`).
-test('6:58') :- phrase(time_text(6, 58), `kahta vaille kuusi`).
-test('6:59') :- phrase(time_text(6, 59), `yktä vaille kuusi`).
-test('7:0') :- phrase(time_text(7, 0), `seitsemän`).
-test('7:0') :- phrase(time_text(7, 0), `tasan seitsemän`).
-test('7:1') :- phrase(time_text(7, 1), `yksi yli seitsemän`).
-test('7:2') :- phrase(time_text(7, 2), `kaksi yli seitsemän`).
-test('7:3') :- phrase(time_text(7, 3), `kolme yli seitsemän`).
-test('7:4') :- phrase(time_text(7, 4), `neljä yli seitsemän`).
-test('7:5') :- phrase(time_text(7, 5), `viisi yli seitsemän`).
-test('7:6') :- phrase(time_text(7, 6), `kuusi yli seitsemän`).
-test('7:7') :- phrase(time_text(7, 7), `seitsemän yli seitsemän`).
-test('7:8') :- phrase(time_text(7, 8), `kahdeksan yli seitsemän`).
-test('7:9') :- phrase(time_text(7, 9), `yhdeksän yli seitsemän`).
-test('7:10') :- phrase(time_text(7, 10), `kymmenen yli seitsemän`).
-test('7:11') :- phrase(time_text(7, 11), `yksi-toista yli seitsemän`).
-test('7:12') :- phrase(time_text(7, 12), `kaksi-toista yli seitsemän`).
-test('7:13') :- phrase(time_text(7, 13), `kolme-toista yli seitsemän`).
-test('7:14') :- phrase(time_text(7, 14), `neljä-toista yli seitsemän`).
-test('7:15') :- phrase(time_text(7, 15), `vartin yli seitsemän`).
-test('7:15') :- phrase(time_text(7, 15), `viisi-toista yli seitsemän`).
-test('7:16') :- phrase(time_text(7, 16), `kuusi-toista yli seitsemän`).
-test('7:17') :- phrase(time_text(7, 17), `seitsemän-toista yli seitsemän`).
-test('7:18') :- phrase(time_text(7, 18), `kahdeksan-toista yli seitsemän`).
-test('7:19') :- phrase(time_text(7, 19), `yhdeksän-toista yli seitsemän`).
-test('7:20') :- phrase(time_text(7, 20), `kaksi-kymmenen yli seitsemän`).
-test('7:21') :- phrase(time_text(7, 21), `kaksi-kymmentä-yksi yli seitsemän`).
-test('7:22') :- phrase(time_text(7, 22), `kaksi-kymmentä-kaksi yli seitsemän`).
-test('7:23') :- phrase(time_text(7, 23), `kaksi-kymmentä-kolme yli seitsemän`).
-test('7:24') :- phrase(time_text(7, 24), `kaksi-kymmentä-neljä yli seitsemän`).
-test('7:25') :- phrase(time_text(7, 25), `kaksi-kymmentä-viisi yli seitsemän`).
-test('7:26') :- phrase(time_text(7, 26), `kaksi-kymmentä-kuusi yli seitsemän`).
-test('7:27') :- phrase(time_text(7, 27), `kaksi-kymmentä-seitsemän yli seitsemän`).
-test('7:28') :- phrase(time_text(7, 28), `kaksi-kymmentä-kahdeksan yli seitsemän`).
-test('7:29') :- phrase(time_text(7, 29), `kaksi-kymmentä-yhdeksän yli seitsemän`).
-test('7:31') :- phrase(time_text(7, 31), `kahta-kymmentä-yhdeksää vaille seitsemän`).
-test('7:32') :- phrase(time_text(7, 32), `kahta-kymmentä-kahdeksaa vaille seitsemän`).
-test('7:33') :- phrase(time_text(7, 33), `kahta-kymmentä-seitsemää vaille seitsemän`).
-test('7:34') :- phrase(time_text(7, 34), `kahta-kymmentä-kuutta vaille seitsemän`).
-test('7:35') :- phrase(time_text(7, 35), `kahta-kymmentä-viittä vaille seitsemän`).
-test('7:36') :- phrase(time_text(7, 36), `kahta-kymmentä-neljää vaille seitsemän`).
-test('7:37') :- phrase(time_text(7, 37), `kahta-kymmentä-kolmea vaille seitsemän`).
-test('7:38') :- phrase(time_text(7, 38), `kahta-kymmentä-kahta vaille seitsemän`).
-test('7:39') :- phrase(time_text(7, 39), `kahta-kymmentä-yktä vaille seitsemän`).
-test('7:40') :- phrase(time_text(7, 40), `kahta-kymmentä vaille seitsemän`).
-test('7:41') :- phrase(time_text(7, 41), `yhdeksää-toista vaille seitsemän`).
-test('7:42') :- phrase(time_text(7, 42), `kahdeksaa-toista vaille seitsemän`).
-test('7:43') :- phrase(time_text(7, 43), `seitsemää-toista vaille seitsemän`).
-test('7:44') :- phrase(time_text(7, 44), `kuutta-toista vaille seitsemän`).
-test('7:45') :- phrase(time_text(7, 45), `viittä-toista vaille seitsemän`).
-test('7:46') :- phrase(time_text(7, 46), `neljää-toista vaille seitsemän`).
-test('7:47') :- phrase(time_text(7, 47), `kolmea-toista vaille seitsemän`).
-test('7:48') :- phrase(time_text(7, 48), `kahta-toista vaille seitsemän`).
-test('7:49') :- phrase(time_text(7, 49), `yktä-toista vaille seitsemän`).
-test('7:50') :- phrase(time_text(7, 50), `kymmentä vaille seitsemän`).
-test('7:51') :- phrase(time_text(7, 51), `yhdeksää vaille seitsemän`).
-test('7:52') :- phrase(time_text(7, 52), `kahdeksaa vaille seitsemän`).
-test('7:53') :- phrase(time_text(7, 53), `seitsemää vaille seitsemän`).
-test('7:54') :- phrase(time_text(7, 54), `kuutta vaille seitsemän`).
-test('7:55') :- phrase(time_text(7, 55), `viittä vaille seitsemän`).
-test('7:56') :- phrase(time_text(7, 56), `neljää vaille seitsemän`).
-test('7:57') :- phrase(time_text(7, 57), `kolmea vaille seitsemän`).
-test('7:58') :- phrase(time_text(7, 58), `kahta vaille seitsemän`).
-test('7:59') :- phrase(time_text(7, 59), `yktä vaille seitsemän`).
-test('8:0') :- phrase(time_text(8, 0), `kahdeksan`).
-test('8:0') :- phrase(time_text(8, 0), `tasan kahdeksan`).
-test('8:1') :- phrase(time_text(8, 1), `yksi yli kahdeksan`).
-test('8:2') :- phrase(time_text(8, 2), `kaksi yli kahdeksan`).
-test('8:3') :- phrase(time_text(8, 3), `kolme yli kahdeksan`).
-test('8:4') :- phrase(time_text(8, 4), `neljä yli kahdeksan`).
-test('8:5') :- phrase(time_text(8, 5), `viisi yli kahdeksan`).
-test('8:6') :- phrase(time_text(8, 6), `kuusi yli kahdeksan`).
-test('8:7') :- phrase(time_text(8, 7), `seitsemän yli kahdeksan`).
-test('8:8') :- phrase(time_text(8, 8), `kahdeksan yli kahdeksan`).
-test('8:9') :- phrase(time_text(8, 9), `yhdeksän yli kahdeksan`).
-test('8:10') :- phrase(time_text(8, 10), `kymmenen yli kahdeksan`).
-test('8:11') :- phrase(time_text(8, 11), `yksi-toista yli kahdeksan`).
-test('8:12') :- phrase(time_text(8, 12), `kaksi-toista yli kahdeksan`).
-test('8:13') :- phrase(time_text(8, 13), `kolme-toista yli kahdeksan`).
-test('8:14') :- phrase(time_text(8, 14), `neljä-toista yli kahdeksan`).
-test('8:15') :- phrase(time_text(8, 15), `vartin yli kahdeksan`).
-test('8:15') :- phrase(time_text(8, 15), `viisi-toista yli kahdeksan`).
-test('8:16') :- phrase(time_text(8, 16), `kuusi-toista yli kahdeksan`).
-test('8:17') :- phrase(time_text(8, 17), `seitsemän-toista yli kahdeksan`).
-test('8:18') :- phrase(time_text(8, 18), `kahdeksan-toista yli kahdeksan`).
-test('8:19') :- phrase(time_text(8, 19), `yhdeksän-toista yli kahdeksan`).
-test('8:20') :- phrase(time_text(8, 20), `kaksi-kymmenen yli kahdeksan`).
-test('8:21') :- phrase(time_text(8, 21), `kaksi-kymmentä-yksi yli kahdeksan`).
-test('8:22') :- phrase(time_text(8, 22), `kaksi-kymmentä-kaksi yli kahdeksan`).
-test('8:23') :- phrase(time_text(8, 23), `kaksi-kymmentä-kolme yli kahdeksan`).
-test('8:24') :- phrase(time_text(8, 24), `kaksi-kymmentä-neljä yli kahdeksan`).
-test('8:25') :- phrase(time_text(8, 25), `kaksi-kymmentä-viisi yli kahdeksan`).
-test('8:26') :- phrase(time_text(8, 26), `kaksi-kymmentä-kuusi yli kahdeksan`).
-test('8:27') :- phrase(time_text(8, 27), `kaksi-kymmentä-seitsemän yli kahdeksan`).
-test('8:28') :- phrase(time_text(8, 28), `kaksi-kymmentä-kahdeksan yli kahdeksan`).
-test('8:29') :- phrase(time_text(8, 29), `kaksi-kymmentä-yhdeksän yli kahdeksan`).
-test('8:31') :- phrase(time_text(8, 31), `kahta-kymmentä-yhdeksää vaille kahdeksan`).
-test('8:32') :- phrase(time_text(8, 32), `kahta-kymmentä-kahdeksaa vaille kahdeksan`).
-test('8:33') :- phrase(time_text(8, 33), `kahta-kymmentä-seitsemää vaille kahdeksan`).
-test('8:34') :- phrase(time_text(8, 34), `kahta-kymmentä-kuutta vaille kahdeksan`).
-test('8:35') :- phrase(time_text(8, 35), `kahta-kymmentä-viittä vaille kahdeksan`).
-test('8:36') :- phrase(time_text(8, 36), `kahta-kymmentä-neljää vaille kahdeksan`).
-test('8:37') :- phrase(time_text(8, 37), `kahta-kymmentä-kolmea vaille kahdeksan`).
-test('8:38') :- phrase(time_text(8, 38), `kahta-kymmentä-kahta vaille kahdeksan`).
-test('8:39') :- phrase(time_text(8, 39), `kahta-kymmentä-yktä vaille kahdeksan`).
-test('8:40') :- phrase(time_text(8, 40), `kahta-kymmentä vaille kahdeksan`).
-test('8:41') :- phrase(time_text(8, 41), `yhdeksää-toista vaille kahdeksan`).
-test('8:42') :- phrase(time_text(8, 42), `kahdeksaa-toista vaille kahdeksan`).
-test('8:43') :- phrase(time_text(8, 43), `seitsemää-toista vaille kahdeksan`).
-test('8:44') :- phrase(time_text(8, 44), `kuutta-toista vaille kahdeksan`).
-test('8:45') :- phrase(time_text(8, 45), `viittä-toista vaille kahdeksan`).
-test('8:46') :- phrase(time_text(8, 46), `neljää-toista vaille kahdeksan`).
-test('8:47') :- phrase(time_text(8, 47), `kolmea-toista vaille kahdeksan`).
-test('8:48') :- phrase(time_text(8, 48), `kahta-toista vaille kahdeksan`).
-test('8:49') :- phrase(time_text(8, 49), `yktä-toista vaille kahdeksan`).
-test('8:50') :- phrase(time_text(8, 50), `kymmentä vaille kahdeksan`).
-test('8:51') :- phrase(time_text(8, 51), `yhdeksää vaille kahdeksan`).
-test('8:52') :- phrase(time_text(8, 52), `kahdeksaa vaille kahdeksan`).
-test('8:53') :- phrase(time_text(8, 53), `seitsemää vaille kahdeksan`).
-test('8:54') :- phrase(time_text(8, 54), `kuutta vaille kahdeksan`).
-test('8:55') :- phrase(time_text(8, 55), `viittä vaille kahdeksan`).
-test('8:56') :- phrase(time_text(8, 56), `neljää vaille kahdeksan`).
-test('8:57') :- phrase(time_text(8, 57), `kolmea vaille kahdeksan`).
-test('8:58') :- phrase(time_text(8, 58), `kahta vaille kahdeksan`).
-test('8:59') :- phrase(time_text(8, 59), `yktä vaille kahdeksan`).
-test('9:0') :- phrase(time_text(9, 0), `tasan yhdeksän`).
-test('9:0') :- phrase(time_text(9, 0), `yhdeksän`).
-test('9:1') :- phrase(time_text(9, 1), `yksi yli yhdeksän`).
-test('9:2') :- phrase(time_text(9, 2), `kaksi yli yhdeksän`).
-test('9:3') :- phrase(time_text(9, 3), `kolme yli yhdeksän`).
-test('9:4') :- phrase(time_text(9, 4), `neljä yli yhdeksän`).
-test('9:5') :- phrase(time_text(9, 5), `viisi yli yhdeksän`).
-test('9:6') :- phrase(time_text(9, 6), `kuusi yli yhdeksän`).
-test('9:7') :- phrase(time_text(9, 7), `seitsemän yli yhdeksän`).
-test('9:8') :- phrase(time_text(9, 8), `kahdeksan yli yhdeksän`).
-test('9:9') :- phrase(time_text(9, 9), `yhdeksän yli yhdeksän`).
-test('9:10') :- phrase(time_text(9, 10), `kymmenen yli yhdeksän`).
-test('9:11') :- phrase(time_text(9, 11), `yksi-toista yli yhdeksän`).
-test('9:12') :- phrase(time_text(9, 12), `kaksi-toista yli yhdeksän`).
-test('9:13') :- phrase(time_text(9, 13), `kolme-toista yli yhdeksän`).
-test('9:14') :- phrase(time_text(9, 14), `neljä-toista yli yhdeksän`).
-test('9:15') :- phrase(time_text(9, 15), `vartin yli yhdeksän`).
-test('9:15') :- phrase(time_text(9, 15), `viisi-toista yli yhdeksän`).
-test('9:16') :- phrase(time_text(9, 16), `kuusi-toista yli yhdeksän`).
-test('9:17') :- phrase(time_text(9, 17), `seitsemän-toista yli yhdeksän`).
-test('9:18') :- phrase(time_text(9, 18), `kahdeksan-toista yli yhdeksän`).
-test('9:19') :- phrase(time_text(9, 19), `yhdeksän-toista yli yhdeksän`).
-test('9:20') :- phrase(time_text(9, 20), `kaksi-kymmenen yli yhdeksän`).
-test('9:21') :- phrase(time_text(9, 21), `kaksi-kymmentä-yksi yli yhdeksän`).
-test('9:22') :- phrase(time_text(9, 22), `kaksi-kymmentä-kaksi yli yhdeksän`).
-test('9:23') :- phrase(time_text(9, 23), `kaksi-kymmentä-kolme yli yhdeksän`).
-test('9:24') :- phrase(time_text(9, 24), `kaksi-kymmentä-neljä yli yhdeksän`).
-test('9:25') :- phrase(time_text(9, 25), `kaksi-kymmentä-viisi yli yhdeksän`).
-test('9:26') :- phrase(time_text(9, 26), `kaksi-kymmentä-kuusi yli yhdeksän`).
-test('9:27') :- phrase(time_text(9, 27), `kaksi-kymmentä-seitsemän yli yhdeksän`).
-test('9:28') :- phrase(time_text(9, 28), `kaksi-kymmentä-kahdeksan yli yhdeksän`).
-test('9:29') :- phrase(time_text(9, 29), `kaksi-kymmentä-yhdeksän yli yhdeksän`).
-test('9:31') :- phrase(time_text(9, 31), `kahta-kymmentä-yhdeksää vaille yhdeksän`).
-test('9:32') :- phrase(time_text(9, 32), `kahta-kymmentä-kahdeksaa vaille yhdeksän`).
-test('9:33') :- phrase(time_text(9, 33), `kahta-kymmentä-seitsemää vaille yhdeksän`).
-test('9:34') :- phrase(time_text(9, 34), `kahta-kymmentä-kuutta vaille yhdeksän`).
-test('9:35') :- phrase(time_text(9, 35), `kahta-kymmentä-viittä vaille yhdeksän`).
-test('9:36') :- phrase(time_text(9, 36), `kahta-kymmentä-neljää vaille yhdeksän`).
-test('9:37') :- phrase(time_text(9, 37), `kahta-kymmentä-kolmea vaille yhdeksän`).
-test('9:38') :- phrase(time_text(9, 38), `kahta-kymmentä-kahta vaille yhdeksän`).
-test('9:39') :- phrase(time_text(9, 39), `kahta-kymmentä-yktä vaille yhdeksän`).
-test('9:40') :- phrase(time_text(9, 40), `kahta-kymmentä vaille yhdeksän`).
-test('9:41') :- phrase(time_text(9, 41), `yhdeksää-toista vaille yhdeksän`).
-test('9:42') :- phrase(time_text(9, 42), `kahdeksaa-toista vaille yhdeksän`).
-test('9:43') :- phrase(time_text(9, 43), `seitsemää-toista vaille yhdeksän`).
-test('9:44') :- phrase(time_text(9, 44), `kuutta-toista vaille yhdeksän`).
-test('9:45') :- phrase(time_text(9, 45), `viittä-toista vaille yhdeksän`).
-test('9:46') :- phrase(time_text(9, 46), `neljää-toista vaille yhdeksän`).
-test('9:47') :- phrase(time_text(9, 47), `kolmea-toista vaille yhdeksän`).
-test('9:48') :- phrase(time_text(9, 48), `kahta-toista vaille yhdeksän`).
-test('9:49') :- phrase(time_text(9, 49), `yktä-toista vaille yhdeksän`).
-test('9:50') :- phrase(time_text(9, 50), `kymmentä vaille yhdeksän`).
-test('9:51') :- phrase(time_text(9, 51), `yhdeksää vaille yhdeksän`).
-test('9:52') :- phrase(time_text(9, 52), `kahdeksaa vaille yhdeksän`).
-test('9:53') :- phrase(time_text(9, 53), `seitsemää vaille yhdeksän`).
-test('9:54') :- phrase(time_text(9, 54), `kuutta vaille yhdeksän`).
-test('9:55') :- phrase(time_text(9, 55), `viittä vaille yhdeksän`).
-test('9:56') :- phrase(time_text(9, 56), `neljää vaille yhdeksän`).
-test('9:57') :- phrase(time_text(9, 57), `kolmea vaille yhdeksän`).
-test('9:58') :- phrase(time_text(9, 58), `kahta vaille yhdeksän`).
-test('9:59') :- phrase(time_text(9, 59), `yktä vaille yhdeksän`).
-test('10:0') :- phrase(time_text(10, 0), `kymmenen`).
-test('10:0') :- phrase(time_text(10, 0), `tasan kymmenen`).
-test('10:1') :- phrase(time_text(10, 1), `yksi yli kymmenen`).
-test('10:2') :- phrase(time_text(10, 2), `kaksi yli kymmenen`).
-test('10:3') :- phrase(time_text(10, 3), `kolme yli kymmenen`).
-test('10:4') :- phrase(time_text(10, 4), `neljä yli kymmenen`).
-test('10:5') :- phrase(time_text(10, 5), `viisi yli kymmenen`).
-test('10:6') :- phrase(time_text(10, 6), `kuusi yli kymmenen`).
-test('10:7') :- phrase(time_text(10, 7), `seitsemän yli kymmenen`).
-test('10:8') :- phrase(time_text(10, 8), `kahdeksan yli kymmenen`).
-test('10:9') :- phrase(time_text(10, 9), `yhdeksän yli kymmenen`).
-test('10:10') :- phrase(time_text(10, 10), `kymmenen yli kymmenen`).
-test('10:11') :- phrase(time_text(10, 11), `yksi-toista yli kymmenen`).
-test('10:12') :- phrase(time_text(10, 12), `kaksi-toista yli kymmenen`).
-test('10:13') :- phrase(time_text(10, 13), `kolme-toista yli kymmenen`).
-test('10:14') :- phrase(time_text(10, 14), `neljä-toista yli kymmenen`).
-test('10:15') :- phrase(time_text(10, 15), `vartin yli kymmenen`).
-test('10:15') :- phrase(time_text(10, 15), `viisi-toista yli kymmenen`).
-test('10:16') :- phrase(time_text(10, 16), `kuusi-toista yli kymmenen`).
-test('10:17') :- phrase(time_text(10, 17), `seitsemän-toista yli kymmenen`).
-test('10:18') :- phrase(time_text(10, 18), `kahdeksan-toista yli kymmenen`).
-test('10:19') :- phrase(time_text(10, 19), `yhdeksän-toista yli kymmenen`).
-test('10:20') :- phrase(time_text(10, 20), `kaksi-kymmenen yli kymmenen`).
-test('10:21') :- phrase(time_text(10, 21), `kaksi-kymmentä-yksi yli kymmenen`).
-test('10:22') :- phrase(time_text(10, 22), `kaksi-kymmentä-kaksi yli kymmenen`).
-test('10:23') :- phrase(time_text(10, 23), `kaksi-kymmentä-kolme yli kymmenen`).
-test('10:24') :- phrase(time_text(10, 24), `kaksi-kymmentä-neljä yli kymmenen`).
-test('10:25') :- phrase(time_text(10, 25), `kaksi-kymmentä-viisi yli kymmenen`).
-test('10:26') :- phrase(time_text(10, 26), `kaksi-kymmentä-kuusi yli kymmenen`).
-test('10:27') :- phrase(time_text(10, 27), `kaksi-kymmentä-seitsemän yli kymmenen`).
-test('10:28') :- phrase(time_text(10, 28), `kaksi-kymmentä-kahdeksan yli kymmenen`).
-test('10:29') :- phrase(time_text(10, 29), `kaksi-kymmentä-yhdeksän yli kymmenen`).
-test('10:31') :- phrase(time_text(10, 31), `kahta-kymmentä-yhdeksää vaille kymmenen`).
-test('10:32') :- phrase(time_text(10, 32), `kahta-kymmentä-kahdeksaa vaille kymmenen`).
-test('10:33') :- phrase(time_text(10, 33), `kahta-kymmentä-seitsemää vaille kymmenen`).
-test('10:34') :- phrase(time_text(10, 34), `kahta-kymmentä-kuutta vaille kymmenen`).
-test('10:35') :- phrase(time_text(10, 35), `kahta-kymmentä-viittä vaille kymmenen`).
-test('10:36') :- phrase(time_text(10, 36), `kahta-kymmentä-neljää vaille kymmenen`).
-test('10:37') :- phrase(time_text(10, 37), `kahta-kymmentä-kolmea vaille kymmenen`).
-test('10:38') :- phrase(time_text(10, 38), `kahta-kymmentä-kahta vaille kymmenen`).
-test('10:39') :- phrase(time_text(10, 39), `kahta-kymmentä-yktä vaille kymmenen`).
-test('10:40') :- phrase(time_text(10, 40), `kahta-kymmentä vaille kymmenen`).
-test('10:41') :- phrase(time_text(10, 41), `yhdeksää-toista vaille kymmenen`).
-test('10:42') :- phrase(time_text(10, 42), `kahdeksaa-toista vaille kymmenen`).
-test('10:43') :- phrase(time_text(10, 43), `seitsemää-toista vaille kymmenen`).
-test('10:44') :- phrase(time_text(10, 44), `kuutta-toista vaille kymmenen`).
-test('10:45') :- phrase(time_text(10, 45), `viittä-toista vaille kymmenen`).
-test('10:46') :- phrase(time_text(10, 46), `neljää-toista vaille kymmenen`).
-test('10:47') :- phrase(time_text(10, 47), `kolmea-toista vaille kymmenen`).
-test('10:48') :- phrase(time_text(10, 48), `kahta-toista vaille kymmenen`).
-test('10:49') :- phrase(time_text(10, 49), `yktä-toista vaille kymmenen`).
-test('10:50') :- phrase(time_text(10, 50), `kymmentä vaille kymmenen`).
-test('10:51') :- phrase(time_text(10, 51), `yhdeksää vaille kymmenen`).
-test('10:52') :- phrase(time_text(10, 52), `kahdeksaa vaille kymmenen`).
-test('10:53') :- phrase(time_text(10, 53), `seitsemää vaille kymmenen`).
-test('10:54') :- phrase(time_text(10, 54), `kuutta vaille kymmenen`).
-test('10:55') :- phrase(time_text(10, 55), `viittä vaille kymmenen`).
-test('10:56') :- phrase(time_text(10, 56), `neljää vaille kymmenen`).
-test('10:57') :- phrase(time_text(10, 57), `kolmea vaille kymmenen`).
-test('10:58') :- phrase(time_text(10, 58), `kahta vaille kymmenen`).
-test('10:59') :- phrase(time_text(10, 59), `yktä vaille kymmenen`).
-test('11:0') :- phrase(time_text(11, 0), `tasan yksi-toista`).
-test('11:0') :- phrase(time_text(11, 0), `yksi-toista`).
-test('11:1') :- phrase(time_text(11, 1), `yksi yli yksi-toista`).
-test('11:2') :- phrase(time_text(11, 2), `kaksi yli yksi-toista`).
-test('11:3') :- phrase(time_text(11, 3), `kolme yli yksi-toista`).
-test('11:4') :- phrase(time_text(11, 4), `neljä yli yksi-toista`).
-test('11:5') :- phrase(time_text(11, 5), `viisi yli yksi-toista`).
-test('11:6') :- phrase(time_text(11, 6), `kuusi yli yksi-toista`).
-test('11:7') :- phrase(time_text(11, 7), `seitsemän yli yksi-toista`).
-test('11:8') :- phrase(time_text(11, 8), `kahdeksan yli yksi-toista`).
-test('11:9') :- phrase(time_text(11, 9), `yhdeksän yli yksi-toista`).
-test('11:10') :- phrase(time_text(11, 10), `kymmenen yli yksi-toista`).
-test('11:11') :- phrase(time_text(11, 11), `yksi-toista yli yksi-toista`).
-test('11:12') :- phrase(time_text(11, 12), `kaksi-toista yli yksi-toista`).
-test('11:13') :- phrase(time_text(11, 13), `kolme-toista yli yksi-toista`).
-test('11:14') :- phrase(time_text(11, 14), `neljä-toista yli yksi-toista`).
-test('11:15') :- phrase(time_text(11, 15), `vartin yli yksi-toista`).
-test('11:15') :- phrase(time_text(11, 15), `viisi-toista yli yksi-toista`).
-test('11:16') :- phrase(time_text(11, 16), `kuusi-toista yli yksi-toista`).
-test('11:17') :- phrase(time_text(11, 17), `seitsemän-toista yli yksi-toista`).
-test('11:18') :- phrase(time_text(11, 18), `kahdeksan-toista yli yksi-toista`).
-test('11:19') :- phrase(time_text(11, 19), `yhdeksän-toista yli yksi-toista`).
-test('11:20') :- phrase(time_text(11, 20), `kaksi-kymmenen yli yksi-toista`).
-test('11:21') :- phrase(time_text(11, 21), `kaksi-kymmentä-yksi yli yksi-toista`).
-test('11:22') :- phrase(time_text(11, 22), `kaksi-kymmentä-kaksi yli yksi-toista`).
-test('11:23') :- phrase(time_text(11, 23), `kaksi-kymmentä-kolme yli yksi-toista`).
-test('11:24') :- phrase(time_text(11, 24), `kaksi-kymmentä-neljä yli yksi-toista`).
-test('11:25') :- phrase(time_text(11, 25), `kaksi-kymmentä-viisi yli yksi-toista`).
-test('11:26') :- phrase(time_text(11, 26), `kaksi-kymmentä-kuusi yli yksi-toista`).
-test('11:27') :- phrase(time_text(11, 27), `kaksi-kymmentä-seitsemän yli yksi-toista`).
-test('11:28') :- phrase(time_text(11, 28), `kaksi-kymmentä-kahdeksan yli yksi-toista`).
-test('11:29') :- phrase(time_text(11, 29), `kaksi-kymmentä-yhdeksän yli yksi-toista`).
-test('11:31') :- phrase(time_text(11, 31), `kahta-kymmentä-yhdeksää vaille yksi-toista`).
-test('11:32') :- phrase(time_text(11, 32), `kahta-kymmentä-kahdeksaa vaille yksi-toista`).
-test('11:33') :- phrase(time_text(11, 33), `kahta-kymmentä-seitsemää vaille yksi-toista`).
-test('11:34') :- phrase(time_text(11, 34), `kahta-kymmentä-kuutta vaille yksi-toista`).
-test('11:35') :- phrase(time_text(11, 35), `kahta-kymmentä-viittä vaille yksi-toista`).
-test('11:36') :- phrase(time_text(11, 36), `kahta-kymmentä-neljää vaille yksi-toista`).
-test('11:37') :- phrase(time_text(11, 37), `kahta-kymmentä-kolmea vaille yksi-toista`).
-test('11:38') :- phrase(time_text(11, 38), `kahta-kymmentä-kahta vaille yksi-toista`).
-test('11:39') :- phrase(time_text(11, 39), `kahta-kymmentä-yktä vaille yksi-toista`).
-test('11:40') :- phrase(time_text(11, 40), `kahta-kymmentä vaille yksi-toista`).
-test('11:41') :- phrase(time_text(11, 41), `yhdeksää-toista vaille yksi-toista`).
-test('11:42') :- phrase(time_text(11, 42), `kahdeksaa-toista vaille yksi-toista`).
-test('11:43') :- phrase(time_text(11, 43), `seitsemää-toista vaille yksi-toista`).
-test('11:44') :- phrase(time_text(11, 44), `kuutta-toista vaille yksi-toista`).
-test('11:45') :- phrase(time_text(11, 45), `viittä-toista vaille yksi-toista`).
-test('11:46') :- phrase(time_text(11, 46), `neljää-toista vaille yksi-toista`).
-test('11:47') :- phrase(time_text(11, 47), `kolmea-toista vaille yksi-toista`).
-test('11:48') :- phrase(time_text(11, 48), `kahta-toista vaille yksi-toista`).
-test('11:49') :- phrase(time_text(11, 49), `yktä-toista vaille yksi-toista`).
-test('11:50') :- phrase(time_text(11, 50), `kymmentä vaille yksi-toista`).
-test('11:51') :- phrase(time_text(11, 51), `yhdeksää vaille yksi-toista`).
-test('11:52') :- phrase(time_text(11, 52), `kahdeksaa vaille yksi-toista`).
-test('11:53') :- phrase(time_text(11, 53), `seitsemää vaille yksi-toista`).
-test('11:54') :- phrase(time_text(11, 54), `kuutta vaille yksi-toista`).
-test('11:55') :- phrase(time_text(11, 55), `viittä vaille yksi-toista`).
-test('11:56') :- phrase(time_text(11, 56), `neljää vaille yksi-toista`).
-test('11:57') :- phrase(time_text(11, 57), `kolmea vaille yksi-toista`).
-test('11:58') :- phrase(time_text(11, 58), `kahta vaille yksi-toista`).
-test('11:59') :- phrase(time_text(11, 59), `yktä vaille yksi-toista`).
-test('12:0') :- phrase(time_text(12, 0), `kaksi-toista`).
-test('12:0') :- phrase(time_text(12, 0), `tasan kaksi-toista`).
-test('12:1') :- phrase(time_text(12, 1), `yksi yli kaksi-toista`).
-test('12:2') :- phrase(time_text(12, 2), `kaksi yli kaksi-toista`).
-test('12:3') :- phrase(time_text(12, 3), `kolme yli kaksi-toista`).
-test('12:4') :- phrase(time_text(12, 4), `neljä yli kaksi-toista`).
-test('12:5') :- phrase(time_text(12, 5), `viisi yli kaksi-toista`).
-test('12:6') :- phrase(time_text(12, 6), `kuusi yli kaksi-toista`).
-test('12:7') :- phrase(time_text(12, 7), `seitsemän yli kaksi-toista`).
-test('12:8') :- phrase(time_text(12, 8), `kahdeksan yli kaksi-toista`).
-test('12:9') :- phrase(time_text(12, 9), `yhdeksän yli kaksi-toista`).
-test('12:10') :- phrase(time_text(12, 10), `kymmenen yli kaksi-toista`).
-test('12:11') :- phrase(time_text(12, 11), `yksi-toista yli kaksi-toista`).
-test('12:12') :- phrase(time_text(12, 12), `kaksi-toista yli kaksi-toista`).
-test('12:13') :- phrase(time_text(12, 13), `kolme-toista yli kaksi-toista`).
-test('12:14') :- phrase(time_text(12, 14), `neljä-toista yli kaksi-toista`).
-test('12:15') :- phrase(time_text(12, 15), `vartin yli kaksi-toista`).
-test('12:15') :- phrase(time_text(12, 15), `viisi-toista yli kaksi-toista`).
-test('12:16') :- phrase(time_text(12, 16), `kuusi-toista yli kaksi-toista`).
-test('12:17') :- phrase(time_text(12, 17), `seitsemän-toista yli kaksi-toista`).
-test('12:18') :- phrase(time_text(12, 18), `kahdeksan-toista yli kaksi-toista`).
-test('12:19') :- phrase(time_text(12, 19), `yhdeksän-toista yli kaksi-toista`).
-test('12:20') :- phrase(time_text(12, 20), `kaksi-kymmenen yli kaksi-toista`).
-test('12:21') :- phrase(time_text(12, 21), `kaksi-kymmentä-yksi yli kaksi-toista`).
-test('12:22') :- phrase(time_text(12, 22), `kaksi-kymmentä-kaksi yli kaksi-toista`).
-test('12:23') :- phrase(time_text(12, 23), `kaksi-kymmentä-kolme yli kaksi-toista`).
-test('12:24') :- phrase(time_text(12, 24), `kaksi-kymmentä-neljä yli kaksi-toista`).
-test('12:25') :- phrase(time_text(12, 25), `kaksi-kymmentä-viisi yli kaksi-toista`).
-test('12:26') :- phrase(time_text(12, 26), `kaksi-kymmentä-kuusi yli kaksi-toista`).
-test('12:27') :- phrase(time_text(12, 27), `kaksi-kymmentä-seitsemän yli kaksi-toista`).
-test('12:28') :- phrase(time_text(12, 28), `kaksi-kymmentä-kahdeksan yli kaksi-toista`).
-test('12:29') :- phrase(time_text(12, 29), `kaksi-kymmentä-yhdeksän yli kaksi-toista`).
-test('12:31') :- phrase(time_text(12, 31), `kahta-kymmentä-yhdeksää vaille kaksi-toista`).
-test('12:32') :- phrase(time_text(12, 32), `kahta-kymmentä-kahdeksaa vaille kaksi-toista`).
-test('12:33') :- phrase(time_text(12, 33), `kahta-kymmentä-seitsemää vaille kaksi-toista`).
-test('12:34') :- phrase(time_text(12, 34), `kahta-kymmentä-kuutta vaille kaksi-toista`).
-test('12:35') :- phrase(time_text(12, 35), `kahta-kymmentä-viittä vaille kaksi-toista`).
-test('12:36') :- phrase(time_text(12, 36), `kahta-kymmentä-neljää vaille kaksi-toista`).
-test('12:37') :- phrase(time_text(12, 37), `kahta-kymmentä-kolmea vaille kaksi-toista`).
-test('12:38') :- phrase(time_text(12, 38), `kahta-kymmentä-kahta vaille kaksi-toista`).
-test('12:39') :- phrase(time_text(12, 39), `kahta-kymmentä-yktä vaille kaksi-toista`).
-test('12:40') :- phrase(time_text(12, 40), `kahta-kymmentä vaille kaksi-toista`).
-test('12:41') :- phrase(time_text(12, 41), `yhdeksää-toista vaille kaksi-toista`).
-test('12:42') :- phrase(time_text(12, 42), `kahdeksaa-toista vaille kaksi-toista`).
-test('12:43') :- phrase(time_text(12, 43), `seitsemää-toista vaille kaksi-toista`).
-test('12:44') :- phrase(time_text(12, 44), `kuutta-toista vaille kaksi-toista`).
-test('12:45') :- phrase(time_text(12, 45), `viittä-toista vaille kaksi-toista`).
-test('12:46') :- phrase(time_text(12, 46), `neljää-toista vaille kaksi-toista`).
-test('12:47') :- phrase(time_text(12, 47), `kolmea-toista vaille kaksi-toista`).
-test('12:48') :- phrase(time_text(12, 48), `kahta-toista vaille kaksi-toista`).
-test('12:49') :- phrase(time_text(12, 49), `yktä-toista vaille kaksi-toista`).
-test('12:50') :- phrase(time_text(12, 50), `kymmentä vaille kaksi-toista`).
-test('12:51') :- phrase(time_text(12, 51), `yhdeksää vaille kaksi-toista`).
-test('12:52') :- phrase(time_text(12, 52), `kahdeksaa vaille kaksi-toista`).
-test('12:53') :- phrase(time_text(12, 53), `seitsemää vaille kaksi-toista`).
-test('12:54') :- phrase(time_text(12, 54), `kuutta vaille kaksi-toista`).
-test('12:55') :- phrase(time_text(12, 55), `viittä vaille kaksi-toista`).
-test('12:56') :- phrase(time_text(12, 56), `neljää vaille kaksi-toista`).
-test('12:57') :- phrase(time_text(12, 57), `kolmea vaille kaksi-toista`).
-test('12:58') :- phrase(time_text(12, 58), `kahta vaille kaksi-toista`).
-test('12:59') :- phrase(time_text(12, 59), `yktä vaille kaksi-toista`).
-test('13:0') :- phrase(time_text(13, 0), `kolme-toista`).
-test('13:0') :- phrase(time_text(13, 0), `tasan kolme-toista`).
-test('13:1') :- phrase(time_text(13, 1), `yksi yli kolme-toista`).
-test('13:2') :- phrase(time_text(13, 2), `kaksi yli kolme-toista`).
-test('13:3') :- phrase(time_text(13, 3), `kolme yli kolme-toista`).
-test('13:4') :- phrase(time_text(13, 4), `neljä yli kolme-toista`).
-test('13:5') :- phrase(time_text(13, 5), `viisi yli kolme-toista`).
-test('13:6') :- phrase(time_text(13, 6), `kuusi yli kolme-toista`).
-test('13:7') :- phrase(time_text(13, 7), `seitsemän yli kolme-toista`).
-test('13:8') :- phrase(time_text(13, 8), `kahdeksan yli kolme-toista`).
-test('13:9') :- phrase(time_text(13, 9), `yhdeksän yli kolme-toista`).
-test('13:10') :- phrase(time_text(13, 10), `kymmenen yli kolme-toista`).
-test('13:11') :- phrase(time_text(13, 11), `yksi-toista yli kolme-toista`).
-test('13:12') :- phrase(time_text(13, 12), `kaksi-toista yli kolme-toista`).
-test('13:13') :- phrase(time_text(13, 13), `kolme-toista yli kolme-toista`).
-test('13:14') :- phrase(time_text(13, 14), `neljä-toista yli kolme-toista`).
-test('13:15') :- phrase(time_text(13, 15), `vartin yli kolme-toista`).
-test('13:15') :- phrase(time_text(13, 15), `viisi-toista yli kolme-toista`).
-test('13:16') :- phrase(time_text(13, 16), `kuusi-toista yli kolme-toista`).
-test('13:17') :- phrase(time_text(13, 17), `seitsemän-toista yli kolme-toista`).
-test('13:18') :- phrase(time_text(13, 18), `kahdeksan-toista yli kolme-toista`).
-test('13:19') :- phrase(time_text(13, 19), `yhdeksän-toista yli kolme-toista`).
-test('13:20') :- phrase(time_text(13, 20), `kaksi-kymmenen yli kolme-toista`).
-test('13:21') :- phrase(time_text(13, 21), `kaksi-kymmentä-yksi yli kolme-toista`).
-test('13:22') :- phrase(time_text(13, 22), `kaksi-kymmentä-kaksi yli kolme-toista`).
-test('13:23') :- phrase(time_text(13, 23), `kaksi-kymmentä-kolme yli kolme-toista`).
-test('13:24') :- phrase(time_text(13, 24), `kaksi-kymmentä-neljä yli kolme-toista`).
-test('13:25') :- phrase(time_text(13, 25), `kaksi-kymmentä-viisi yli kolme-toista`).
-test('13:26') :- phrase(time_text(13, 26), `kaksi-kymmentä-kuusi yli kolme-toista`).
-test('13:27') :- phrase(time_text(13, 27), `kaksi-kymmentä-seitsemän yli kolme-toista`).
-test('13:28') :- phrase(time_text(13, 28), `kaksi-kymmentä-kahdeksan yli kolme-toista`).
-test('13:29') :- phrase(time_text(13, 29), `kaksi-kymmentä-yhdeksän yli kolme-toista`).
-test('13:31') :- phrase(time_text(13, 31), `kahta-kymmentä-yhdeksää vaille kolme-toista`).
-test('13:32') :- phrase(time_text(13, 32), `kahta-kymmentä-kahdeksaa vaille kolme-toista`).
-test('13:33') :- phrase(time_text(13, 33), `kahta-kymmentä-seitsemää vaille kolme-toista`).
-test('13:34') :- phrase(time_text(13, 34), `kahta-kymmentä-kuutta vaille kolme-toista`).
-test('13:35') :- phrase(time_text(13, 35), `kahta-kymmentä-viittä vaille kolme-toista`).
-test('13:36') :- phrase(time_text(13, 36), `kahta-kymmentä-neljää vaille kolme-toista`).
-test('13:37') :- phrase(time_text(13, 37), `kahta-kymmentä-kolmea vaille kolme-toista`).
-test('13:38') :- phrase(time_text(13, 38), `kahta-kymmentä-kahta vaille kolme-toista`).
-test('13:39') :- phrase(time_text(13, 39), `kahta-kymmentä-yktä vaille kolme-toista`).
-test('13:40') :- phrase(time_text(13, 40), `kahta-kymmentä vaille kolme-toista`).
-test('13:41') :- phrase(time_text(13, 41), `yhdeksää-toista vaille kolme-toista`).
-test('13:42') :- phrase(time_text(13, 42), `kahdeksaa-toista vaille kolme-toista`).
-test('13:43') :- phrase(time_text(13, 43), `seitsemää-toista vaille kolme-toista`).
-test('13:44') :- phrase(time_text(13, 44), `kuutta-toista vaille kolme-toista`).
-test('13:45') :- phrase(time_text(13, 45), `viittä-toista vaille kolme-toista`).
-test('13:46') :- phrase(time_text(13, 46), `neljää-toista vaille kolme-toista`).
-test('13:47') :- phrase(time_text(13, 47), `kolmea-toista vaille kolme-toista`).
-test('13:48') :- phrase(time_text(13, 48), `kahta-toista vaille kolme-toista`).
-test('13:49') :- phrase(time_text(13, 49), `yktä-toista vaille kolme-toista`).
-test('13:50') :- phrase(time_text(13, 50), `kymmentä vaille kolme-toista`).
-test('13:51') :- phrase(time_text(13, 51), `yhdeksää vaille kolme-toista`).
-test('13:52') :- phrase(time_text(13, 52), `kahdeksaa vaille kolme-toista`).
-test('13:53') :- phrase(time_text(13, 53), `seitsemää vaille kolme-toista`).
-test('13:54') :- phrase(time_text(13, 54), `kuutta vaille kolme-toista`).
-test('13:55') :- phrase(time_text(13, 55), `viittä vaille kolme-toista`).
-test('13:56') :- phrase(time_text(13, 56), `neljää vaille kolme-toista`).
-test('13:57') :- phrase(time_text(13, 57), `kolmea vaille kolme-toista`).
-test('13:58') :- phrase(time_text(13, 58), `kahta vaille kolme-toista`).
-test('13:59') :- phrase(time_text(13, 59), `yktä vaille kolme-toista`).
-test('14:0') :- phrase(time_text(14, 0), `neljä-toista`).
-test('14:0') :- phrase(time_text(14, 0), `tasan neljä-toista`).
-test('14:1') :- phrase(time_text(14, 1), `yksi yli neljä-toista`).
-test('14:2') :- phrase(time_text(14, 2), `kaksi yli neljä-toista`).
-test('14:3') :- phrase(time_text(14, 3), `kolme yli neljä-toista`).
-test('14:4') :- phrase(time_text(14, 4), `neljä yli neljä-toista`).
-test('14:5') :- phrase(time_text(14, 5), `viisi yli neljä-toista`).
-test('14:6') :- phrase(time_text(14, 6), `kuusi yli neljä-toista`).
-test('14:7') :- phrase(time_text(14, 7), `seitsemän yli neljä-toista`).
-test('14:8') :- phrase(time_text(14, 8), `kahdeksan yli neljä-toista`).
-test('14:9') :- phrase(time_text(14, 9), `yhdeksän yli neljä-toista`).
-test('14:10') :- phrase(time_text(14, 10), `kymmenen yli neljä-toista`).
-test('14:11') :- phrase(time_text(14, 11), `yksi-toista yli neljä-toista`).
-test('14:12') :- phrase(time_text(14, 12), `kaksi-toista yli neljä-toista`).
-test('14:13') :- phrase(time_text(14, 13), `kolme-toista yli neljä-toista`).
-test('14:14') :- phrase(time_text(14, 14), `neljä-toista yli neljä-toista`).
-test('14:15') :- phrase(time_text(14, 15), `vartin yli neljä-toista`).
-test('14:15') :- phrase(time_text(14, 15), `viisi-toista yli neljä-toista`).
-test('14:16') :- phrase(time_text(14, 16), `kuusi-toista yli neljä-toista`).
-test('14:17') :- phrase(time_text(14, 17), `seitsemän-toista yli neljä-toista`).
-test('14:18') :- phrase(time_text(14, 18), `kahdeksan-toista yli neljä-toista`).
-test('14:19') :- phrase(time_text(14, 19), `yhdeksän-toista yli neljä-toista`).
-test('14:20') :- phrase(time_text(14, 20), `kaksi-kymmenen yli neljä-toista`).
-test('14:21') :- phrase(time_text(14, 21), `kaksi-kymmentä-yksi yli neljä-toista`).
-test('14:22') :- phrase(time_text(14, 22), `kaksi-kymmentä-kaksi yli neljä-toista`).
-test('14:23') :- phrase(time_text(14, 23), `kaksi-kymmentä-kolme yli neljä-toista`).
-test('14:24') :- phrase(time_text(14, 24), `kaksi-kymmentä-neljä yli neljä-toista`).
-test('14:25') :- phrase(time_text(14, 25), `kaksi-kymmentä-viisi yli neljä-toista`).
-test('14:26') :- phrase(time_text(14, 26), `kaksi-kymmentä-kuusi yli neljä-toista`).
-test('14:27') :- phrase(time_text(14, 27), `kaksi-kymmentä-seitsemän yli neljä-toista`).
-test('14:28') :- phrase(time_text(14, 28), `kaksi-kymmentä-kahdeksan yli neljä-toista`).
-test('14:29') :- phrase(time_text(14, 29), `kaksi-kymmentä-yhdeksän yli neljä-toista`).
-test('14:31') :- phrase(time_text(14, 31), `kahta-kymmentä-yhdeksää vaille neljä-toista`).
-test('14:32') :- phrase(time_text(14, 32), `kahta-kymmentä-kahdeksaa vaille neljä-toista`).
-test('14:33') :- phrase(time_text(14, 33), `kahta-kymmentä-seitsemää vaille neljä-toista`).
-test('14:34') :- phrase(time_text(14, 34), `kahta-kymmentä-kuutta vaille neljä-toista`).
-test('14:35') :- phrase(time_text(14, 35), `kahta-kymmentä-viittä vaille neljä-toista`).
-test('14:36') :- phrase(time_text(14, 36), `kahta-kymmentä-neljää vaille neljä-toista`).
-test('14:37') :- phrase(time_text(14, 37), `kahta-kymmentä-kolmea vaille neljä-toista`).
-test('14:38') :- phrase(time_text(14, 38), `kahta-kymmentä-kahta vaille neljä-toista`).
-test('14:39') :- phrase(time_text(14, 39), `kahta-kymmentä-yktä vaille neljä-toista`).
-test('14:40') :- phrase(time_text(14, 40), `kahta-kymmentä vaille neljä-toista`).
-test('14:41') :- phrase(time_text(14, 41), `yhdeksää-toista vaille neljä-toista`).
-test('14:42') :- phrase(time_text(14, 42), `kahdeksaa-toista vaille neljä-toista`).
-test('14:43') :- phrase(time_text(14, 43), `seitsemää-toista vaille neljä-toista`).
-test('14:44') :- phrase(time_text(14, 44), `kuutta-toista vaille neljä-toista`).
-test('14:45') :- phrase(time_text(14, 45), `viittä-toista vaille neljä-toista`).
-test('14:46') :- phrase(time_text(14, 46), `neljää-toista vaille neljä-toista`).
-test('14:47') :- phrase(time_text(14, 47), `kolmea-toista vaille neljä-toista`).
-test('14:48') :- phrase(time_text(14, 48), `kahta-toista vaille neljä-toista`).
-test('14:49') :- phrase(time_text(14, 49), `yktä-toista vaille neljä-toista`).
-test('14:50') :- phrase(time_text(14, 50), `kymmentä vaille neljä-toista`).
-test('14:51') :- phrase(time_text(14, 51), `yhdeksää vaille neljä-toista`).
-test('14:52') :- phrase(time_text(14, 52), `kahdeksaa vaille neljä-toista`).
-test('14:53') :- phrase(time_text(14, 53), `seitsemää vaille neljä-toista`).
-test('14:54') :- phrase(time_text(14, 54), `kuutta vaille neljä-toista`).
-test('14:55') :- phrase(time_text(14, 55), `viittä vaille neljä-toista`).
-test('14:56') :- phrase(time_text(14, 56), `neljää vaille neljä-toista`).
-test('14:57') :- phrase(time_text(14, 57), `kolmea vaille neljä-toista`).
-test('14:58') :- phrase(time_text(14, 58), `kahta vaille neljä-toista`).
-test('14:59') :- phrase(time_text(14, 59), `yktä vaille neljä-toista`).
-test('15:0') :- phrase(time_text(15, 0), `tasan viisi-toista`).
-test('15:0') :- phrase(time_text(15, 0), `viisi-toista`).
-test('15:1') :- phrase(time_text(15, 1), `yksi yli viisi-toista`).
-test('15:2') :- phrase(time_text(15, 2), `kaksi yli viisi-toista`).
-test('15:3') :- phrase(time_text(15, 3), `kolme yli viisi-toista`).
-test('15:4') :- phrase(time_text(15, 4), `neljä yli viisi-toista`).
-test('15:5') :- phrase(time_text(15, 5), `viisi yli viisi-toista`).
-test('15:6') :- phrase(time_text(15, 6), `kuusi yli viisi-toista`).
-test('15:7') :- phrase(time_text(15, 7), `seitsemän yli viisi-toista`).
-test('15:8') :- phrase(time_text(15, 8), `kahdeksan yli viisi-toista`).
-test('15:9') :- phrase(time_text(15, 9), `yhdeksän yli viisi-toista`).
-test('15:10') :- phrase(time_text(15, 10), `kymmenen yli viisi-toista`).
-test('15:11') :- phrase(time_text(15, 11), `yksi-toista yli viisi-toista`).
-test('15:12') :- phrase(time_text(15, 12), `kaksi-toista yli viisi-toista`).
-test('15:13') :- phrase(time_text(15, 13), `kolme-toista yli viisi-toista`).
-test('15:14') :- phrase(time_text(15, 14), `neljä-toista yli viisi-toista`).
-test('15:15') :- phrase(time_text(15, 15), `vartin yli viisi-toista`).
-test('15:15') :- phrase(time_text(15, 15), `viisi-toista yli viisi-toista`).
-test('15:16') :- phrase(time_text(15, 16), `kuusi-toista yli viisi-toista`).
-test('15:17') :- phrase(time_text(15, 17), `seitsemän-toista yli viisi-toista`).
-test('15:18') :- phrase(time_text(15, 18), `kahdeksan-toista yli viisi-toista`).
-test('15:19') :- phrase(time_text(15, 19), `yhdeksän-toista yli viisi-toista`).
-test('15:20') :- phrase(time_text(15, 20), `kaksi-kymmenen yli viisi-toista`).
-test('15:21') :- phrase(time_text(15, 21), `kaksi-kymmentä-yksi yli viisi-toista`).
-test('15:22') :- phrase(time_text(15, 22), `kaksi-kymmentä-kaksi yli viisi-toista`).
-test('15:23') :- phrase(time_text(15, 23), `kaksi-kymmentä-kolme yli viisi-toista`).
-test('15:24') :- phrase(time_text(15, 24), `kaksi-kymmentä-neljä yli viisi-toista`).
-test('15:25') :- phrase(time_text(15, 25), `kaksi-kymmentä-viisi yli viisi-toista`).
-test('15:26') :- phrase(time_text(15, 26), `kaksi-kymmentä-kuusi yli viisi-toista`).
-test('15:27') :- phrase(time_text(15, 27), `kaksi-kymmentä-seitsemän yli viisi-toista`).
-test('15:28') :- phrase(time_text(15, 28), `kaksi-kymmentä-kahdeksan yli viisi-toista`).
-test('15:29') :- phrase(time_text(15, 29), `kaksi-kymmentä-yhdeksän yli viisi-toista`).
-test('15:31') :- phrase(time_text(15, 31), `kahta-kymmentä-yhdeksää vaille viisi-toista`).
-test('15:32') :- phrase(time_text(15, 32), `kahta-kymmentä-kahdeksaa vaille viisi-toista`).
-test('15:33') :- phrase(time_text(15, 33), `kahta-kymmentä-seitsemää vaille viisi-toista`).
-test('15:34') :- phrase(time_text(15, 34), `kahta-kymmentä-kuutta vaille viisi-toista`).
-test('15:35') :- phrase(time_text(15, 35), `kahta-kymmentä-viittä vaille viisi-toista`).
-test('15:36') :- phrase(time_text(15, 36), `kahta-kymmentä-neljää vaille viisi-toista`).
-test('15:37') :- phrase(time_text(15, 37), `kahta-kymmentä-kolmea vaille viisi-toista`).
-test('15:38') :- phrase(time_text(15, 38), `kahta-kymmentä-kahta vaille viisi-toista`).
-test('15:39') :- phrase(time_text(15, 39), `kahta-kymmentä-yktä vaille viisi-toista`).
-test('15:40') :- phrase(time_text(15, 40), `kahta-kymmentä vaille viisi-toista`).
-test('15:41') :- phrase(time_text(15, 41), `yhdeksää-toista vaille viisi-toista`).
-test('15:42') :- phrase(time_text(15, 42), `kahdeksaa-toista vaille viisi-toista`).
-test('15:43') :- phrase(time_text(15, 43), `seitsemää-toista vaille viisi-toista`).
-test('15:44') :- phrase(time_text(15, 44), `kuutta-toista vaille viisi-toista`).
-test('15:45') :- phrase(time_text(15, 45), `viittä-toista vaille viisi-toista`).
-test('15:46') :- phrase(time_text(15, 46), `neljää-toista vaille viisi-toista`).
-test('15:47') :- phrase(time_text(15, 47), `kolmea-toista vaille viisi-toista`).
-test('15:48') :- phrase(time_text(15, 48), `kahta-toista vaille viisi-toista`).
-test('15:49') :- phrase(time_text(15, 49), `yktä-toista vaille viisi-toista`).
-test('15:50') :- phrase(time_text(15, 50), `kymmentä vaille viisi-toista`).
-test('15:51') :- phrase(time_text(15, 51), `yhdeksää vaille viisi-toista`).
-test('15:52') :- phrase(time_text(15, 52), `kahdeksaa vaille viisi-toista`).
-test('15:53') :- phrase(time_text(15, 53), `seitsemää vaille viisi-toista`).
-test('15:54') :- phrase(time_text(15, 54), `kuutta vaille viisi-toista`).
-test('15:55') :- phrase(time_text(15, 55), `viittä vaille viisi-toista`).
-test('15:56') :- phrase(time_text(15, 56), `neljää vaille viisi-toista`).
-test('15:57') :- phrase(time_text(15, 57), `kolmea vaille viisi-toista`).
-test('15:58') :- phrase(time_text(15, 58), `kahta vaille viisi-toista`).
-test('15:59') :- phrase(time_text(15, 59), `yktä vaille viisi-toista`).
-test('16:0') :- phrase(time_text(16, 0), `kuusi-toista`).
-test('16:0') :- phrase(time_text(16, 0), `tasan kuusi-toista`).
-test('16:1') :- phrase(time_text(16, 1), `yksi yli kuusi-toista`).
-test('16:2') :- phrase(time_text(16, 2), `kaksi yli kuusi-toista`).
-test('16:3') :- phrase(time_text(16, 3), `kolme yli kuusi-toista`).
-test('16:4') :- phrase(time_text(16, 4), `neljä yli kuusi-toista`).
-test('16:5') :- phrase(time_text(16, 5), `viisi yli kuusi-toista`).
-test('16:6') :- phrase(time_text(16, 6), `kuusi yli kuusi-toista`).
-test('16:7') :- phrase(time_text(16, 7), `seitsemän yli kuusi-toista`).
-test('16:8') :- phrase(time_text(16, 8), `kahdeksan yli kuusi-toista`).
-test('16:9') :- phrase(time_text(16, 9), `yhdeksän yli kuusi-toista`).
-test('16:10') :- phrase(time_text(16, 10), `kymmenen yli kuusi-toista`).
-test('16:11') :- phrase(time_text(16, 11), `yksi-toista yli kuusi-toista`).
-test('16:12') :- phrase(time_text(16, 12), `kaksi-toista yli kuusi-toista`).
-test('16:13') :- phrase(time_text(16, 13), `kolme-toista yli kuusi-toista`).
-test('16:14') :- phrase(time_text(16, 14), `neljä-toista yli kuusi-toista`).
-test('16:15') :- phrase(time_text(16, 15), `vartin yli kuusi-toista`).
-test('16:15') :- phrase(time_text(16, 15), `viisi-toista yli kuusi-toista`).
-test('16:16') :- phrase(time_text(16, 16), `kuusi-toista yli kuusi-toista`).
-test('16:17') :- phrase(time_text(16, 17), `seitsemän-toista yli kuusi-toista`).
-test('16:18') :- phrase(time_text(16, 18), `kahdeksan-toista yli kuusi-toista`).
-test('16:19') :- phrase(time_text(16, 19), `yhdeksän-toista yli kuusi-toista`).
-test('16:20') :- phrase(time_text(16, 20), `kaksi-kymmenen yli kuusi-toista`).
-test('16:21') :- phrase(time_text(16, 21), `kaksi-kymmentä-yksi yli kuusi-toista`).
-test('16:22') :- phrase(time_text(16, 22), `kaksi-kymmentä-kaksi yli kuusi-toista`).
-test('16:23') :- phrase(time_text(16, 23), `kaksi-kymmentä-kolme yli kuusi-toista`).
-test('16:24') :- phrase(time_text(16, 24), `kaksi-kymmentä-neljä yli kuusi-toista`).
-test('16:25') :- phrase(time_text(16, 25), `kaksi-kymmentä-viisi yli kuusi-toista`).
-test('16:26') :- phrase(time_text(16, 26), `kaksi-kymmentä-kuusi yli kuusi-toista`).
-test('16:27') :- phrase(time_text(16, 27), `kaksi-kymmentä-seitsemän yli kuusi-toista`).
-test('16:28') :- phrase(time_text(16, 28), `kaksi-kymmentä-kahdeksan yli kuusi-toista`).
-test('16:29') :- phrase(time_text(16, 29), `kaksi-kymmentä-yhdeksän yli kuusi-toista`).
-test('16:31') :- phrase(time_text(16, 31), `kahta-kymmentä-yhdeksää vaille kuusi-toista`).
-test('16:32') :- phrase(time_text(16, 32), `kahta-kymmentä-kahdeksaa vaille kuusi-toista`).
-test('16:33') :- phrase(time_text(16, 33), `kahta-kymmentä-seitsemää vaille kuusi-toista`).
-test('16:34') :- phrase(time_text(16, 34), `kahta-kymmentä-kuutta vaille kuusi-toista`).
-test('16:35') :- phrase(time_text(16, 35), `kahta-kymmentä-viittä vaille kuusi-toista`).
-test('16:36') :- phrase(time_text(16, 36), `kahta-kymmentä-neljää vaille kuusi-toista`).
-test('16:37') :- phrase(time_text(16, 37), `kahta-kymmentä-kolmea vaille kuusi-toista`).
-test('16:38') :- phrase(time_text(16, 38), `kahta-kymmentä-kahta vaille kuusi-toista`).
-test('16:39') :- phrase(time_text(16, 39), `kahta-kymmentä-yktä vaille kuusi-toista`).
-test('16:40') :- phrase(time_text(16, 40), `kahta-kymmentä vaille kuusi-toista`).
-test('16:41') :- phrase(time_text(16, 41), `yhdeksää-toista vaille kuusi-toista`).
-test('16:42') :- phrase(time_text(16, 42), `kahdeksaa-toista vaille kuusi-toista`).
-test('16:43') :- phrase(time_text(16, 43), `seitsemää-toista vaille kuusi-toista`).
-test('16:44') :- phrase(time_text(16, 44), `kuutta-toista vaille kuusi-toista`).
-test('16:45') :- phrase(time_text(16, 45), `viittä-toista vaille kuusi-toista`).
-test('16:46') :- phrase(time_text(16, 46), `neljää-toista vaille kuusi-toista`).
-test('16:47') :- phrase(time_text(16, 47), `kolmea-toista vaille kuusi-toista`).
-test('16:48') :- phrase(time_text(16, 48), `kahta-toista vaille kuusi-toista`).
-test('16:49') :- phrase(time_text(16, 49), `yktä-toista vaille kuusi-toista`).
-test('16:50') :- phrase(time_text(16, 50), `kymmentä vaille kuusi-toista`).
-test('16:51') :- phrase(time_text(16, 51), `yhdeksää vaille kuusi-toista`).
-test('16:52') :- phrase(time_text(16, 52), `kahdeksaa vaille kuusi-toista`).
-test('16:53') :- phrase(time_text(16, 53), `seitsemää vaille kuusi-toista`).
-test('16:54') :- phrase(time_text(16, 54), `kuutta vaille kuusi-toista`).
-test('16:55') :- phrase(time_text(16, 55), `viittä vaille kuusi-toista`).
-test('16:56') :- phrase(time_text(16, 56), `neljää vaille kuusi-toista`).
-test('16:57') :- phrase(time_text(16, 57), `kolmea vaille kuusi-toista`).
-test('16:58') :- phrase(time_text(16, 58), `kahta vaille kuusi-toista`).
-test('16:59') :- phrase(time_text(16, 59), `yktä vaille kuusi-toista`).
-test('17:0') :- phrase(time_text(17, 0), `seitsemän-toista`).
-test('17:0') :- phrase(time_text(17, 0), `tasan seitsemän-toista`).
-test('17:1') :- phrase(time_text(17, 1), `yksi yli seitsemän-toista`).
-test('17:2') :- phrase(time_text(17, 2), `kaksi yli seitsemän-toista`).
-test('17:3') :- phrase(time_text(17, 3), `kolme yli seitsemän-toista`).
-test('17:4') :- phrase(time_text(17, 4), `neljä yli seitsemän-toista`).
-test('17:5') :- phrase(time_text(17, 5), `viisi yli seitsemän-toista`).
-test('17:6') :- phrase(time_text(17, 6), `kuusi yli seitsemän-toista`).
-test('17:7') :- phrase(time_text(17, 7), `seitsemän yli seitsemän-toista`).
-test('17:8') :- phrase(time_text(17, 8), `kahdeksan yli seitsemän-toista`).
-test('17:9') :- phrase(time_text(17, 9), `yhdeksän yli seitsemän-toista`).
-test('17:10') :- phrase(time_text(17, 10), `kymmenen yli seitsemän-toista`).
-test('17:11') :- phrase(time_text(17, 11), `yksi-toista yli seitsemän-toista`).
-test('17:12') :- phrase(time_text(17, 12), `kaksi-toista yli seitsemän-toista`).
-test('17:13') :- phrase(time_text(17, 13), `kolme-toista yli seitsemän-toista`).
-test('17:14') :- phrase(time_text(17, 14), `neljä-toista yli seitsemän-toista`).
-test('17:15') :- phrase(time_text(17, 15), `vartin yli seitsemän-toista`).
-test('17:15') :- phrase(time_text(17, 15), `viisi-toista yli seitsemän-toista`).
-test('17:16') :- phrase(time_text(17, 16), `kuusi-toista yli seitsemän-toista`).
-test('17:17') :- phrase(time_text(17, 17), `seitsemän-toista yli seitsemän-toista`).
-test('17:18') :- phrase(time_text(17, 18), `kahdeksan-toista yli seitsemän-toista`).
-test('17:19') :- phrase(time_text(17, 19), `yhdeksän-toista yli seitsemän-toista`).
-test('17:20') :- phrase(time_text(17, 20), `kaksi-kymmenen yli seitsemän-toista`).
-test('17:21') :- phrase(time_text(17, 21), `kaksi-kymmentä-yksi yli seitsemän-toista`).
-test('17:22') :- phrase(time_text(17, 22), `kaksi-kymmentä-kaksi yli seitsemän-toista`).
-test('17:23') :- phrase(time_text(17, 23), `kaksi-kymmentä-kolme yli seitsemän-toista`).
-test('17:24') :- phrase(time_text(17, 24), `kaksi-kymmentä-neljä yli seitsemän-toista`).
-test('17:25') :- phrase(time_text(17, 25), `kaksi-kymmentä-viisi yli seitsemän-toista`).
-test('17:26') :- phrase(time_text(17, 26), `kaksi-kymmentä-kuusi yli seitsemän-toista`).
-test('17:27') :- phrase(time_text(17, 27), `kaksi-kymmentä-seitsemän yli seitsemän-toista`).
-test('17:28') :- phrase(time_text(17, 28), `kaksi-kymmentä-kahdeksan yli seitsemän-toista`).
-test('17:29') :- phrase(time_text(17, 29), `kaksi-kymmentä-yhdeksän yli seitsemän-toista`).
-test('17:31') :- phrase(time_text(17, 31), `kahta-kymmentä-yhdeksää vaille seitsemän-toista`).
-test('17:32') :- phrase(time_text(17, 32), `kahta-kymmentä-kahdeksaa vaille seitsemän-toista`).
-test('17:33') :- phrase(time_text(17, 33), `kahta-kymmentä-seitsemää vaille seitsemän-toista`).
-test('17:34') :- phrase(time_text(17, 34), `kahta-kymmentä-kuutta vaille seitsemän-toista`).
-test('17:35') :- phrase(time_text(17, 35), `kahta-kymmentä-viittä vaille seitsemän-toista`).
-test('17:36') :- phrase(time_text(17, 36), `kahta-kymmentä-neljää vaille seitsemän-toista`).
-test('17:37') :- phrase(time_text(17, 37), `kahta-kymmentä-kolmea vaille seitsemän-toista`).
-test('17:38') :- phrase(time_text(17, 38), `kahta-kymmentä-kahta vaille seitsemän-toista`).
-test('17:39') :- phrase(time_text(17, 39), `kahta-kymmentä-yktä vaille seitsemän-toista`).
-test('17:40') :- phrase(time_text(17, 40), `kahta-kymmentä vaille seitsemän-toista`).
-test('17:41') :- phrase(time_text(17, 41), `yhdeksää-toista vaille seitsemän-toista`).
-test('17:42') :- phrase(time_text(17, 42), `kahdeksaa-toista vaille seitsemän-toista`).
-test('17:43') :- phrase(time_text(17, 43), `seitsemää-toista vaille seitsemän-toista`).
-test('17:44') :- phrase(time_text(17, 44), `kuutta-toista vaille seitsemän-toista`).
-test('17:45') :- phrase(time_text(17, 45), `viittä-toista vaille seitsemän-toista`).
-test('17:46') :- phrase(time_text(17, 46), `neljää-toista vaille seitsemän-toista`).
-test('17:47') :- phrase(time_text(17, 47), `kolmea-toista vaille seitsemän-toista`).
-test('17:48') :- phrase(time_text(17, 48), `kahta-toista vaille seitsemän-toista`).
-test('17:49') :- phrase(time_text(17, 49), `yktä-toista vaille seitsemän-toista`).
-test('17:50') :- phrase(time_text(17, 50), `kymmentä vaille seitsemän-toista`).
-test('17:51') :- phrase(time_text(17, 51), `yhdeksää vaille seitsemän-toista`).
-test('17:52') :- phrase(time_text(17, 52), `kahdeksaa vaille seitsemän-toista`).
-test('17:53') :- phrase(time_text(17, 53), `seitsemää vaille seitsemän-toista`).
-test('17:54') :- phrase(time_text(17, 54), `kuutta vaille seitsemän-toista`).
-test('17:55') :- phrase(time_text(17, 55), `viittä vaille seitsemän-toista`).
-test('17:56') :- phrase(time_text(17, 56), `neljää vaille seitsemän-toista`).
-test('17:57') :- phrase(time_text(17, 57), `kolmea vaille seitsemän-toista`).
-test('17:58') :- phrase(time_text(17, 58), `kahta vaille seitsemän-toista`).
-test('17:59') :- phrase(time_text(17, 59), `yktä vaille seitsemän-toista`).
-test('18:0') :- phrase(time_text(18, 0), `kahdeksan-toista`).
-test('18:0') :- phrase(time_text(18, 0), `tasan kahdeksan-toista`).
-test('18:1') :- phrase(time_text(18, 1), `yksi yli kahdeksan-toista`).
-test('18:2') :- phrase(time_text(18, 2), `kaksi yli kahdeksan-toista`).
-test('18:3') :- phrase(time_text(18, 3), `kolme yli kahdeksan-toista`).
-test('18:4') :- phrase(time_text(18, 4), `neljä yli kahdeksan-toista`).
-test('18:5') :- phrase(time_text(18, 5), `viisi yli kahdeksan-toista`).
-test('18:6') :- phrase(time_text(18, 6), `kuusi yli kahdeksan-toista`).
-test('18:7') :- phrase(time_text(18, 7), `seitsemän yli kahdeksan-toista`).
-test('18:8') :- phrase(time_text(18, 8), `kahdeksan yli kahdeksan-toista`).
-test('18:9') :- phrase(time_text(18, 9), `yhdeksän yli kahdeksan-toista`).
-test('18:10') :- phrase(time_text(18, 10), `kymmenen yli kahdeksan-toista`).
-test('18:11') :- phrase(time_text(18, 11), `yksi-toista yli kahdeksan-toista`).
-test('18:12') :- phrase(time_text(18, 12), `kaksi-toista yli kahdeksan-toista`).
-test('18:13') :- phrase(time_text(18, 13), `kolme-toista yli kahdeksan-toista`).
-test('18:14') :- phrase(time_text(18, 14), `neljä-toista yli kahdeksan-toista`).
-test('18:15') :- phrase(time_text(18, 15), `vartin yli kahdeksan-toista`).
-test('18:15') :- phrase(time_text(18, 15), `viisi-toista yli kahdeksan-toista`).
-test('18:16') :- phrase(time_text(18, 16), `kuusi-toista yli kahdeksan-toista`).
-test('18:17') :- phrase(time_text(18, 17), `seitsemän-toista yli kahdeksan-toista`).
-test('18:18') :- phrase(time_text(18, 18), `kahdeksan-toista yli kahdeksan-toista`).
-test('18:19') :- phrase(time_text(18, 19), `yhdeksän-toista yli kahdeksan-toista`).
-test('18:20') :- phrase(time_text(18, 20), `kaksi-kymmenen yli kahdeksan-toista`).
-test('18:21') :- phrase(time_text(18, 21), `kaksi-kymmentä-yksi yli kahdeksan-toista`).
-test('18:22') :- phrase(time_text(18, 22), `kaksi-kymmentä-kaksi yli kahdeksan-toista`).
-test('18:23') :- phrase(time_text(18, 23), `kaksi-kymmentä-kolme yli kahdeksan-toista`).
-test('18:24') :- phrase(time_text(18, 24), `kaksi-kymmentä-neljä yli kahdeksan-toista`).
-test('18:25') :- phrase(time_text(18, 25), `kaksi-kymmentä-viisi yli kahdeksan-toista`).
-test('18:26') :- phrase(time_text(18, 26), `kaksi-kymmentä-kuusi yli kahdeksan-toista`).
-test('18:27') :- phrase(time_text(18, 27), `kaksi-kymmentä-seitsemän yli kahdeksan-toista`).
-test('18:28') :- phrase(time_text(18, 28), `kaksi-kymmentä-kahdeksan yli kahdeksan-toista`).
-test('18:29') :- phrase(time_text(18, 29), `kaksi-kymmentä-yhdeksän yli kahdeksan-toista`).
-test('18:31') :- phrase(time_text(18, 31), `kahta-kymmentä-yhdeksää vaille kahdeksan-toista`).
-test('18:32') :- phrase(time_text(18, 32), `kahta-kymmentä-kahdeksaa vaille kahdeksan-toista`).
-test('18:33') :- phrase(time_text(18, 33), `kahta-kymmentä-seitsemää vaille kahdeksan-toista`).
-test('18:34') :- phrase(time_text(18, 34), `kahta-kymmentä-kuutta vaille kahdeksan-toista`).
-test('18:35') :- phrase(time_text(18, 35), `kahta-kymmentä-viittä vaille kahdeksan-toista`).
-test('18:36') :- phrase(time_text(18, 36), `kahta-kymmentä-neljää vaille kahdeksan-toista`).
-test('18:37') :- phrase(time_text(18, 37), `kahta-kymmentä-kolmea vaille kahdeksan-toista`).
-test('18:38') :- phrase(time_text(18, 38), `kahta-kymmentä-kahta vaille kahdeksan-toista`).
-test('18:39') :- phrase(time_text(18, 39), `kahta-kymmentä-yktä vaille kahdeksan-toista`).
-test('18:40') :- phrase(time_text(18, 40), `kahta-kymmentä vaille kahdeksan-toista`).
-test('18:41') :- phrase(time_text(18, 41), `yhdeksää-toista vaille kahdeksan-toista`).
-test('18:42') :- phrase(time_text(18, 42), `kahdeksaa-toista vaille kahdeksan-toista`).
-test('18:43') :- phrase(time_text(18, 43), `seitsemää-toista vaille kahdeksan-toista`).
-test('18:44') :- phrase(time_text(18, 44), `kuutta-toista vaille kahdeksan-toista`).
-test('18:45') :- phrase(time_text(18, 45), `viittä-toista vaille kahdeksan-toista`).
-test('18:46') :- phrase(time_text(18, 46), `neljää-toista vaille kahdeksan-toista`).
-test('18:47') :- phrase(time_text(18, 47), `kolmea-toista vaille kahdeksan-toista`).
-test('18:48') :- phrase(time_text(18, 48), `kahta-toista vaille kahdeksan-toista`).
-test('18:49') :- phrase(time_text(18, 49), `yktä-toista vaille kahdeksan-toista`).
-test('18:50') :- phrase(time_text(18, 50), `kymmentä vaille kahdeksan-toista`).
-test('18:51') :- phrase(time_text(18, 51), `yhdeksää vaille kahdeksan-toista`).
-test('18:52') :- phrase(time_text(18, 52), `kahdeksaa vaille kahdeksan-toista`).
-test('18:53') :- phrase(time_text(18, 53), `seitsemää vaille kahdeksan-toista`).
-test('18:54') :- phrase(time_text(18, 54), `kuutta vaille kahdeksan-toista`).
-test('18:55') :- phrase(time_text(18, 55), `viittä vaille kahdeksan-toista`).
-test('18:56') :- phrase(time_text(18, 56), `neljää vaille kahdeksan-toista`).
-test('18:57') :- phrase(time_text(18, 57), `kolmea vaille kahdeksan-toista`).
-test('18:58') :- phrase(time_text(18, 58), `kahta vaille kahdeksan-toista`).
-test('18:59') :- phrase(time_text(18, 59), `yktä vaille kahdeksan-toista`).
-test('19:0') :- phrase(time_text(19, 0), `tasan yhdeksän-toista`).
-test('19:0') :- phrase(time_text(19, 0), `yhdeksän-toista`).
-test('19:1') :- phrase(time_text(19, 1), `yksi yli yhdeksän-toista`).
-test('19:2') :- phrase(time_text(19, 2), `kaksi yli yhdeksän-toista`).
-test('19:3') :- phrase(time_text(19, 3), `kolme yli yhdeksän-toista`).
-test('19:4') :- phrase(time_text(19, 4), `neljä yli yhdeksän-toista`).
-test('19:5') :- phrase(time_text(19, 5), `viisi yli yhdeksän-toista`).
-test('19:6') :- phrase(time_text(19, 6), `kuusi yli yhdeksän-toista`).
-test('19:7') :- phrase(time_text(19, 7), `seitsemän yli yhdeksän-toista`).
-test('19:8') :- phrase(time_text(19, 8), `kahdeksan yli yhdeksän-toista`).
-test('19:9') :- phrase(time_text(19, 9), `yhdeksän yli yhdeksän-toista`).
-test('19:10') :- phrase(time_text(19, 10), `kymmenen yli yhdeksän-toista`).
-test('19:11') :- phrase(time_text(19, 11), `yksi-toista yli yhdeksän-toista`).
-test('19:12') :- phrase(time_text(19, 12), `kaksi-toista yli yhdeksän-toista`).
-test('19:13') :- phrase(time_text(19, 13), `kolme-toista yli yhdeksän-toista`).
-test('19:14') :- phrase(time_text(19, 14), `neljä-toista yli yhdeksän-toista`).
-test('19:15') :- phrase(time_text(19, 15), `vartin yli yhdeksän-toista`).
-test('19:15') :- phrase(time_text(19, 15), `viisi-toista yli yhdeksän-toista`).
-test('19:16') :- phrase(time_text(19, 16), `kuusi-toista yli yhdeksän-toista`).
-test('19:17') :- phrase(time_text(19, 17), `seitsemän-toista yli yhdeksän-toista`).
-test('19:18') :- phrase(time_text(19, 18), `kahdeksan-toista yli yhdeksän-toista`).
-test('19:19') :- phrase(time_text(19, 19), `yhdeksän-toista yli yhdeksän-toista`).
-test('19:20') :- phrase(time_text(19, 20), `kaksi-kymmenen yli yhdeksän-toista`).
-test('19:21') :- phrase(time_text(19, 21), `kaksi-kymmentä-yksi yli yhdeksän-toista`).
-test('19:22') :- phrase(time_text(19, 22), `kaksi-kymmentä-kaksi yli yhdeksän-toista`).
-test('19:23') :- phrase(time_text(19, 23), `kaksi-kymmentä-kolme yli yhdeksän-toista`).
-test('19:24') :- phrase(time_text(19, 24), `kaksi-kymmentä-neljä yli yhdeksän-toista`).
-test('19:25') :- phrase(time_text(19, 25), `kaksi-kymmentä-viisi yli yhdeksän-toista`).
-test('19:26') :- phrase(time_text(19, 26), `kaksi-kymmentä-kuusi yli yhdeksän-toista`).
-test('19:27') :- phrase(time_text(19, 27), `kaksi-kymmentä-seitsemän yli yhdeksän-toista`).
-test('19:28') :- phrase(time_text(19, 28), `kaksi-kymmentä-kahdeksan yli yhdeksän-toista`).
-test('19:29') :- phrase(time_text(19, 29), `kaksi-kymmentä-yhdeksän yli yhdeksän-toista`).
-test('19:31') :- phrase(time_text(19, 31), `kahta-kymmentä-yhdeksää vaille yhdeksän-toista`).
-test('19:32') :- phrase(time_text(19, 32), `kahta-kymmentä-kahdeksaa vaille yhdeksän-toista`).
-test('19:33') :- phrase(time_text(19, 33), `kahta-kymmentä-seitsemää vaille yhdeksän-toista`).
-test('19:34') :- phrase(time_text(19, 34), `kahta-kymmentä-kuutta vaille yhdeksän-toista`).
-test('19:35') :- phrase(time_text(19, 35), `kahta-kymmentä-viittä vaille yhdeksän-toista`).
-test('19:36') :- phrase(time_text(19, 36), `kahta-kymmentä-neljää vaille yhdeksän-toista`).
-test('19:37') :- phrase(time_text(19, 37), `kahta-kymmentä-kolmea vaille yhdeksän-toista`).
-test('19:38') :- phrase(time_text(19, 38), `kahta-kymmentä-kahta vaille yhdeksän-toista`).
-test('19:39') :- phrase(time_text(19, 39), `kahta-kymmentä-yktä vaille yhdeksän-toista`).
-test('19:40') :- phrase(time_text(19, 40), `kahta-kymmentä vaille yhdeksän-toista`).
-test('19:41') :- phrase(time_text(19, 41), `yhdeksää-toista vaille yhdeksän-toista`).
-test('19:42') :- phrase(time_text(19, 42), `kahdeksaa-toista vaille yhdeksän-toista`).
-test('19:43') :- phrase(time_text(19, 43), `seitsemää-toista vaille yhdeksän-toista`).
-test('19:44') :- phrase(time_text(19, 44), `kuutta-toista vaille yhdeksän-toista`).
-test('19:45') :- phrase(time_text(19, 45), `viittä-toista vaille yhdeksän-toista`).
-test('19:46') :- phrase(time_text(19, 46), `neljää-toista vaille yhdeksän-toista`).
-test('19:47') :- phrase(time_text(19, 47), `kolmea-toista vaille yhdeksän-toista`).
-test('19:48') :- phrase(time_text(19, 48), `kahta-toista vaille yhdeksän-toista`).
-test('19:49') :- phrase(time_text(19, 49), `yktä-toista vaille yhdeksän-toista`).
-test('19:50') :- phrase(time_text(19, 50), `kymmentä vaille yhdeksän-toista`).
-test('19:51') :- phrase(time_text(19, 51), `yhdeksää vaille yhdeksän-toista`).
-test('19:52') :- phrase(time_text(19, 52), `kahdeksaa vaille yhdeksän-toista`).
-test('19:53') :- phrase(time_text(19, 53), `seitsemää vaille yhdeksän-toista`).
-test('19:54') :- phrase(time_text(19, 54), `kuutta vaille yhdeksän-toista`).
-test('19:55') :- phrase(time_text(19, 55), `viittä vaille yhdeksän-toista`).
-test('19:56') :- phrase(time_text(19, 56), `neljää vaille yhdeksän-toista`).
-test('19:57') :- phrase(time_text(19, 57), `kolmea vaille yhdeksän-toista`).
-test('19:58') :- phrase(time_text(19, 58), `kahta vaille yhdeksän-toista`).
-test('19:59') :- phrase(time_text(19, 59), `yktä vaille yhdeksän-toista`).
-test('20:0') :- phrase(time_text(20, 0), `kaksi-kymmenen`).
-test('20:0') :- phrase(time_text(20, 0), `tasan kaksi-kymmenen`).
-test('20:1') :- phrase(time_text(20, 1), `yksi yli kaksi-kymmenen`).
-test('20:2') :- phrase(time_text(20, 2), `kaksi yli kaksi-kymmenen`).
-test('20:3') :- phrase(time_text(20, 3), `kolme yli kaksi-kymmenen`).
-test('20:4') :- phrase(time_text(20, 4), `neljä yli kaksi-kymmenen`).
-test('20:5') :- phrase(time_text(20, 5), `viisi yli kaksi-kymmenen`).
-test('20:6') :- phrase(time_text(20, 6), `kuusi yli kaksi-kymmenen`).
-test('20:7') :- phrase(time_text(20, 7), `seitsemän yli kaksi-kymmenen`).
-test('20:8') :- phrase(time_text(20, 8), `kahdeksan yli kaksi-kymmenen`).
-test('20:9') :- phrase(time_text(20, 9), `yhdeksän yli kaksi-kymmenen`).
-test('20:10') :- phrase(time_text(20, 10), `kymmenen yli kaksi-kymmenen`).
-test('20:11') :- phrase(time_text(20, 11), `yksi-toista yli kaksi-kymmenen`).
-test('20:12') :- phrase(time_text(20, 12), `kaksi-toista yli kaksi-kymmenen`).
-test('20:13') :- phrase(time_text(20, 13), `kolme-toista yli kaksi-kymmenen`).
-test('20:14') :- phrase(time_text(20, 14), `neljä-toista yli kaksi-kymmenen`).
-test('20:15') :- phrase(time_text(20, 15), `vartin yli kaksi-kymmenen`).
-test('20:15') :- phrase(time_text(20, 15), `viisi-toista yli kaksi-kymmenen`).
-test('20:16') :- phrase(time_text(20, 16), `kuusi-toista yli kaksi-kymmenen`).
-test('20:17') :- phrase(time_text(20, 17), `seitsemän-toista yli kaksi-kymmenen`).
-test('20:18') :- phrase(time_text(20, 18), `kahdeksan-toista yli kaksi-kymmenen`).
-test('20:19') :- phrase(time_text(20, 19), `yhdeksän-toista yli kaksi-kymmenen`).
-test('20:20') :- phrase(time_text(20, 20), `kaksi-kymmenen yli kaksi-kymmenen`).
-test('20:21') :- phrase(time_text(20, 21), `kaksi-kymmentä-yksi yli kaksi-kymmenen`).
-test('20:22') :- phrase(time_text(20, 22), `kaksi-kymmentä-kaksi yli kaksi-kymmenen`).
-test('20:23') :- phrase(time_text(20, 23), `kaksi-kymmentä-kolme yli kaksi-kymmenen`).
-test('20:24') :- phrase(time_text(20, 24), `kaksi-kymmentä-neljä yli kaksi-kymmenen`).
-test('20:25') :- phrase(time_text(20, 25), `kaksi-kymmentä-viisi yli kaksi-kymmenen`).
-test('20:26') :- phrase(time_text(20, 26), `kaksi-kymmentä-kuusi yli kaksi-kymmenen`).
-test('20:27') :- phrase(time_text(20, 27), `kaksi-kymmentä-seitsemän yli kaksi-kymmenen`).
-test('20:28') :- phrase(time_text(20, 28), `kaksi-kymmentä-kahdeksan yli kaksi-kymmenen`).
-test('20:29') :- phrase(time_text(20, 29), `kaksi-kymmentä-yhdeksän yli kaksi-kymmenen`).
-test('20:31') :- phrase(time_text(20, 31), `kahta-kymmentä-yhdeksää vaille kaksi-kymmenen`).
-test('20:32') :- phrase(time_text(20, 32), `kahta-kymmentä-kahdeksaa vaille kaksi-kymmenen`).
-test('20:33') :- phrase(time_text(20, 33), `kahta-kymmentä-seitsemää vaille kaksi-kymmenen`).
-test('20:34') :- phrase(time_text(20, 34), `kahta-kymmentä-kuutta vaille kaksi-kymmenen`).
-test('20:35') :- phrase(time_text(20, 35), `kahta-kymmentä-viittä vaille kaksi-kymmenen`).
-test('20:36') :- phrase(time_text(20, 36), `kahta-kymmentä-neljää vaille kaksi-kymmenen`).
-test('20:37') :- phrase(time_text(20, 37), `kahta-kymmentä-kolmea vaille kaksi-kymmenen`).
-test('20:38') :- phrase(time_text(20, 38), `kahta-kymmentä-kahta vaille kaksi-kymmenen`).
-test('20:39') :- phrase(time_text(20, 39), `kahta-kymmentä-yktä vaille kaksi-kymmenen`).
-test('20:40') :- phrase(time_text(20, 40), `kahta-kymmentä vaille kaksi-kymmenen`).
-test('20:41') :- phrase(time_text(20, 41), `yhdeksää-toista vaille kaksi-kymmenen`).
-test('20:42') :- phrase(time_text(20, 42), `kahdeksaa-toista vaille kaksi-kymmenen`).
-test('20:43') :- phrase(time_text(20, 43), `seitsemää-toista vaille kaksi-kymmenen`).
-test('20:44') :- phrase(time_text(20, 44), `kuutta-toista vaille kaksi-kymmenen`).
-test('20:45') :- phrase(time_text(20, 45), `viittä-toista vaille kaksi-kymmenen`).
-test('20:46') :- phrase(time_text(20, 46), `neljää-toista vaille kaksi-kymmenen`).
-test('20:47') :- phrase(time_text(20, 47), `kolmea-toista vaille kaksi-kymmenen`).
-test('20:48') :- phrase(time_text(20, 48), `kahta-toista vaille kaksi-kymmenen`).
-test('20:49') :- phrase(time_text(20, 49), `yktä-toista vaille kaksi-kymmenen`).
-test('20:50') :- phrase(time_text(20, 50), `kymmentä vaille kaksi-kymmenen`).
-test('20:51') :- phrase(time_text(20, 51), `yhdeksää vaille kaksi-kymmenen`).
-test('20:52') :- phrase(time_text(20, 52), `kahdeksaa vaille kaksi-kymmenen`).
-test('20:53') :- phrase(time_text(20, 53), `seitsemää vaille kaksi-kymmenen`).
-test('20:54') :- phrase(time_text(20, 54), `kuutta vaille kaksi-kymmenen`).
-test('20:55') :- phrase(time_text(20, 55), `viittä vaille kaksi-kymmenen`).
-test('20:56') :- phrase(time_text(20, 56), `neljää vaille kaksi-kymmenen`).
-test('20:57') :- phrase(time_text(20, 57), `kolmea vaille kaksi-kymmenen`).
-test('20:58') :- phrase(time_text(20, 58), `kahta vaille kaksi-kymmenen`).
-test('20:59') :- phrase(time_text(20, 59), `yktä vaille kaksi-kymmenen`).
-test('21:0') :- phrase(time_text(21, 0), `kaksi-kymmentä-yksi`).
-test('21:0') :- phrase(time_text(21, 0), `tasan kaksi-kymmentä-yksi`).
-test('21:1') :- phrase(time_text(21, 1), `yksi yli kaksi-kymmentä-yksi`).
-test('21:2') :- phrase(time_text(21, 2), `kaksi yli kaksi-kymmentä-yksi`).
-test('21:3') :- phrase(time_text(21, 3), `kolme yli kaksi-kymmentä-yksi`).
-test('21:4') :- phrase(time_text(21, 4), `neljä yli kaksi-kymmentä-yksi`).
-test('21:5') :- phrase(time_text(21, 5), `viisi yli kaksi-kymmentä-yksi`).
-test('21:6') :- phrase(time_text(21, 6), `kuusi yli kaksi-kymmentä-yksi`).
-test('21:7') :- phrase(time_text(21, 7), `seitsemän yli kaksi-kymmentä-yksi`).
-test('21:8') :- phrase(time_text(21, 8), `kahdeksan yli kaksi-kymmentä-yksi`).
-test('21:9') :- phrase(time_text(21, 9), `yhdeksän yli kaksi-kymmentä-yksi`).
-test('21:10') :- phrase(time_text(21, 10), `kymmenen yli kaksi-kymmentä-yksi`).
-test('21:11') :- phrase(time_text(21, 11), `yksi-toista yli kaksi-kymmentä-yksi`).
-test('21:12') :- phrase(time_text(21, 12), `kaksi-toista yli kaksi-kymmentä-yksi`).
-test('21:13') :- phrase(time_text(21, 13), `kolme-toista yli kaksi-kymmentä-yksi`).
-test('21:14') :- phrase(time_text(21, 14), `neljä-toista yli kaksi-kymmentä-yksi`).
-test('21:15') :- phrase(time_text(21, 15), `vartin yli kaksi-kymmentä-yksi`).
-test('21:15') :- phrase(time_text(21, 15), `viisi-toista yli kaksi-kymmentä-yksi`).
-test('21:16') :- phrase(time_text(21, 16), `kuusi-toista yli kaksi-kymmentä-yksi`).
-test('21:17') :- phrase(time_text(21, 17), `seitsemän-toista yli kaksi-kymmentä-yksi`).
-test('21:18') :- phrase(time_text(21, 18), `kahdeksan-toista yli kaksi-kymmentä-yksi`).
-test('21:19') :- phrase(time_text(21, 19), `yhdeksän-toista yli kaksi-kymmentä-yksi`).
-test('21:20') :- phrase(time_text(21, 20), `kaksi-kymmenen yli kaksi-kymmentä-yksi`).
-test('21:21') :- phrase(time_text(21, 21), `kaksi-kymmentä-yksi yli kaksi-kymmentä-yksi`).
-test('21:22') :- phrase(time_text(21, 22), `kaksi-kymmentä-kaksi yli kaksi-kymmentä-yksi`).
-test('21:23') :- phrase(time_text(21, 23), `kaksi-kymmentä-kolme yli kaksi-kymmentä-yksi`).
-test('21:24') :- phrase(time_text(21, 24), `kaksi-kymmentä-neljä yli kaksi-kymmentä-yksi`).
-test('21:25') :- phrase(time_text(21, 25), `kaksi-kymmentä-viisi yli kaksi-kymmentä-yksi`).
-test('21:26') :- phrase(time_text(21, 26), `kaksi-kymmentä-kuusi yli kaksi-kymmentä-yksi`).
-test('21:27') :- phrase(time_text(21, 27), `kaksi-kymmentä-seitsemän yli kaksi-kymmentä-yksi`).
-test('21:28') :- phrase(time_text(21, 28), `kaksi-kymmentä-kahdeksan yli kaksi-kymmentä-yksi`).
-test('21:29') :- phrase(time_text(21, 29), `kaksi-kymmentä-yhdeksän yli kaksi-kymmentä-yksi`).
-test('21:31') :- phrase(time_text(21, 31), `kahta-kymmentä-yhdeksää vaille kaksi-kymmentä-yksi`).
-test('21:32') :- phrase(time_text(21, 32), `kahta-kymmentä-kahdeksaa vaille kaksi-kymmentä-yksi`).
-test('21:33') :- phrase(time_text(21, 33), `kahta-kymmentä-seitsemää vaille kaksi-kymmentä-yksi`).
-test('21:34') :- phrase(time_text(21, 34), `kahta-kymmentä-kuutta vaille kaksi-kymmentä-yksi`).
-test('21:35') :- phrase(time_text(21, 35), `kahta-kymmentä-viittä vaille kaksi-kymmentä-yksi`).
-test('21:36') :- phrase(time_text(21, 36), `kahta-kymmentä-neljää vaille kaksi-kymmentä-yksi`).
-test('21:37') :- phrase(time_text(21, 37), `kahta-kymmentä-kolmea vaille kaksi-kymmentä-yksi`).
-test('21:38') :- phrase(time_text(21, 38), `kahta-kymmentä-kahta vaille kaksi-kymmentä-yksi`).
-test('21:39') :- phrase(time_text(21, 39), `kahta-kymmentä-yktä vaille kaksi-kymmentä-yksi`).
-test('21:40') :- phrase(time_text(21, 40), `kahta-kymmentä vaille kaksi-kymmentä-yksi`).
-test('21:41') :- phrase(time_text(21, 41), `yhdeksää-toista vaille kaksi-kymmentä-yksi`).
-test('21:42') :- phrase(time_text(21, 42), `kahdeksaa-toista vaille kaksi-kymmentä-yksi`).
-test('21:43') :- phrase(time_text(21, 43), `seitsemää-toista vaille kaksi-kymmentä-yksi`).
-test('21:44') :- phrase(time_text(21, 44), `kuutta-toista vaille kaksi-kymmentä-yksi`).
-test('21:45') :- phrase(time_text(21, 45), `viittä-toista vaille kaksi-kymmentä-yksi`).
-test('21:46') :- phrase(time_text(21, 46), `neljää-toista vaille kaksi-kymmentä-yksi`).
-test('21:47') :- phrase(time_text(21, 47), `kolmea-toista vaille kaksi-kymmentä-yksi`).
-test('21:48') :- phrase(time_text(21, 48), `kahta-toista vaille kaksi-kymmentä-yksi`).
-test('21:49') :- phrase(time_text(21, 49), `yktä-toista vaille kaksi-kymmentä-yksi`).
-test('21:50') :- phrase(time_text(21, 50), `kymmentä vaille kaksi-kymmentä-yksi`).
-test('21:51') :- phrase(time_text(21, 51), `yhdeksää vaille kaksi-kymmentä-yksi`).
-test('21:52') :- phrase(time_text(21, 52), `kahdeksaa vaille kaksi-kymmentä-yksi`).
-test('21:53') :- phrase(time_text(21, 53), `seitsemää vaille kaksi-kymmentä-yksi`).
-test('21:54') :- phrase(time_text(21, 54), `kuutta vaille kaksi-kymmentä-yksi`).
-test('21:55') :- phrase(time_text(21, 55), `viittä vaille kaksi-kymmentä-yksi`).
-test('21:56') :- phrase(time_text(21, 56), `neljää vaille kaksi-kymmentä-yksi`).
-test('21:57') :- phrase(time_text(21, 57), `kolmea vaille kaksi-kymmentä-yksi`).
-test('21:58') :- phrase(time_text(21, 58), `kahta vaille kaksi-kymmentä-yksi`).
-test('21:59') :- phrase(time_text(21, 59), `yktä vaille kaksi-kymmentä-yksi`).
-test('22:0') :- phrase(time_text(22, 0), `kaksi-kymmentä-kaksi`).
-test('22:0') :- phrase(time_text(22, 0), `tasan kaksi-kymmentä-kaksi`).
-test('22:1') :- phrase(time_text(22, 1), `yksi yli kaksi-kymmentä-kaksi`).
-test('22:2') :- phrase(time_text(22, 2), `kaksi yli kaksi-kymmentä-kaksi`).
-test('22:3') :- phrase(time_text(22, 3), `kolme yli kaksi-kymmentä-kaksi`).
-test('22:4') :- phrase(time_text(22, 4), `neljä yli kaksi-kymmentä-kaksi`).
-test('22:5') :- phrase(time_text(22, 5), `viisi yli kaksi-kymmentä-kaksi`).
-test('22:6') :- phrase(time_text(22, 6), `kuusi yli kaksi-kymmentä-kaksi`).
-test('22:7') :- phrase(time_text(22, 7), `seitsemän yli kaksi-kymmentä-kaksi`).
-test('22:8') :- phrase(time_text(22, 8), `kahdeksan yli kaksi-kymmentä-kaksi`).
-test('22:9') :- phrase(time_text(22, 9), `yhdeksän yli kaksi-kymmentä-kaksi`).
-test('22:10') :- phrase(time_text(22, 10), `kymmenen yli kaksi-kymmentä-kaksi`).
-test('22:11') :- phrase(time_text(22, 11), `yksi-toista yli kaksi-kymmentä-kaksi`).
-test('22:12') :- phrase(time_text(22, 12), `kaksi-toista yli kaksi-kymmentä-kaksi`).
-test('22:13') :- phrase(time_text(22, 13), `kolme-toista yli kaksi-kymmentä-kaksi`).
-test('22:14') :- phrase(time_text(22, 14), `neljä-toista yli kaksi-kymmentä-kaksi`).
-test('22:15') :- phrase(time_text(22, 15), `vartin yli kaksi-kymmentä-kaksi`).
-test('22:15') :- phrase(time_text(22, 15), `viisi-toista yli kaksi-kymmentä-kaksi`).
-test('22:16') :- phrase(time_text(22, 16), `kuusi-toista yli kaksi-kymmentä-kaksi`).
-test('22:17') :- phrase(time_text(22, 17), `seitsemän-toista yli kaksi-kymmentä-kaksi`).
-test('22:18') :- phrase(time_text(22, 18), `kahdeksan-toista yli kaksi-kymmentä-kaksi`).
-test('22:19') :- phrase(time_text(22, 19), `yhdeksän-toista yli kaksi-kymmentä-kaksi`).
-test('22:20') :- phrase(time_text(22, 20), `kaksi-kymmenen yli kaksi-kymmentä-kaksi`).
-test('22:21') :- phrase(time_text(22, 21), `kaksi-kymmentä-yksi yli kaksi-kymmentä-kaksi`).
-test('22:22') :- phrase(time_text(22, 22), `kaksi-kymmentä-kaksi yli kaksi-kymmentä-kaksi`).
-test('22:23') :- phrase(time_text(22, 23), `kaksi-kymmentä-kolme yli kaksi-kymmentä-kaksi`).
-test('22:24') :- phrase(time_text(22, 24), `kaksi-kymmentä-neljä yli kaksi-kymmentä-kaksi`).
-test('22:25') :- phrase(time_text(22, 25), `kaksi-kymmentä-viisi yli kaksi-kymmentä-kaksi`).
-test('22:26') :- phrase(time_text(22, 26), `kaksi-kymmentä-kuusi yli kaksi-kymmentä-kaksi`).
-test('22:27') :- phrase(time_text(22, 27), `kaksi-kymmentä-seitsemän yli kaksi-kymmentä-kaksi`).
-test('22:28') :- phrase(time_text(22, 28), `kaksi-kymmentä-kahdeksan yli kaksi-kymmentä-kaksi`).
-test('22:29') :- phrase(time_text(22, 29), `kaksi-kymmentä-yhdeksän yli kaksi-kymmentä-kaksi`).
-test('22:31') :- phrase(time_text(22, 31), `kahta-kymmentä-yhdeksää vaille kaksi-kymmentä-kaksi`).
-test('22:32') :- phrase(time_text(22, 32), `kahta-kymmentä-kahdeksaa vaille kaksi-kymmentä-kaksi`).
-test('22:33') :- phrase(time_text(22, 33), `kahta-kymmentä-seitsemää vaille kaksi-kymmentä-kaksi`).
-test('22:34') :- phrase(time_text(22, 34), `kahta-kymmentä-kuutta vaille kaksi-kymmentä-kaksi`).
-test('22:35') :- phrase(time_text(22, 35), `kahta-kymmentä-viittä vaille kaksi-kymmentä-kaksi`).
-test('22:36') :- phrase(time_text(22, 36), `kahta-kymmentä-neljää vaille kaksi-kymmentä-kaksi`).
-test('22:37') :- phrase(time_text(22, 37), `kahta-kymmentä-kolmea vaille kaksi-kymmentä-kaksi`).
-test('22:38') :- phrase(time_text(22, 38), `kahta-kymmentä-kahta vaille kaksi-kymmentä-kaksi`).
-test('22:39') :- phrase(time_text(22, 39), `kahta-kymmentä-yktä vaille kaksi-kymmentä-kaksi`).
-test('22:40') :- phrase(time_text(22, 40), `kahta-kymmentä vaille kaksi-kymmentä-kaksi`).
-test('22:41') :- phrase(time_text(22, 41), `yhdeksää-toista vaille kaksi-kymmentä-kaksi`).
-test('22:42') :- phrase(time_text(22, 42), `kahdeksaa-toista vaille kaksi-kymmentä-kaksi`).
-test('22:43') :- phrase(time_text(22, 43), `seitsemää-toista vaille kaksi-kymmentä-kaksi`).
-test('22:44') :- phrase(time_text(22, 44), `kuutta-toista vaille kaksi-kymmentä-kaksi`).
-test('22:45') :- phrase(time_text(22, 45), `viittä-toista vaille kaksi-kymmentä-kaksi`).
-test('22:46') :- phrase(time_text(22, 46), `neljää-toista vaille kaksi-kymmentä-kaksi`).
-test('22:47') :- phrase(time_text(22, 47), `kolmea-toista vaille kaksi-kymmentä-kaksi`).
-test('22:48') :- phrase(time_text(22, 48), `kahta-toista vaille kaksi-kymmentä-kaksi`).
-test('22:49') :- phrase(time_text(22, 49), `yktä-toista vaille kaksi-kymmentä-kaksi`).
-test('22:50') :- phrase(time_text(22, 50), `kymmentä vaille kaksi-kymmentä-kaksi`).
-test('22:51') :- phrase(time_text(22, 51), `yhdeksää vaille kaksi-kymmentä-kaksi`).
-test('22:52') :- phrase(time_text(22, 52), `kahdeksaa vaille kaksi-kymmentä-kaksi`).
-test('22:53') :- phrase(time_text(22, 53), `seitsemää vaille kaksi-kymmentä-kaksi`).
-test('22:54') :- phrase(time_text(22, 54), `kuutta vaille kaksi-kymmentä-kaksi`).
-test('22:55') :- phrase(time_text(22, 55), `viittä vaille kaksi-kymmentä-kaksi`).
-test('22:56') :- phrase(time_text(22, 56), `neljää vaille kaksi-kymmentä-kaksi`).
-test('22:57') :- phrase(time_text(22, 57), `kolmea vaille kaksi-kymmentä-kaksi`).
-test('22:58') :- phrase(time_text(22, 58), `kahta vaille kaksi-kymmentä-kaksi`).
-test('22:59') :- phrase(time_text(22, 59), `yktä vaille kaksi-kymmentä-kaksi`).
-test('23:0') :- phrase(time_text(23, 0), `kaksi-kymmentä-kolme`).
-test('23:0') :- phrase(time_text(23, 0), `tasan kaksi-kymmentä-kolme`).
-test('23:1') :- phrase(time_text(23, 1), `yksi yli kaksi-kymmentä-kolme`).
-test('23:2') :- phrase(time_text(23, 2), `kaksi yli kaksi-kymmentä-kolme`).
-test('23:3') :- phrase(time_text(23, 3), `kolme yli kaksi-kymmentä-kolme`).
-test('23:4') :- phrase(time_text(23, 4), `neljä yli kaksi-kymmentä-kolme`).
-test('23:5') :- phrase(time_text(23, 5), `viisi yli kaksi-kymmentä-kolme`).
-test('23:6') :- phrase(time_text(23, 6), `kuusi yli kaksi-kymmentä-kolme`).
-test('23:7') :- phrase(time_text(23, 7), `seitsemän yli kaksi-kymmentä-kolme`).
-test('23:8') :- phrase(time_text(23, 8), `kahdeksan yli kaksi-kymmentä-kolme`).
-test('23:9') :- phrase(time_text(23, 9), `yhdeksän yli kaksi-kymmentä-kolme`).
-test('23:10') :- phrase(time_text(23, 10), `kymmenen yli kaksi-kymmentä-kolme`).
-test('23:11') :- phrase(time_text(23, 11), `yksi-toista yli kaksi-kymmentä-kolme`).
-test('23:12') :- phrase(time_text(23, 12), `kaksi-toista yli kaksi-kymmentä-kolme`).
-test('23:13') :- phrase(time_text(23, 13), `kolme-toista yli kaksi-kymmentä-kolme`).
-test('23:14') :- phrase(time_text(23, 14), `neljä-toista yli kaksi-kymmentä-kolme`).
-test('23:15') :- phrase(time_text(23, 15), `vartin yli kaksi-kymmentä-kolme`).
-test('23:15') :- phrase(time_text(23, 15), `viisi-toista yli kaksi-kymmentä-kolme`).
-test('23:16') :- phrase(time_text(23, 16), `kuusi-toista yli kaksi-kymmentä-kolme`).
-test('23:17') :- phrase(time_text(23, 17), `seitsemän-toista yli kaksi-kymmentä-kolme`).
-test('23:18') :- phrase(time_text(23, 18), `kahdeksan-toista yli kaksi-kymmentä-kolme`).
-test('23:19') :- phrase(time_text(23, 19), `yhdeksän-toista yli kaksi-kymmentä-kolme`).
-test('23:20') :- phrase(time_text(23, 20), `kaksi-kymmenen yli kaksi-kymmentä-kolme`).
-test('23:21') :- phrase(time_text(23, 21), `kaksi-kymmentä-yksi yli kaksi-kymmentä-kolme`).
-test('23:22') :- phrase(time_text(23, 22), `kaksi-kymmentä-kaksi yli kaksi-kymmentä-kolme`).
-test('23:23') :- phrase(time_text(23, 23), `kaksi-kymmentä-kolme yli kaksi-kymmentä-kolme`).
-test('23:24') :- phrase(time_text(23, 24), `kaksi-kymmentä-neljä yli kaksi-kymmentä-kolme`).
-test('23:25') :- phrase(time_text(23, 25), `kaksi-kymmentä-viisi yli kaksi-kymmentä-kolme`).
-test('23:26') :- phrase(time_text(23, 26), `kaksi-kymmentä-kuusi yli kaksi-kymmentä-kolme`).
-test('23:27') :- phrase(time_text(23, 27), `kaksi-kymmentä-seitsemän yli kaksi-kymmentä-kolme`).
-test('23:28') :- phrase(time_text(23, 28), `kaksi-kymmentä-kahdeksan yli kaksi-kymmentä-kolme`).
-test('23:29') :- phrase(time_text(23, 29), `kaksi-kymmentä-yhdeksän yli kaksi-kymmentä-kolme`).
-test('23:30') :- phrase(time_text(23, 30), `puoli nolla`).
-test('23:31') :- phrase(time_text(23, 31), `kahta-kymmentä-yhdeksää vaille kaksi-kymmentä-kolme`).
-test('23:32') :- phrase(time_text(23, 32), `kahta-kymmentä-kahdeksaa vaille kaksi-kymmentä-kolme`).
-test('23:33') :- phrase(time_text(23, 33), `kahta-kymmentä-seitsemää vaille kaksi-kymmentä-kolme`).
-test('23:34') :- phrase(time_text(23, 34), `kahta-kymmentä-kuutta vaille kaksi-kymmentä-kolme`).
-test('23:35') :- phrase(time_text(23, 35), `kahta-kymmentä-viittä vaille kaksi-kymmentä-kolme`).
-test('23:36') :- phrase(time_text(23, 36), `kahta-kymmentä-neljää vaille kaksi-kymmentä-kolme`).
-test('23:37') :- phrase(time_text(23, 37), `kahta-kymmentä-kolmea vaille kaksi-kymmentä-kolme`).
-test('23:38') :- phrase(time_text(23, 38), `kahta-kymmentä-kahta vaille kaksi-kymmentä-kolme`).
-test('23:39') :- phrase(time_text(23, 39), `kahta-kymmentä-yktä vaille kaksi-kymmentä-kolme`).
-test('23:40') :- phrase(time_text(23, 40), `kahta-kymmentä vaille kaksi-kymmentä-kolme`).
-test('23:41') :- phrase(time_text(23, 41), `yhdeksää-toista vaille kaksi-kymmentä-kolme`).
-test('23:42') :- phrase(time_text(23, 42), `kahdeksaa-toista vaille kaksi-kymmentä-kolme`).
-test('23:43') :- phrase(time_text(23, 43), `seitsemää-toista vaille kaksi-kymmentä-kolme`).
-test('23:44') :- phrase(time_text(23, 44), `kuutta-toista vaille kaksi-kymmentä-kolme`).
-test('23:45') :- phrase(time_text(23, 45), `viittä-toista vaille kaksi-kymmentä-kolme`).
-test('23:46') :- phrase(time_text(23, 46), `neljää-toista vaille kaksi-kymmentä-kolme`).
-test('23:47') :- phrase(time_text(23, 47), `kolmea-toista vaille kaksi-kymmentä-kolme`).
-test('23:48') :- phrase(time_text(23, 48), `kahta-toista vaille kaksi-kymmentä-kolme`).
-test('23:49') :- phrase(time_text(23, 49), `yktä-toista vaille kaksi-kymmentä-kolme`).
-test('23:50') :- phrase(time_text(23, 50), `kymmentä vaille kaksi-kymmentä-kolme`).
-test('23:51') :- phrase(time_text(23, 51), `yhdeksää vaille kaksi-kymmentä-kolme`).
-test('23:52') :- phrase(time_text(23, 52), `kahdeksaa vaille kaksi-kymmentä-kolme`).
-test('23:53') :- phrase(time_text(23, 53), `seitsemää vaille kaksi-kymmentä-kolme`).
-test('23:54') :- phrase(time_text(23, 54), `kuutta vaille kaksi-kymmentä-kolme`).
-test('23:55') :- phrase(time_text(23, 55), `viittä vaille kaksi-kymmentä-kolme`).
-test('23:56') :- phrase(time_text(23, 56), `neljää vaille kaksi-kymmentä-kolme`).
-test('23:57') :- phrase(time_text(23, 57), `kolmea vaille kaksi-kymmentä-kolme`).
-test('23:58') :- phrase(time_text(23, 58), `kahta vaille kaksi-kymmentä-kolme`).
-test('23:59') :- phrase(time_text(23, 59), `yktä vaille kaksi-kymmentä-kolme`).
+test('0:0', [nondet]) :- phrase(time_text(0, 0), `nolla`).
+test('0:0', [nondet]) :- phrase(time_text(0, 0), `tasan nolla`).
+test('0:1', [nondet]) :- phrase(time_text(0, 1), `yksi yli nolla`).
+test('0:2', [nondet]) :- phrase(time_text(0, 2), `kaksi yli nolla`).
+test('0:3', [nondet]) :- phrase(time_text(0, 3), `kolme yli nolla`).
+test('0:4', [nondet]) :- phrase(time_text(0, 4), `neljä yli nolla`).
+test('0:5', [nondet]) :- phrase(time_text(0, 5), `viisi yli nolla`).
+test('0:6', [nondet]) :- phrase(time_text(0, 6), `kuusi yli nolla`).
+test('0:7', [nondet]) :- phrase(time_text(0, 7), `seitsemän yli nolla`).
+test('0:8', [nondet]) :- phrase(time_text(0, 8), `kahdeksan yli nolla`).
+test('0:9', [nondet]) :- phrase(time_text(0, 9), `yhdeksän yli nolla`).
+test('0:10', [nondet]) :- phrase(time_text(0, 10), `kymmenen yli nolla`).
+test('0:11', [nondet]) :- phrase(time_text(0, 11), `yksitoista yli nolla`).
+test('0:12', [nondet]) :- phrase(time_text(0, 12), `kaksitoista yli nolla`).
+test('0:13', [nondet]) :- phrase(time_text(0, 13), `kolmetoista yli nolla`).
+test('0:14', [nondet]) :- phrase(time_text(0, 14), `neljätoista yli nolla`).
+test('0:15', [nondet]) :- phrase(time_text(0, 15), `vartin yli nolla`).
+test('0:15', [nondet]) :- phrase(time_text(0, 15), `viisitoista yli nolla`).
+test('0:16', [nondet]) :- phrase(time_text(0, 16), `kuusitoista yli nolla`).
+test('0:17', [nondet]) :- phrase(time_text(0, 17), `seitsemäntoista yli nolla`).
+test('0:18', [nondet]) :- phrase(time_text(0, 18), `kahdeksantoista yli nolla`).
+test('0:19', [nondet]) :- phrase(time_text(0, 19), `yhdeksäntoista yli nolla`).
+test('0:20', [nondet]) :- phrase(time_text(0, 20), `kaksikymmentänolla yli nolla`).
+test('0:21', [nondet]) :- phrase(time_text(0, 21), `kaksikymmentäyksi yli nolla`).
+test('0:22', [nondet]) :- phrase(time_text(0, 22), `kaksikymmentäkaksi yli nolla`).
+test('0:23', [nondet]) :- phrase(time_text(0, 23), `kaksikymmentäkolme yli nolla`).
+test('0:24', [nondet]) :- phrase(time_text(0, 24), `kaksikymmentäneljä yli nolla`).
+test('0:25', [nondet]) :- phrase(time_text(0, 25), `kaksikymmentäviisi yli nolla`).
+test('0:26', [nondet]) :- phrase(time_text(0, 26), `kaksikymmentäkuusi yli nolla`).
+test('0:27', [nondet]) :- phrase(time_text(0, 27), `kaksikymmentäseitsemän yli nolla`).
+test('0:28', [nondet]) :- phrase(time_text(0, 28), `kaksikymmentäkahdeksan yli nolla`).
+test('0:29', [nondet]) :- phrase(time_text(0, 29), `kaksikymmentäyhdeksän yli nolla`).
+test('0:30', [nondet]) :- phrase(time_text(0, 30), `puoli yksi`).
+test('0:31', [nondet]) :- phrase(time_text(0, 31), `kahtakymmentäyhdeksää vaille nolla`).
+test('0:32', [nondet]) :- phrase(time_text(0, 32), `kahtakymmentäkahdeksaa vaille nolla`).
+test('0:33', [nondet]) :- phrase(time_text(0, 33), `kahtakymmentäseitsemää vaille nolla`).
+test('0:34', [nondet]) :- phrase(time_text(0, 34), `kahtakymmentäkuutta vaille nolla`).
+test('0:35', [nondet]) :- phrase(time_text(0, 35), `kahtakymmentäviittä vaille nolla`).
+test('0:36', [nondet]) :- phrase(time_text(0, 36), `kahtakymmentäneljää vaille nolla`).
+test('0:37', [nondet]) :- phrase(time_text(0, 37), `kahtakymmentäkolmea vaille nolla`).
+test('0:38', [nondet]) :- phrase(time_text(0, 38), `kahtakymmentäkahta vaille nolla`).
+test('0:39', [nondet]) :- phrase(time_text(0, 39), `kahtakymmentäyktä vaille nolla`).
+test('0:40', [nondet]) :- phrase(time_text(0, 40), `kahtakymmentänollaa vaille nolla`).
+test('0:41', [nondet]) :- phrase(time_text(0, 41), `yhdeksäätoista vaille nolla`).
+test('0:42', [nondet]) :- phrase(time_text(0, 42), `kahdeksaatoista vaille nolla`).
+test('0:43', [nondet]) :- phrase(time_text(0, 43), `seitsemäätoista vaille nolla`).
+test('0:44', [nondet]) :- phrase(time_text(0, 44), `kuuttatoista vaille nolla`).
+test('0:45', [nondet]) :- phrase(time_text(0, 45), `viittätoista vaille nolla`).
+test('0:46', [nondet]) :- phrase(time_text(0, 46), `neljäätoista vaille nolla`).
+test('0:47', [nondet]) :- phrase(time_text(0, 47), `kolmeatoista vaille nolla`).
+test('0:48', [nondet]) :- phrase(time_text(0, 48), `kahtatoista vaille nolla`).
+test('0:49', [nondet]) :- phrase(time_text(0, 49), `yktätoista vaille nolla`).
+test('0:50', [nondet]) :- phrase(time_text(0, 50), `kymmentä vaille nolla`).
+test('0:51', [nondet]) :- phrase(time_text(0, 51), `yhdeksää vaille nolla`).
+test('0:52', [nondet]) :- phrase(time_text(0, 52), `kahdeksaa vaille nolla`).
+test('0:53', [nondet]) :- phrase(time_text(0, 53), `seitsemää vaille nolla`).
+test('0:54', [nondet]) :- phrase(time_text(0, 54), `kuutta vaille nolla`).
+test('0:55', [nondet]) :- phrase(time_text(0, 55), `viittä vaille nolla`).
+test('0:56', [nondet]) :- phrase(time_text(0, 56), `neljää vaille nolla`).
+test('0:57', [nondet]) :- phrase(time_text(0, 57), `kolmea vaille nolla`).
+test('0:58', [nondet]) :- phrase(time_text(0, 58), `kahta vaille nolla`).
+test('0:59', [nondet]) :- phrase(time_text(0, 59), `yktä vaille nolla`).
+test('1:0', [nondet]) :- phrase(time_text(1, 0), `tasan yksi`).
+test('1:0', [nondet]) :- phrase(time_text(1, 0), `yksi`).
+test('1:1', [nondet]) :- phrase(time_text(1, 1), `yksi yli yksi`).
+test('1:2', [nondet]) :- phrase(time_text(1, 2), `kaksi yli yksi`).
+test('1:3', [nondet]) :- phrase(time_text(1, 3), `kolme yli yksi`).
+test('1:4', [nondet]) :- phrase(time_text(1, 4), `neljä yli yksi`).
+test('1:5', [nondet]) :- phrase(time_text(1, 5), `viisi yli yksi`).
+test('1:6', [nondet]) :- phrase(time_text(1, 6), `kuusi yli yksi`).
+test('1:7', [nondet]) :- phrase(time_text(1, 7), `seitsemän yli yksi`).
+test('1:8', [nondet]) :- phrase(time_text(1, 8), `kahdeksan yli yksi`).
+test('1:9', [nondet]) :- phrase(time_text(1, 9), `yhdeksän yli yksi`).
+test('1:10', [nondet]) :- phrase(time_text(1, 10), `kymmenen yli yksi`).
+test('1:11', [nondet]) :- phrase(time_text(1, 11), `yksitoista yli yksi`).
+test('1:12', [nondet]) :- phrase(time_text(1, 12), `kaksitoista yli yksi`).
+test('1:13', [nondet]) :- phrase(time_text(1, 13), `kolmetoista yli yksi`).
+test('1:14', [nondet]) :- phrase(time_text(1, 14), `neljätoista yli yksi`).
+test('1:15', [nondet]) :- phrase(time_text(1, 15), `vartin yli yksi`).
+test('1:15', [nondet]) :- phrase(time_text(1, 15), `viisitoista yli yksi`).
+test('1:16', [nondet]) :- phrase(time_text(1, 16), `kuusitoista yli yksi`).
+test('1:17', [nondet]) :- phrase(time_text(1, 17), `seitsemäntoista yli yksi`).
+test('1:18', [nondet]) :- phrase(time_text(1, 18), `kahdeksantoista yli yksi`).
+test('1:19', [nondet]) :- phrase(time_text(1, 19), `yhdeksäntoista yli yksi`).
+test('1:20', [nondet]) :- phrase(time_text(1, 20), `kaksikymmentänolla yli yksi`).
+test('1:21', [nondet]) :- phrase(time_text(1, 21), `kaksikymmentäyksi yli yksi`).
+test('1:22', [nondet]) :- phrase(time_text(1, 22), `kaksikymmentäkaksi yli yksi`).
+test('1:23', [nondet]) :- phrase(time_text(1, 23), `kaksikymmentäkolme yli yksi`).
+test('1:24', [nondet]) :- phrase(time_text(1, 24), `kaksikymmentäneljä yli yksi`).
+test('1:25', [nondet]) :- phrase(time_text(1, 25), `kaksikymmentäviisi yli yksi`).
+test('1:26', [nondet]) :- phrase(time_text(1, 26), `kaksikymmentäkuusi yli yksi`).
+test('1:27', [nondet]) :- phrase(time_text(1, 27), `kaksikymmentäseitsemän yli yksi`).
+test('1:28', [nondet]) :- phrase(time_text(1, 28), `kaksikymmentäkahdeksan yli yksi`).
+test('1:29', [nondet]) :- phrase(time_text(1, 29), `kaksikymmentäyhdeksän yli yksi`).
+test('1:30', [nondet]) :- phrase(time_text(1, 30), `puoli kaksi`).
+test('1:31', [nondet]) :- phrase(time_text(1, 31), `kahtakymmentäyhdeksää vaille yksi`).
+test('1:32', [nondet]) :- phrase(time_text(1, 32), `kahtakymmentäkahdeksaa vaille yksi`).
+test('1:33', [nondet]) :- phrase(time_text(1, 33), `kahtakymmentäseitsemää vaille yksi`).
+test('1:34', [nondet]) :- phrase(time_text(1, 34), `kahtakymmentäkuutta vaille yksi`).
+test('1:35', [nondet]) :- phrase(time_text(1, 35), `kahtakymmentäviittä vaille yksi`).
+test('1:36', [nondet]) :- phrase(time_text(1, 36), `kahtakymmentäneljää vaille yksi`).
+test('1:37', [nondet]) :- phrase(time_text(1, 37), `kahtakymmentäkolmea vaille yksi`).
+test('1:38', [nondet]) :- phrase(time_text(1, 38), `kahtakymmentäkahta vaille yksi`).
+test('1:39', [nondet]) :- phrase(time_text(1, 39), `kahtakymmentäyktä vaille yksi`).
+test('1:40', [nondet]) :- phrase(time_text(1, 40), `kahtakymmentänollaa vaille yksi`).
+test('1:41', [nondet]) :- phrase(time_text(1, 41), `yhdeksäätoista vaille yksi`).
+test('1:42', [nondet]) :- phrase(time_text(1, 42), `kahdeksaatoista vaille yksi`).
+test('1:43', [nondet]) :- phrase(time_text(1, 43), `seitsemäätoista vaille yksi`).
+test('1:44', [nondet]) :- phrase(time_text(1, 44), `kuuttatoista vaille yksi`).
+test('1:45', [nondet]) :- phrase(time_text(1, 45), `viittätoista vaille yksi`).
+test('1:46', [nondet]) :- phrase(time_text(1, 46), `neljäätoista vaille yksi`).
+test('1:47', [nondet]) :- phrase(time_text(1, 47), `kolmeatoista vaille yksi`).
+test('1:48', [nondet]) :- phrase(time_text(1, 48), `kahtatoista vaille yksi`).
+test('1:49', [nondet]) :- phrase(time_text(1, 49), `yktätoista vaille yksi`).
+test('1:50', [nondet]) :- phrase(time_text(1, 50), `kymmentä vaille yksi`).
+test('1:51', [nondet]) :- phrase(time_text(1, 51), `yhdeksää vaille yksi`).
+test('1:52', [nondet]) :- phrase(time_text(1, 52), `kahdeksaa vaille yksi`).
+test('1:53', [nondet]) :- phrase(time_text(1, 53), `seitsemää vaille yksi`).
+test('1:54', [nondet]) :- phrase(time_text(1, 54), `kuutta vaille yksi`).
+test('1:55', [nondet]) :- phrase(time_text(1, 55), `viittä vaille yksi`).
+test('1:56', [nondet]) :- phrase(time_text(1, 56), `neljää vaille yksi`).
+test('1:57', [nondet]) :- phrase(time_text(1, 57), `kolmea vaille yksi`).
+test('1:58', [nondet]) :- phrase(time_text(1, 58), `kahta vaille yksi`).
+test('1:59', [nondet]) :- phrase(time_text(1, 59), `yktä vaille yksi`).
+test('2:0', [nondet]) :- phrase(time_text(2, 0), `kaksi`).
+test('2:0', [nondet]) :- phrase(time_text(2, 0), `tasan kaksi`).
+test('2:1', [nondet]) :- phrase(time_text(2, 1), `yksi yli kaksi`).
+test('2:2', [nondet]) :- phrase(time_text(2, 2), `kaksi yli kaksi`).
+test('2:3', [nondet]) :- phrase(time_text(2, 3), `kolme yli kaksi`).
+test('2:4', [nondet]) :- phrase(time_text(2, 4), `neljä yli kaksi`).
+test('2:5', [nondet]) :- phrase(time_text(2, 5), `viisi yli kaksi`).
+test('2:6', [nondet]) :- phrase(time_text(2, 6), `kuusi yli kaksi`).
+test('2:7', [nondet]) :- phrase(time_text(2, 7), `seitsemän yli kaksi`).
+test('2:8', [nondet]) :- phrase(time_text(2, 8), `kahdeksan yli kaksi`).
+test('2:9', [nondet]) :- phrase(time_text(2, 9), `yhdeksän yli kaksi`).
+test('2:10', [nondet]) :- phrase(time_text(2, 10), `kymmenen yli kaksi`).
+test('2:11', [nondet]) :- phrase(time_text(2, 11), `yksitoista yli kaksi`).
+test('2:12', [nondet]) :- phrase(time_text(2, 12), `kaksitoista yli kaksi`).
+test('2:13', [nondet]) :- phrase(time_text(2, 13), `kolmetoista yli kaksi`).
+test('2:14', [nondet]) :- phrase(time_text(2, 14), `neljätoista yli kaksi`).
+test('2:15', [nondet]) :- phrase(time_text(2, 15), `vartin yli kaksi`).
+test('2:15', [nondet]) :- phrase(time_text(2, 15), `viisitoista yli kaksi`).
+test('2:16', [nondet]) :- phrase(time_text(2, 16), `kuusitoista yli kaksi`).
+test('2:17', [nondet]) :- phrase(time_text(2, 17), `seitsemäntoista yli kaksi`).
+test('2:18', [nondet]) :- phrase(time_text(2, 18), `kahdeksantoista yli kaksi`).
+test('2:19', [nondet]) :- phrase(time_text(2, 19), `yhdeksäntoista yli kaksi`).
+test('2:20', [nondet]) :- phrase(time_text(2, 20), `kaksikymmentänolla yli kaksi`).
+test('2:21', [nondet]) :- phrase(time_text(2, 21), `kaksikymmentäyksi yli kaksi`).
+test('2:22', [nondet]) :- phrase(time_text(2, 22), `kaksikymmentäkaksi yli kaksi`).
+test('2:23', [nondet]) :- phrase(time_text(2, 23), `kaksikymmentäkolme yli kaksi`).
+test('2:24', [nondet]) :- phrase(time_text(2, 24), `kaksikymmentäneljä yli kaksi`).
+test('2:25', [nondet]) :- phrase(time_text(2, 25), `kaksikymmentäviisi yli kaksi`).
+test('2:26', [nondet]) :- phrase(time_text(2, 26), `kaksikymmentäkuusi yli kaksi`).
+test('2:27', [nondet]) :- phrase(time_text(2, 27), `kaksikymmentäseitsemän yli kaksi`).
+test('2:28', [nondet]) :- phrase(time_text(2, 28), `kaksikymmentäkahdeksan yli kaksi`).
+test('2:29', [nondet]) :- phrase(time_text(2, 29), `kaksikymmentäyhdeksän yli kaksi`).
+test('2:30', [nondet]) :- phrase(time_text(2, 30), `puoli kolme`).
+test('2:31', [nondet]) :- phrase(time_text(2, 31), `kahtakymmentäyhdeksää vaille kaksi`).
+test('2:32', [nondet]) :- phrase(time_text(2, 32), `kahtakymmentäkahdeksaa vaille kaksi`).
+test('2:33', [nondet]) :- phrase(time_text(2, 33), `kahtakymmentäseitsemää vaille kaksi`).
+test('2:34', [nondet]) :- phrase(time_text(2, 34), `kahtakymmentäkuutta vaille kaksi`).
+test('2:35', [nondet]) :- phrase(time_text(2, 35), `kahtakymmentäviittä vaille kaksi`).
+test('2:36', [nondet]) :- phrase(time_text(2, 36), `kahtakymmentäneljää vaille kaksi`).
+test('2:37', [nondet]) :- phrase(time_text(2, 37), `kahtakymmentäkolmea vaille kaksi`).
+test('2:38', [nondet]) :- phrase(time_text(2, 38), `kahtakymmentäkahta vaille kaksi`).
+test('2:39', [nondet]) :- phrase(time_text(2, 39), `kahtakymmentäyktä vaille kaksi`).
+test('2:40', [nondet]) :- phrase(time_text(2, 40), `kahtakymmentänollaa vaille kaksi`).
+test('2:41', [nondet]) :- phrase(time_text(2, 41), `yhdeksäätoista vaille kaksi`).
+test('2:42', [nondet]) :- phrase(time_text(2, 42), `kahdeksaatoista vaille kaksi`).
+test('2:43', [nondet]) :- phrase(time_text(2, 43), `seitsemäätoista vaille kaksi`).
+test('2:44', [nondet]) :- phrase(time_text(2, 44), `kuuttatoista vaille kaksi`).
+test('2:45', [nondet]) :- phrase(time_text(2, 45), `viittätoista vaille kaksi`).
+test('2:46', [nondet]) :- phrase(time_text(2, 46), `neljäätoista vaille kaksi`).
+test('2:47', [nondet]) :- phrase(time_text(2, 47), `kolmeatoista vaille kaksi`).
+test('2:48', [nondet]) :- phrase(time_text(2, 48), `kahtatoista vaille kaksi`).
+test('2:49', [nondet]) :- phrase(time_text(2, 49), `yktätoista vaille kaksi`).
+test('2:50', [nondet]) :- phrase(time_text(2, 50), `kymmentä vaille kaksi`).
+test('2:51', [nondet]) :- phrase(time_text(2, 51), `yhdeksää vaille kaksi`).
+test('2:52', [nondet]) :- phrase(time_text(2, 52), `kahdeksaa vaille kaksi`).
+test('2:53', [nondet]) :- phrase(time_text(2, 53), `seitsemää vaille kaksi`).
+test('2:54', [nondet]) :- phrase(time_text(2, 54), `kuutta vaille kaksi`).
+test('2:55', [nondet]) :- phrase(time_text(2, 55), `viittä vaille kaksi`).
+test('2:56', [nondet]) :- phrase(time_text(2, 56), `neljää vaille kaksi`).
+test('2:57', [nondet]) :- phrase(time_text(2, 57), `kolmea vaille kaksi`).
+test('2:58', [nondet]) :- phrase(time_text(2, 58), `kahta vaille kaksi`).
+test('2:59', [nondet]) :- phrase(time_text(2, 59), `yktä vaille kaksi`).
+test('3:0', [nondet]) :- phrase(time_text(3, 0), `kolme`).
+test('3:0', [nondet]) :- phrase(time_text(3, 0), `tasan kolme`).
+test('3:1', [nondet]) :- phrase(time_text(3, 1), `yksi yli kolme`).
+test('3:2', [nondet]) :- phrase(time_text(3, 2), `kaksi yli kolme`).
+test('3:3', [nondet]) :- phrase(time_text(3, 3), `kolme yli kolme`).
+test('3:4', [nondet]) :- phrase(time_text(3, 4), `neljä yli kolme`).
+test('3:5', [nondet]) :- phrase(time_text(3, 5), `viisi yli kolme`).
+test('3:6', [nondet]) :- phrase(time_text(3, 6), `kuusi yli kolme`).
+test('3:7', [nondet]) :- phrase(time_text(3, 7), `seitsemän yli kolme`).
+test('3:8', [nondet]) :- phrase(time_text(3, 8), `kahdeksan yli kolme`).
+test('3:9', [nondet]) :- phrase(time_text(3, 9), `yhdeksän yli kolme`).
+test('3:10', [nondet]) :- phrase(time_text(3, 10), `kymmenen yli kolme`).
+test('3:11', [nondet]) :- phrase(time_text(3, 11), `yksitoista yli kolme`).
+test('3:12', [nondet]) :- phrase(time_text(3, 12), `kaksitoista yli kolme`).
+test('3:13', [nondet]) :- phrase(time_text(3, 13), `kolmetoista yli kolme`).
+test('3:14', [nondet]) :- phrase(time_text(3, 14), `neljätoista yli kolme`).
+test('3:15', [nondet]) :- phrase(time_text(3, 15), `vartin yli kolme`).
+test('3:15', [nondet]) :- phrase(time_text(3, 15), `viisitoista yli kolme`).
+test('3:16', [nondet]) :- phrase(time_text(3, 16), `kuusitoista yli kolme`).
+test('3:17', [nondet]) :- phrase(time_text(3, 17), `seitsemäntoista yli kolme`).
+test('3:18', [nondet]) :- phrase(time_text(3, 18), `kahdeksantoista yli kolme`).
+test('3:19', [nondet]) :- phrase(time_text(3, 19), `yhdeksäntoista yli kolme`).
+test('3:20', [nondet]) :- phrase(time_text(3, 20), `kaksikymmentänolla yli kolme`).
+test('3:21', [nondet]) :- phrase(time_text(3, 21), `kaksikymmentäyksi yli kolme`).
+test('3:22', [nondet]) :- phrase(time_text(3, 22), `kaksikymmentäkaksi yli kolme`).
+test('3:23', [nondet]) :- phrase(time_text(3, 23), `kaksikymmentäkolme yli kolme`).
+test('3:24', [nondet]) :- phrase(time_text(3, 24), `kaksikymmentäneljä yli kolme`).
+test('3:25', [nondet]) :- phrase(time_text(3, 25), `kaksikymmentäviisi yli kolme`).
+test('3:26', [nondet]) :- phrase(time_text(3, 26), `kaksikymmentäkuusi yli kolme`).
+test('3:27', [nondet]) :- phrase(time_text(3, 27), `kaksikymmentäseitsemän yli kolme`).
+test('3:28', [nondet]) :- phrase(time_text(3, 28), `kaksikymmentäkahdeksan yli kolme`).
+test('3:29', [nondet]) :- phrase(time_text(3, 29), `kaksikymmentäyhdeksän yli kolme`).
+test('3:30', [nondet]) :- phrase(time_text(3, 30), `puoli neljä`).
+test('3:31', [nondet]) :- phrase(time_text(3, 31), `kahtakymmentäyhdeksää vaille kolme`).
+test('3:32', [nondet]) :- phrase(time_text(3, 32), `kahtakymmentäkahdeksaa vaille kolme`).
+test('3:33', [nondet]) :- phrase(time_text(3, 33), `kahtakymmentäseitsemää vaille kolme`).
+test('3:34', [nondet]) :- phrase(time_text(3, 34), `kahtakymmentäkuutta vaille kolme`).
+test('3:35', [nondet]) :- phrase(time_text(3, 35), `kahtakymmentäviittä vaille kolme`).
+test('3:36', [nondet]) :- phrase(time_text(3, 36), `kahtakymmentäneljää vaille kolme`).
+test('3:37', [nondet]) :- phrase(time_text(3, 37), `kahtakymmentäkolmea vaille kolme`).
+test('3:38', [nondet]) :- phrase(time_text(3, 38), `kahtakymmentäkahta vaille kolme`).
+test('3:39', [nondet]) :- phrase(time_text(3, 39), `kahtakymmentäyktä vaille kolme`).
+test('3:40', [nondet]) :- phrase(time_text(3, 40), `kahtakymmentänollaa vaille kolme`).
+test('3:41', [nondet]) :- phrase(time_text(3, 41), `yhdeksäätoista vaille kolme`).
+test('3:42', [nondet]) :- phrase(time_text(3, 42), `kahdeksaatoista vaille kolme`).
+test('3:43', [nondet]) :- phrase(time_text(3, 43), `seitsemäätoista vaille kolme`).
+test('3:44', [nondet]) :- phrase(time_text(3, 44), `kuuttatoista vaille kolme`).
+test('3:45', [nondet]) :- phrase(time_text(3, 45), `viittätoista vaille kolme`).
+test('3:46', [nondet]) :- phrase(time_text(3, 46), `neljäätoista vaille kolme`).
+test('3:47', [nondet]) :- phrase(time_text(3, 47), `kolmeatoista vaille kolme`).
+test('3:48', [nondet]) :- phrase(time_text(3, 48), `kahtatoista vaille kolme`).
+test('3:49', [nondet]) :- phrase(time_text(3, 49), `yktätoista vaille kolme`).
+test('3:50', [nondet]) :- phrase(time_text(3, 50), `kymmentä vaille kolme`).
+test('3:51', [nondet]) :- phrase(time_text(3, 51), `yhdeksää vaille kolme`).
+test('3:52', [nondet]) :- phrase(time_text(3, 52), `kahdeksaa vaille kolme`).
+test('3:53', [nondet]) :- phrase(time_text(3, 53), `seitsemää vaille kolme`).
+test('3:54', [nondet]) :- phrase(time_text(3, 54), `kuutta vaille kolme`).
+test('3:55', [nondet]) :- phrase(time_text(3, 55), `viittä vaille kolme`).
+test('3:56', [nondet]) :- phrase(time_text(3, 56), `neljää vaille kolme`).
+test('3:57', [nondet]) :- phrase(time_text(3, 57), `kolmea vaille kolme`).
+test('3:58', [nondet]) :- phrase(time_text(3, 58), `kahta vaille kolme`).
+test('3:59', [nondet]) :- phrase(time_text(3, 59), `yktä vaille kolme`).
+test('4:0', [nondet]) :- phrase(time_text(4, 0), `neljä`).
+test('4:0', [nondet]) :- phrase(time_text(4, 0), `tasan neljä`).
+test('4:1', [nondet]) :- phrase(time_text(4, 1), `yksi yli neljä`).
+test('4:2', [nondet]) :- phrase(time_text(4, 2), `kaksi yli neljä`).
+test('4:3', [nondet]) :- phrase(time_text(4, 3), `kolme yli neljä`).
+test('4:4', [nondet]) :- phrase(time_text(4, 4), `neljä yli neljä`).
+test('4:5', [nondet]) :- phrase(time_text(4, 5), `viisi yli neljä`).
+test('4:6', [nondet]) :- phrase(time_text(4, 6), `kuusi yli neljä`).
+test('4:7', [nondet]) :- phrase(time_text(4, 7), `seitsemän yli neljä`).
+test('4:8', [nondet]) :- phrase(time_text(4, 8), `kahdeksan yli neljä`).
+test('4:9', [nondet]) :- phrase(time_text(4, 9), `yhdeksän yli neljä`).
+test('4:10', [nondet]) :- phrase(time_text(4, 10), `kymmenen yli neljä`).
+test('4:11', [nondet]) :- phrase(time_text(4, 11), `yksitoista yli neljä`).
+test('4:12', [nondet]) :- phrase(time_text(4, 12), `kaksitoista yli neljä`).
+test('4:13', [nondet]) :- phrase(time_text(4, 13), `kolmetoista yli neljä`).
+test('4:14', [nondet]) :- phrase(time_text(4, 14), `neljätoista yli neljä`).
+test('4:15', [nondet]) :- phrase(time_text(4, 15), `vartin yli neljä`).
+test('4:15', [nondet]) :- phrase(time_text(4, 15), `viisitoista yli neljä`).
+test('4:16', [nondet]) :- phrase(time_text(4, 16), `kuusitoista yli neljä`).
+test('4:17', [nondet]) :- phrase(time_text(4, 17), `seitsemäntoista yli neljä`).
+test('4:18', [nondet]) :- phrase(time_text(4, 18), `kahdeksantoista yli neljä`).
+test('4:19', [nondet]) :- phrase(time_text(4, 19), `yhdeksäntoista yli neljä`).
+test('4:20', [nondet]) :- phrase(time_text(4, 20), `kaksikymmentänolla yli neljä`).
+test('4:21', [nondet]) :- phrase(time_text(4, 21), `kaksikymmentäyksi yli neljä`).
+test('4:22', [nondet]) :- phrase(time_text(4, 22), `kaksikymmentäkaksi yli neljä`).
+test('4:23', [nondet]) :- phrase(time_text(4, 23), `kaksikymmentäkolme yli neljä`).
+test('4:24', [nondet]) :- phrase(time_text(4, 24), `kaksikymmentäneljä yli neljä`).
+test('4:25', [nondet]) :- phrase(time_text(4, 25), `kaksikymmentäviisi yli neljä`).
+test('4:26', [nondet]) :- phrase(time_text(4, 26), `kaksikymmentäkuusi yli neljä`).
+test('4:27', [nondet]) :- phrase(time_text(4, 27), `kaksikymmentäseitsemän yli neljä`).
+test('4:28', [nondet]) :- phrase(time_text(4, 28), `kaksikymmentäkahdeksan yli neljä`).
+test('4:29', [nondet]) :- phrase(time_text(4, 29), `kaksikymmentäyhdeksän yli neljä`).
+test('4:30', [nondet]) :- phrase(time_text(4, 30), `puoli viisi`).
+test('4:31', [nondet]) :- phrase(time_text(4, 31), `kahtakymmentäyhdeksää vaille neljä`).
+test('4:32', [nondet]) :- phrase(time_text(4, 32), `kahtakymmentäkahdeksaa vaille neljä`).
+test('4:33', [nondet]) :- phrase(time_text(4, 33), `kahtakymmentäseitsemää vaille neljä`).
+test('4:34', [nondet]) :- phrase(time_text(4, 34), `kahtakymmentäkuutta vaille neljä`).
+test('4:35', [nondet]) :- phrase(time_text(4, 35), `kahtakymmentäviittä vaille neljä`).
+test('4:36', [nondet]) :- phrase(time_text(4, 36), `kahtakymmentäneljää vaille neljä`).
+test('4:37', [nondet]) :- phrase(time_text(4, 37), `kahtakymmentäkolmea vaille neljä`).
+test('4:38', [nondet]) :- phrase(time_text(4, 38), `kahtakymmentäkahta vaille neljä`).
+test('4:39', [nondet]) :- phrase(time_text(4, 39), `kahtakymmentäyktä vaille neljä`).
+test('4:40', [nondet]) :- phrase(time_text(4, 40), `kahtakymmentänollaa vaille neljä`).
+test('4:41', [nondet]) :- phrase(time_text(4, 41), `yhdeksäätoista vaille neljä`).
+test('4:42', [nondet]) :- phrase(time_text(4, 42), `kahdeksaatoista vaille neljä`).
+test('4:43', [nondet]) :- phrase(time_text(4, 43), `seitsemäätoista vaille neljä`).
+test('4:44', [nondet]) :- phrase(time_text(4, 44), `kuuttatoista vaille neljä`).
+test('4:45', [nondet]) :- phrase(time_text(4, 45), `viittätoista vaille neljä`).
+test('4:46', [nondet]) :- phrase(time_text(4, 46), `neljäätoista vaille neljä`).
+test('4:47', [nondet]) :- phrase(time_text(4, 47), `kolmeatoista vaille neljä`).
+test('4:48', [nondet]) :- phrase(time_text(4, 48), `kahtatoista vaille neljä`).
+test('4:49', [nondet]) :- phrase(time_text(4, 49), `yktätoista vaille neljä`).
+test('4:50', [nondet]) :- phrase(time_text(4, 50), `kymmentä vaille neljä`).
+test('4:51', [nondet]) :- phrase(time_text(4, 51), `yhdeksää vaille neljä`).
+test('4:52', [nondet]) :- phrase(time_text(4, 52), `kahdeksaa vaille neljä`).
+test('4:53', [nondet]) :- phrase(time_text(4, 53), `seitsemää vaille neljä`).
+test('4:54', [nondet]) :- phrase(time_text(4, 54), `kuutta vaille neljä`).
+test('4:55', [nondet]) :- phrase(time_text(4, 55), `viittä vaille neljä`).
+test('4:56', [nondet]) :- phrase(time_text(4, 56), `neljää vaille neljä`).
+test('4:57', [nondet]) :- phrase(time_text(4, 57), `kolmea vaille neljä`).
+test('4:58', [nondet]) :- phrase(time_text(4, 58), `kahta vaille neljä`).
+test('4:59', [nondet]) :- phrase(time_text(4, 59), `yktä vaille neljä`).
+test('5:0', [nondet]) :- phrase(time_text(5, 0), `tasan viisi`).
+test('5:0', [nondet]) :- phrase(time_text(5, 0), `viisi`).
+test('5:1', [nondet]) :- phrase(time_text(5, 1), `yksi yli viisi`).
+test('5:2', [nondet]) :- phrase(time_text(5, 2), `kaksi yli viisi`).
+test('5:3', [nondet]) :- phrase(time_text(5, 3), `kolme yli viisi`).
+test('5:4', [nondet]) :- phrase(time_text(5, 4), `neljä yli viisi`).
+test('5:5', [nondet]) :- phrase(time_text(5, 5), `viisi yli viisi`).
+test('5:6', [nondet]) :- phrase(time_text(5, 6), `kuusi yli viisi`).
+test('5:7', [nondet]) :- phrase(time_text(5, 7), `seitsemän yli viisi`).
+test('5:8', [nondet]) :- phrase(time_text(5, 8), `kahdeksan yli viisi`).
+test('5:9', [nondet]) :- phrase(time_text(5, 9), `yhdeksän yli viisi`).
+test('5:10', [nondet]) :- phrase(time_text(5, 10), `kymmenen yli viisi`).
+test('5:11', [nondet]) :- phrase(time_text(5, 11), `yksitoista yli viisi`).
+test('5:12', [nondet]) :- phrase(time_text(5, 12), `kaksitoista yli viisi`).
+test('5:13', [nondet]) :- phrase(time_text(5, 13), `kolmetoista yli viisi`).
+test('5:14', [nondet]) :- phrase(time_text(5, 14), `neljätoista yli viisi`).
+test('5:15', [nondet]) :- phrase(time_text(5, 15), `vartin yli viisi`).
+test('5:15', [nondet]) :- phrase(time_text(5, 15), `viisitoista yli viisi`).
+test('5:16', [nondet]) :- phrase(time_text(5, 16), `kuusitoista yli viisi`).
+test('5:17', [nondet]) :- phrase(time_text(5, 17), `seitsemäntoista yli viisi`).
+test('5:18', [nondet]) :- phrase(time_text(5, 18), `kahdeksantoista yli viisi`).
+test('5:19', [nondet]) :- phrase(time_text(5, 19), `yhdeksäntoista yli viisi`).
+test('5:20', [nondet]) :- phrase(time_text(5, 20), `kaksikymmentänolla yli viisi`).
+test('5:21', [nondet]) :- phrase(time_text(5, 21), `kaksikymmentäyksi yli viisi`).
+test('5:22', [nondet]) :- phrase(time_text(5, 22), `kaksikymmentäkaksi yli viisi`).
+test('5:23', [nondet]) :- phrase(time_text(5, 23), `kaksikymmentäkolme yli viisi`).
+test('5:24', [nondet]) :- phrase(time_text(5, 24), `kaksikymmentäneljä yli viisi`).
+test('5:25', [nondet]) :- phrase(time_text(5, 25), `kaksikymmentäviisi yli viisi`).
+test('5:26', [nondet]) :- phrase(time_text(5, 26), `kaksikymmentäkuusi yli viisi`).
+test('5:27', [nondet]) :- phrase(time_text(5, 27), `kaksikymmentäseitsemän yli viisi`).
+test('5:28', [nondet]) :- phrase(time_text(5, 28), `kaksikymmentäkahdeksan yli viisi`).
+test('5:29', [nondet]) :- phrase(time_text(5, 29), `kaksikymmentäyhdeksän yli viisi`).
+test('5:30', [nondet]) :- phrase(time_text(5, 30), `puoli kuusi`).
+test('5:31', [nondet]) :- phrase(time_text(5, 31), `kahtakymmentäyhdeksää vaille viisi`).
+test('5:32', [nondet]) :- phrase(time_text(5, 32), `kahtakymmentäkahdeksaa vaille viisi`).
+test('5:33', [nondet]) :- phrase(time_text(5, 33), `kahtakymmentäseitsemää vaille viisi`).
+test('5:34', [nondet]) :- phrase(time_text(5, 34), `kahtakymmentäkuutta vaille viisi`).
+test('5:35', [nondet]) :- phrase(time_text(5, 35), `kahtakymmentäviittä vaille viisi`).
+test('5:36', [nondet]) :- phrase(time_text(5, 36), `kahtakymmentäneljää vaille viisi`).
+test('5:37', [nondet]) :- phrase(time_text(5, 37), `kahtakymmentäkolmea vaille viisi`).
+test('5:38', [nondet]) :- phrase(time_text(5, 38), `kahtakymmentäkahta vaille viisi`).
+test('5:39', [nondet]) :- phrase(time_text(5, 39), `kahtakymmentäyktä vaille viisi`).
+test('5:40', [nondet]) :- phrase(time_text(5, 40), `kahtakymmentänollaa vaille viisi`).
+test('5:41', [nondet]) :- phrase(time_text(5, 41), `yhdeksäätoista vaille viisi`).
+test('5:42', [nondet]) :- phrase(time_text(5, 42), `kahdeksaatoista vaille viisi`).
+test('5:43', [nondet]) :- phrase(time_text(5, 43), `seitsemäätoista vaille viisi`).
+test('5:44', [nondet]) :- phrase(time_text(5, 44), `kuuttatoista vaille viisi`).
+test('5:45', [nondet]) :- phrase(time_text(5, 45), `viittätoista vaille viisi`).
+test('5:46', [nondet]) :- phrase(time_text(5, 46), `neljäätoista vaille viisi`).
+test('5:47', [nondet]) :- phrase(time_text(5, 47), `kolmeatoista vaille viisi`).
+test('5:48', [nondet]) :- phrase(time_text(5, 48), `kahtatoista vaille viisi`).
+test('5:49', [nondet]) :- phrase(time_text(5, 49), `yktätoista vaille viisi`).
+test('5:50', [nondet]) :- phrase(time_text(5, 50), `kymmentä vaille viisi`).
+test('5:51', [nondet]) :- phrase(time_text(5, 51), `yhdeksää vaille viisi`).
+test('5:52', [nondet]) :- phrase(time_text(5, 52), `kahdeksaa vaille viisi`).
+test('5:53', [nondet]) :- phrase(time_text(5, 53), `seitsemää vaille viisi`).
+test('5:54', [nondet]) :- phrase(time_text(5, 54), `kuutta vaille viisi`).
+test('5:55', [nondet]) :- phrase(time_text(5, 55), `viittä vaille viisi`).
+test('5:56', [nondet]) :- phrase(time_text(5, 56), `neljää vaille viisi`).
+test('5:57', [nondet]) :- phrase(time_text(5, 57), `kolmea vaille viisi`).
+test('5:58', [nondet]) :- phrase(time_text(5, 58), `kahta vaille viisi`).
+test('5:59', [nondet]) :- phrase(time_text(5, 59), `yktä vaille viisi`).
+test('6:0', [nondet]) :- phrase(time_text(6, 0), `kuusi`).
+test('6:0', [nondet]) :- phrase(time_text(6, 0), `tasan kuusi`).
+test('6:1', [nondet]) :- phrase(time_text(6, 1), `yksi yli kuusi`).
+test('6:2', [nondet]) :- phrase(time_text(6, 2), `kaksi yli kuusi`).
+test('6:3', [nondet]) :- phrase(time_text(6, 3), `kolme yli kuusi`).
+test('6:4', [nondet]) :- phrase(time_text(6, 4), `neljä yli kuusi`).
+test('6:5', [nondet]) :- phrase(time_text(6, 5), `viisi yli kuusi`).
+test('6:6', [nondet]) :- phrase(time_text(6, 6), `kuusi yli kuusi`).
+test('6:7', [nondet]) :- phrase(time_text(6, 7), `seitsemän yli kuusi`).
+test('6:8', [nondet]) :- phrase(time_text(6, 8), `kahdeksan yli kuusi`).
+test('6:9', [nondet]) :- phrase(time_text(6, 9), `yhdeksän yli kuusi`).
+test('6:10', [nondet]) :- phrase(time_text(6, 10), `kymmenen yli kuusi`).
+test('6:11', [nondet]) :- phrase(time_text(6, 11), `yksitoista yli kuusi`).
+test('6:12', [nondet]) :- phrase(time_text(6, 12), `kaksitoista yli kuusi`).
+test('6:13', [nondet]) :- phrase(time_text(6, 13), `kolmetoista yli kuusi`).
+test('6:14', [nondet]) :- phrase(time_text(6, 14), `neljätoista yli kuusi`).
+test('6:15', [nondet]) :- phrase(time_text(6, 15), `vartin yli kuusi`).
+test('6:15', [nondet]) :- phrase(time_text(6, 15), `viisitoista yli kuusi`).
+test('6:16', [nondet]) :- phrase(time_text(6, 16), `kuusitoista yli kuusi`).
+test('6:17', [nondet]) :- phrase(time_text(6, 17), `seitsemäntoista yli kuusi`).
+test('6:18', [nondet]) :- phrase(time_text(6, 18), `kahdeksantoista yli kuusi`).
+test('6:19', [nondet]) :- phrase(time_text(6, 19), `yhdeksäntoista yli kuusi`).
+test('6:20', [nondet]) :- phrase(time_text(6, 20), `kaksikymmentänolla yli kuusi`).
+test('6:21', [nondet]) :- phrase(time_text(6, 21), `kaksikymmentäyksi yli kuusi`).
+test('6:22', [nondet]) :- phrase(time_text(6, 22), `kaksikymmentäkaksi yli kuusi`).
+test('6:23', [nondet]) :- phrase(time_text(6, 23), `kaksikymmentäkolme yli kuusi`).
+test('6:24', [nondet]) :- phrase(time_text(6, 24), `kaksikymmentäneljä yli kuusi`).
+test('6:25', [nondet]) :- phrase(time_text(6, 25), `kaksikymmentäviisi yli kuusi`).
+test('6:26', [nondet]) :- phrase(time_text(6, 26), `kaksikymmentäkuusi yli kuusi`).
+test('6:27', [nondet]) :- phrase(time_text(6, 27), `kaksikymmentäseitsemän yli kuusi`).
+test('6:28', [nondet]) :- phrase(time_text(6, 28), `kaksikymmentäkahdeksan yli kuusi`).
+test('6:29', [nondet]) :- phrase(time_text(6, 29), `kaksikymmentäyhdeksän yli kuusi`).
+test('6:30', [nondet]) :- phrase(time_text(6, 30), `puoli seitsemän`).
+test('6:31', [nondet]) :- phrase(time_text(6, 31), `kahtakymmentäyhdeksää vaille kuusi`).
+test('6:32', [nondet]) :- phrase(time_text(6, 32), `kahtakymmentäkahdeksaa vaille kuusi`).
+test('6:33', [nondet]) :- phrase(time_text(6, 33), `kahtakymmentäseitsemää vaille kuusi`).
+test('6:34', [nondet]) :- phrase(time_text(6, 34), `kahtakymmentäkuutta vaille kuusi`).
+test('6:35', [nondet]) :- phrase(time_text(6, 35), `kahtakymmentäviittä vaille kuusi`).
+test('6:36', [nondet]) :- phrase(time_text(6, 36), `kahtakymmentäneljää vaille kuusi`).
+test('6:37', [nondet]) :- phrase(time_text(6, 37), `kahtakymmentäkolmea vaille kuusi`).
+test('6:38', [nondet]) :- phrase(time_text(6, 38), `kahtakymmentäkahta vaille kuusi`).
+test('6:39', [nondet]) :- phrase(time_text(6, 39), `kahtakymmentäyktä vaille kuusi`).
+test('6:40', [nondet]) :- phrase(time_text(6, 40), `kahtakymmentänollaa vaille kuusi`).
+test('6:41', [nondet]) :- phrase(time_text(6, 41), `yhdeksäätoista vaille kuusi`).
+test('6:42', [nondet]) :- phrase(time_text(6, 42), `kahdeksaatoista vaille kuusi`).
+test('6:43', [nondet]) :- phrase(time_text(6, 43), `seitsemäätoista vaille kuusi`).
+test('6:44', [nondet]) :- phrase(time_text(6, 44), `kuuttatoista vaille kuusi`).
+test('6:45', [nondet]) :- phrase(time_text(6, 45), `viittätoista vaille kuusi`).
+test('6:46', [nondet]) :- phrase(time_text(6, 46), `neljäätoista vaille kuusi`).
+test('6:47', [nondet]) :- phrase(time_text(6, 47), `kolmeatoista vaille kuusi`).
+test('6:48', [nondet]) :- phrase(time_text(6, 48), `kahtatoista vaille kuusi`).
+test('6:49', [nondet]) :- phrase(time_text(6, 49), `yktätoista vaille kuusi`).
+test('6:50', [nondet]) :- phrase(time_text(6, 50), `kymmentä vaille kuusi`).
+test('6:51', [nondet]) :- phrase(time_text(6, 51), `yhdeksää vaille kuusi`).
+test('6:52', [nondet]) :- phrase(time_text(6, 52), `kahdeksaa vaille kuusi`).
+test('6:53', [nondet]) :- phrase(time_text(6, 53), `seitsemää vaille kuusi`).
+test('6:54', [nondet]) :- phrase(time_text(6, 54), `kuutta vaille kuusi`).
+test('6:55', [nondet]) :- phrase(time_text(6, 55), `viittä vaille kuusi`).
+test('6:56', [nondet]) :- phrase(time_text(6, 56), `neljää vaille kuusi`).
+test('6:57', [nondet]) :- phrase(time_text(6, 57), `kolmea vaille kuusi`).
+test('6:58', [nondet]) :- phrase(time_text(6, 58), `kahta vaille kuusi`).
+test('6:59', [nondet]) :- phrase(time_text(6, 59), `yktä vaille kuusi`).
+test('7:0', [nondet]) :- phrase(time_text(7, 0), `seitsemän`).
+test('7:0', [nondet]) :- phrase(time_text(7, 0), `tasan seitsemän`).
+test('7:1', [nondet]) :- phrase(time_text(7, 1), `yksi yli seitsemän`).
+test('7:2', [nondet]) :- phrase(time_text(7, 2), `kaksi yli seitsemän`).
+test('7:3', [nondet]) :- phrase(time_text(7, 3), `kolme yli seitsemän`).
+test('7:4', [nondet]) :- phrase(time_text(7, 4), `neljä yli seitsemän`).
+test('7:5', [nondet]) :- phrase(time_text(7, 5), `viisi yli seitsemän`).
+test('7:6', [nondet]) :- phrase(time_text(7, 6), `kuusi yli seitsemän`).
+test('7:7', [nondet]) :- phrase(time_text(7, 7), `seitsemän yli seitsemän`).
+test('7:8', [nondet]) :- phrase(time_text(7, 8), `kahdeksan yli seitsemän`).
+test('7:9', [nondet]) :- phrase(time_text(7, 9), `yhdeksän yli seitsemän`).
+test('7:10', [nondet]) :- phrase(time_text(7, 10), `kymmenen yli seitsemän`).
+test('7:11', [nondet]) :- phrase(time_text(7, 11), `yksitoista yli seitsemän`).
+test('7:12', [nondet]) :- phrase(time_text(7, 12), `kaksitoista yli seitsemän`).
+test('7:13', [nondet]) :- phrase(time_text(7, 13), `kolmetoista yli seitsemän`).
+test('7:14', [nondet]) :- phrase(time_text(7, 14), `neljätoista yli seitsemän`).
+test('7:15', [nondet]) :- phrase(time_text(7, 15), `vartin yli seitsemän`).
+test('7:15', [nondet]) :- phrase(time_text(7, 15), `viisitoista yli seitsemän`).
+test('7:16', [nondet]) :- phrase(time_text(7, 16), `kuusitoista yli seitsemän`).
+test('7:17', [nondet]) :- phrase(time_text(7, 17), `seitsemäntoista yli seitsemän`).
+test('7:18', [nondet]) :- phrase(time_text(7, 18), `kahdeksantoista yli seitsemän`).
+test('7:19', [nondet]) :- phrase(time_text(7, 19), `yhdeksäntoista yli seitsemän`).
+test('7:20', [nondet]) :- phrase(time_text(7, 20), `kaksikymmentänolla yli seitsemän`).
+test('7:21', [nondet]) :- phrase(time_text(7, 21), `kaksikymmentäyksi yli seitsemän`).
+test('7:22', [nondet]) :- phrase(time_text(7, 22), `kaksikymmentäkaksi yli seitsemän`).
+test('7:23', [nondet]) :- phrase(time_text(7, 23), `kaksikymmentäkolme yli seitsemän`).
+test('7:24', [nondet]) :- phrase(time_text(7, 24), `kaksikymmentäneljä yli seitsemän`).
+test('7:25', [nondet]) :- phrase(time_text(7, 25), `kaksikymmentäviisi yli seitsemän`).
+test('7:26', [nondet]) :- phrase(time_text(7, 26), `kaksikymmentäkuusi yli seitsemän`).
+test('7:27', [nondet]) :- phrase(time_text(7, 27), `kaksikymmentäseitsemän yli seitsemän`).
+test('7:28', [nondet]) :- phrase(time_text(7, 28), `kaksikymmentäkahdeksan yli seitsemän`).
+test('7:29', [nondet]) :- phrase(time_text(7, 29), `kaksikymmentäyhdeksän yli seitsemän`).
+test('7:30', [nondet]) :- phrase(time_text(7, 30), `puoli kahdeksan`).
+test('7:31', [nondet]) :- phrase(time_text(7, 31), `kahtakymmentäyhdeksää vaille seitsemän`).
+test('7:32', [nondet]) :- phrase(time_text(7, 32), `kahtakymmentäkahdeksaa vaille seitsemän`).
+test('7:33', [nondet]) :- phrase(time_text(7, 33), `kahtakymmentäseitsemää vaille seitsemän`).
+test('7:34', [nondet]) :- phrase(time_text(7, 34), `kahtakymmentäkuutta vaille seitsemän`).
+test('7:35', [nondet]) :- phrase(time_text(7, 35), `kahtakymmentäviittä vaille seitsemän`).
+test('7:36', [nondet]) :- phrase(time_text(7, 36), `kahtakymmentäneljää vaille seitsemän`).
+test('7:37', [nondet]) :- phrase(time_text(7, 37), `kahtakymmentäkolmea vaille seitsemän`).
+test('7:38', [nondet]) :- phrase(time_text(7, 38), `kahtakymmentäkahta vaille seitsemän`).
+test('7:39', [nondet]) :- phrase(time_text(7, 39), `kahtakymmentäyktä vaille seitsemän`).
+test('7:40', [nondet]) :- phrase(time_text(7, 40), `kahtakymmentänollaa vaille seitsemän`).
+test('7:41', [nondet]) :- phrase(time_text(7, 41), `yhdeksäätoista vaille seitsemän`).
+test('7:42', [nondet]) :- phrase(time_text(7, 42), `kahdeksaatoista vaille seitsemän`).
+test('7:43', [nondet]) :- phrase(time_text(7, 43), `seitsemäätoista vaille seitsemän`).
+test('7:44', [nondet]) :- phrase(time_text(7, 44), `kuuttatoista vaille seitsemän`).
+test('7:45', [nondet]) :- phrase(time_text(7, 45), `viittätoista vaille seitsemän`).
+test('7:46', [nondet]) :- phrase(time_text(7, 46), `neljäätoista vaille seitsemän`).
+test('7:47', [nondet]) :- phrase(time_text(7, 47), `kolmeatoista vaille seitsemän`).
+test('7:48', [nondet]) :- phrase(time_text(7, 48), `kahtatoista vaille seitsemän`).
+test('7:49', [nondet]) :- phrase(time_text(7, 49), `yktätoista vaille seitsemän`).
+test('7:50', [nondet]) :- phrase(time_text(7, 50), `kymmentä vaille seitsemän`).
+test('7:51', [nondet]) :- phrase(time_text(7, 51), `yhdeksää vaille seitsemän`).
+test('7:52', [nondet]) :- phrase(time_text(7, 52), `kahdeksaa vaille seitsemän`).
+test('7:53', [nondet]) :- phrase(time_text(7, 53), `seitsemää vaille seitsemän`).
+test('7:54', [nondet]) :- phrase(time_text(7, 54), `kuutta vaille seitsemän`).
+test('7:55', [nondet]) :- phrase(time_text(7, 55), `viittä vaille seitsemän`).
+test('7:56', [nondet]) :- phrase(time_text(7, 56), `neljää vaille seitsemän`).
+test('7:57', [nondet]) :- phrase(time_text(7, 57), `kolmea vaille seitsemän`).
+test('7:58', [nondet]) :- phrase(time_text(7, 58), `kahta vaille seitsemän`).
+test('7:59', [nondet]) :- phrase(time_text(7, 59), `yktä vaille seitsemän`).
+test('8:0', [nondet]) :- phrase(time_text(8, 0), `kahdeksan`).
+test('8:0', [nondet]) :- phrase(time_text(8, 0), `tasan kahdeksan`).
+test('8:1', [nondet]) :- phrase(time_text(8, 1), `yksi yli kahdeksan`).
+test('8:2', [nondet]) :- phrase(time_text(8, 2), `kaksi yli kahdeksan`).
+test('8:3', [nondet]) :- phrase(time_text(8, 3), `kolme yli kahdeksan`).
+test('8:4', [nondet]) :- phrase(time_text(8, 4), `neljä yli kahdeksan`).
+test('8:5', [nondet]) :- phrase(time_text(8, 5), `viisi yli kahdeksan`).
+test('8:6', [nondet]) :- phrase(time_text(8, 6), `kuusi yli kahdeksan`).
+test('8:7', [nondet]) :- phrase(time_text(8, 7), `seitsemän yli kahdeksan`).
+test('8:8', [nondet]) :- phrase(time_text(8, 8), `kahdeksan yli kahdeksan`).
+test('8:9', [nondet]) :- phrase(time_text(8, 9), `yhdeksän yli kahdeksan`).
+test('8:10', [nondet]) :- phrase(time_text(8, 10), `kymmenen yli kahdeksan`).
+test('8:11', [nondet]) :- phrase(time_text(8, 11), `yksitoista yli kahdeksan`).
+test('8:12', [nondet]) :- phrase(time_text(8, 12), `kaksitoista yli kahdeksan`).
+test('8:13', [nondet]) :- phrase(time_text(8, 13), `kolmetoista yli kahdeksan`).
+test('8:14', [nondet]) :- phrase(time_text(8, 14), `neljätoista yli kahdeksan`).
+test('8:15', [nondet]) :- phrase(time_text(8, 15), `vartin yli kahdeksan`).
+test('8:15', [nondet]) :- phrase(time_text(8, 15), `viisitoista yli kahdeksan`).
+test('8:16', [nondet]) :- phrase(time_text(8, 16), `kuusitoista yli kahdeksan`).
+test('8:17', [nondet]) :- phrase(time_text(8, 17), `seitsemäntoista yli kahdeksan`).
+test('8:18', [nondet]) :- phrase(time_text(8, 18), `kahdeksantoista yli kahdeksan`).
+test('8:19', [nondet]) :- phrase(time_text(8, 19), `yhdeksäntoista yli kahdeksan`).
+test('8:20', [nondet]) :- phrase(time_text(8, 20), `kaksikymmentänolla yli kahdeksan`).
+test('8:21', [nondet]) :- phrase(time_text(8, 21), `kaksikymmentäyksi yli kahdeksan`).
+test('8:22', [nondet]) :- phrase(time_text(8, 22), `kaksikymmentäkaksi yli kahdeksan`).
+test('8:23', [nondet]) :- phrase(time_text(8, 23), `kaksikymmentäkolme yli kahdeksan`).
+test('8:24', [nondet]) :- phrase(time_text(8, 24), `kaksikymmentäneljä yli kahdeksan`).
+test('8:25', [nondet]) :- phrase(time_text(8, 25), `kaksikymmentäviisi yli kahdeksan`).
+test('8:26', [nondet]) :- phrase(time_text(8, 26), `kaksikymmentäkuusi yli kahdeksan`).
+test('8:27', [nondet]) :- phrase(time_text(8, 27), `kaksikymmentäseitsemän yli kahdeksan`).
+test('8:28', [nondet]) :- phrase(time_text(8, 28), `kaksikymmentäkahdeksan yli kahdeksan`).
+test('8:29', [nondet]) :- phrase(time_text(8, 29), `kaksikymmentäyhdeksän yli kahdeksan`).
+test('8:30', [nondet]) :- phrase(time_text(8, 30), `puoli yhdeksän`).
+test('8:31', [nondet]) :- phrase(time_text(8, 31), `kahtakymmentäyhdeksää vaille kahdeksan`).
+test('8:32', [nondet]) :- phrase(time_text(8, 32), `kahtakymmentäkahdeksaa vaille kahdeksan`).
+test('8:33', [nondet]) :- phrase(time_text(8, 33), `kahtakymmentäseitsemää vaille kahdeksan`).
+test('8:34', [nondet]) :- phrase(time_text(8, 34), `kahtakymmentäkuutta vaille kahdeksan`).
+test('8:35', [nondet]) :- phrase(time_text(8, 35), `kahtakymmentäviittä vaille kahdeksan`).
+test('8:36', [nondet]) :- phrase(time_text(8, 36), `kahtakymmentäneljää vaille kahdeksan`).
+test('8:37', [nondet]) :- phrase(time_text(8, 37), `kahtakymmentäkolmea vaille kahdeksan`).
+test('8:38', [nondet]) :- phrase(time_text(8, 38), `kahtakymmentäkahta vaille kahdeksan`).
+test('8:39', [nondet]) :- phrase(time_text(8, 39), `kahtakymmentäyktä vaille kahdeksan`).
+test('8:40', [nondet]) :- phrase(time_text(8, 40), `kahtakymmentänollaa vaille kahdeksan`).
+test('8:41', [nondet]) :- phrase(time_text(8, 41), `yhdeksäätoista vaille kahdeksan`).
+test('8:42', [nondet]) :- phrase(time_text(8, 42), `kahdeksaatoista vaille kahdeksan`).
+test('8:43', [nondet]) :- phrase(time_text(8, 43), `seitsemäätoista vaille kahdeksan`).
+test('8:44', [nondet]) :- phrase(time_text(8, 44), `kuuttatoista vaille kahdeksan`).
+test('8:45', [nondet]) :- phrase(time_text(8, 45), `viittätoista vaille kahdeksan`).
+test('8:46', [nondet]) :- phrase(time_text(8, 46), `neljäätoista vaille kahdeksan`).
+test('8:47', [nondet]) :- phrase(time_text(8, 47), `kolmeatoista vaille kahdeksan`).
+test('8:48', [nondet]) :- phrase(time_text(8, 48), `kahtatoista vaille kahdeksan`).
+test('8:49', [nondet]) :- phrase(time_text(8, 49), `yktätoista vaille kahdeksan`).
+test('8:50', [nondet]) :- phrase(time_text(8, 50), `kymmentä vaille kahdeksan`).
+test('8:51', [nondet]) :- phrase(time_text(8, 51), `yhdeksää vaille kahdeksan`).
+test('8:52', [nondet]) :- phrase(time_text(8, 52), `kahdeksaa vaille kahdeksan`).
+test('8:53', [nondet]) :- phrase(time_text(8, 53), `seitsemää vaille kahdeksan`).
+test('8:54', [nondet]) :- phrase(time_text(8, 54), `kuutta vaille kahdeksan`).
+test('8:55', [nondet]) :- phrase(time_text(8, 55), `viittä vaille kahdeksan`).
+test('8:56', [nondet]) :- phrase(time_text(8, 56), `neljää vaille kahdeksan`).
+test('8:57', [nondet]) :- phrase(time_text(8, 57), `kolmea vaille kahdeksan`).
+test('8:58', [nondet]) :- phrase(time_text(8, 58), `kahta vaille kahdeksan`).
+test('8:59', [nondet]) :- phrase(time_text(8, 59), `yktä vaille kahdeksan`).
+test('9:0', [nondet]) :- phrase(time_text(9, 0), `tasan yhdeksän`).
+test('9:0', [nondet]) :- phrase(time_text(9, 0), `yhdeksän`).
+test('9:1', [nondet]) :- phrase(time_text(9, 1), `yksi yli yhdeksän`).
+test('9:2', [nondet]) :- phrase(time_text(9, 2), `kaksi yli yhdeksän`).
+test('9:3', [nondet]) :- phrase(time_text(9, 3), `kolme yli yhdeksän`).
+test('9:4', [nondet]) :- phrase(time_text(9, 4), `neljä yli yhdeksän`).
+test('9:5', [nondet]) :- phrase(time_text(9, 5), `viisi yli yhdeksän`).
+test('9:6', [nondet]) :- phrase(time_text(9, 6), `kuusi yli yhdeksän`).
+test('9:7', [nondet]) :- phrase(time_text(9, 7), `seitsemän yli yhdeksän`).
+test('9:8', [nondet]) :- phrase(time_text(9, 8), `kahdeksan yli yhdeksän`).
+test('9:9', [nondet]) :- phrase(time_text(9, 9), `yhdeksän yli yhdeksän`).
+test('9:10', [nondet]) :- phrase(time_text(9, 10), `kymmenen yli yhdeksän`).
+test('9:11', [nondet]) :- phrase(time_text(9, 11), `yksitoista yli yhdeksän`).
+test('9:12', [nondet]) :- phrase(time_text(9, 12), `kaksitoista yli yhdeksän`).
+test('9:13', [nondet]) :- phrase(time_text(9, 13), `kolmetoista yli yhdeksän`).
+test('9:14', [nondet]) :- phrase(time_text(9, 14), `neljätoista yli yhdeksän`).
+test('9:15', [nondet]) :- phrase(time_text(9, 15), `vartin yli yhdeksän`).
+test('9:15', [nondet]) :- phrase(time_text(9, 15), `viisitoista yli yhdeksän`).
+test('9:16', [nondet]) :- phrase(time_text(9, 16), `kuusitoista yli yhdeksän`).
+test('9:17', [nondet]) :- phrase(time_text(9, 17), `seitsemäntoista yli yhdeksän`).
+test('9:18', [nondet]) :- phrase(time_text(9, 18), `kahdeksantoista yli yhdeksän`).
+test('9:19', [nondet]) :- phrase(time_text(9, 19), `yhdeksäntoista yli yhdeksän`).
+test('9:20', [nondet]) :- phrase(time_text(9, 20), `kaksikymmentänolla yli yhdeksän`).
+test('9:21', [nondet]) :- phrase(time_text(9, 21), `kaksikymmentäyksi yli yhdeksän`).
+test('9:22', [nondet]) :- phrase(time_text(9, 22), `kaksikymmentäkaksi yli yhdeksän`).
+test('9:23', [nondet]) :- phrase(time_text(9, 23), `kaksikymmentäkolme yli yhdeksän`).
+test('9:24', [nondet]) :- phrase(time_text(9, 24), `kaksikymmentäneljä yli yhdeksän`).
+test('9:25', [nondet]) :- phrase(time_text(9, 25), `kaksikymmentäviisi yli yhdeksän`).
+test('9:26', [nondet]) :- phrase(time_text(9, 26), `kaksikymmentäkuusi yli yhdeksän`).
+test('9:27', [nondet]) :- phrase(time_text(9, 27), `kaksikymmentäseitsemän yli yhdeksän`).
+test('9:28', [nondet]) :- phrase(time_text(9, 28), `kaksikymmentäkahdeksan yli yhdeksän`).
+test('9:29', [nondet]) :- phrase(time_text(9, 29), `kaksikymmentäyhdeksän yli yhdeksän`).
+test('9:30', [nondet]) :- phrase(time_text(9, 30), `puoli kymmenen`).
+test('9:31', [nondet]) :- phrase(time_text(9, 31), `kahtakymmentäyhdeksää vaille yhdeksän`).
+test('9:32', [nondet]) :- phrase(time_text(9, 32), `kahtakymmentäkahdeksaa vaille yhdeksän`).
+test('9:33', [nondet]) :- phrase(time_text(9, 33), `kahtakymmentäseitsemää vaille yhdeksän`).
+test('9:34', [nondet]) :- phrase(time_text(9, 34), `kahtakymmentäkuutta vaille yhdeksän`).
+test('9:35', [nondet]) :- phrase(time_text(9, 35), `kahtakymmentäviittä vaille yhdeksän`).
+test('9:36', [nondet]) :- phrase(time_text(9, 36), `kahtakymmentäneljää vaille yhdeksän`).
+test('9:37', [nondet]) :- phrase(time_text(9, 37), `kahtakymmentäkolmea vaille yhdeksän`).
+test('9:38', [nondet]) :- phrase(time_text(9, 38), `kahtakymmentäkahta vaille yhdeksän`).
+test('9:39', [nondet]) :- phrase(time_text(9, 39), `kahtakymmentäyktä vaille yhdeksän`).
+test('9:40', [nondet]) :- phrase(time_text(9, 40), `kahtakymmentänollaa vaille yhdeksän`).
+test('9:41', [nondet]) :- phrase(time_text(9, 41), `yhdeksäätoista vaille yhdeksän`).
+test('9:42', [nondet]) :- phrase(time_text(9, 42), `kahdeksaatoista vaille yhdeksän`).
+test('9:43', [nondet]) :- phrase(time_text(9, 43), `seitsemäätoista vaille yhdeksän`).
+test('9:44', [nondet]) :- phrase(time_text(9, 44), `kuuttatoista vaille yhdeksän`).
+test('9:45', [nondet]) :- phrase(time_text(9, 45), `viittätoista vaille yhdeksän`).
+test('9:46', [nondet]) :- phrase(time_text(9, 46), `neljäätoista vaille yhdeksän`).
+test('9:47', [nondet]) :- phrase(time_text(9, 47), `kolmeatoista vaille yhdeksän`).
+test('9:48', [nondet]) :- phrase(time_text(9, 48), `kahtatoista vaille yhdeksän`).
+test('9:49', [nondet]) :- phrase(time_text(9, 49), `yktätoista vaille yhdeksän`).
+test('9:50', [nondet]) :- phrase(time_text(9, 50), `kymmentä vaille yhdeksän`).
+test('9:51', [nondet]) :- phrase(time_text(9, 51), `yhdeksää vaille yhdeksän`).
+test('9:52', [nondet]) :- phrase(time_text(9, 52), `kahdeksaa vaille yhdeksän`).
+test('9:53', [nondet]) :- phrase(time_text(9, 53), `seitsemää vaille yhdeksän`).
+test('9:54', [nondet]) :- phrase(time_text(9, 54), `kuutta vaille yhdeksän`).
+test('9:55', [nondet]) :- phrase(time_text(9, 55), `viittä vaille yhdeksän`).
+test('9:56', [nondet]) :- phrase(time_text(9, 56), `neljää vaille yhdeksän`).
+test('9:57', [nondet]) :- phrase(time_text(9, 57), `kolmea vaille yhdeksän`).
+test('9:58', [nondet]) :- phrase(time_text(9, 58), `kahta vaille yhdeksän`).
+test('9:59', [nondet]) :- phrase(time_text(9, 59), `yktä vaille yhdeksän`).
+test('10:0', [nondet]) :- phrase(time_text(10, 0), `kymmenen`).
+test('10:0', [nondet]) :- phrase(time_text(10, 0), `tasan kymmenen`).
+test('10:1', [nondet]) :- phrase(time_text(10, 1), `yksi yli kymmenen`).
+test('10:2', [nondet]) :- phrase(time_text(10, 2), `kaksi yli kymmenen`).
+test('10:3', [nondet]) :- phrase(time_text(10, 3), `kolme yli kymmenen`).
+test('10:4', [nondet]) :- phrase(time_text(10, 4), `neljä yli kymmenen`).
+test('10:5', [nondet]) :- phrase(time_text(10, 5), `viisi yli kymmenen`).
+test('10:6', [nondet]) :- phrase(time_text(10, 6), `kuusi yli kymmenen`).
+test('10:7', [nondet]) :- phrase(time_text(10, 7), `seitsemän yli kymmenen`).
+test('10:8', [nondet]) :- phrase(time_text(10, 8), `kahdeksan yli kymmenen`).
+test('10:9', [nondet]) :- phrase(time_text(10, 9), `yhdeksän yli kymmenen`).
+test('10:10', [nondet]) :- phrase(time_text(10, 10), `kymmenen yli kymmenen`).
+test('10:11', [nondet]) :- phrase(time_text(10, 11), `yksitoista yli kymmenen`).
+test('10:12', [nondet]) :- phrase(time_text(10, 12), `kaksitoista yli kymmenen`).
+test('10:13', [nondet]) :- phrase(time_text(10, 13), `kolmetoista yli kymmenen`).
+test('10:14', [nondet]) :- phrase(time_text(10, 14), `neljätoista yli kymmenen`).
+test('10:15', [nondet]) :- phrase(time_text(10, 15), `vartin yli kymmenen`).
+test('10:15', [nondet]) :- phrase(time_text(10, 15), `viisitoista yli kymmenen`).
+test('10:16', [nondet]) :- phrase(time_text(10, 16), `kuusitoista yli kymmenen`).
+test('10:17', [nondet]) :- phrase(time_text(10, 17), `seitsemäntoista yli kymmenen`).
+test('10:18', [nondet]) :- phrase(time_text(10, 18), `kahdeksantoista yli kymmenen`).
+test('10:19', [nondet]) :- phrase(time_text(10, 19), `yhdeksäntoista yli kymmenen`).
+test('10:20', [nondet]) :- phrase(time_text(10, 20), `kaksikymmentänolla yli kymmenen`).
+test('10:21', [nondet]) :- phrase(time_text(10, 21), `kaksikymmentäyksi yli kymmenen`).
+test('10:22', [nondet]) :- phrase(time_text(10, 22), `kaksikymmentäkaksi yli kymmenen`).
+test('10:23', [nondet]) :- phrase(time_text(10, 23), `kaksikymmentäkolme yli kymmenen`).
+test('10:24', [nondet]) :- phrase(time_text(10, 24), `kaksikymmentäneljä yli kymmenen`).
+test('10:25', [nondet]) :- phrase(time_text(10, 25), `kaksikymmentäviisi yli kymmenen`).
+test('10:26', [nondet]) :- phrase(time_text(10, 26), `kaksikymmentäkuusi yli kymmenen`).
+test('10:27', [nondet]) :- phrase(time_text(10, 27), `kaksikymmentäseitsemän yli kymmenen`).
+test('10:28', [nondet]) :- phrase(time_text(10, 28), `kaksikymmentäkahdeksan yli kymmenen`).
+test('10:29', [nondet]) :- phrase(time_text(10, 29), `kaksikymmentäyhdeksän yli kymmenen`).
+test('10:30', [nondet]) :- phrase(time_text(10, 30), `puoli yksitoista`).
+test('10:31', [nondet]) :- phrase(time_text(10, 31), `kahtakymmentäyhdeksää vaille kymmenen`).
+test('10:32', [nondet]) :- phrase(time_text(10, 32), `kahtakymmentäkahdeksaa vaille kymmenen`).
+test('10:33', [nondet]) :- phrase(time_text(10, 33), `kahtakymmentäseitsemää vaille kymmenen`).
+test('10:34', [nondet]) :- phrase(time_text(10, 34), `kahtakymmentäkuutta vaille kymmenen`).
+test('10:35', [nondet]) :- phrase(time_text(10, 35), `kahtakymmentäviittä vaille kymmenen`).
+test('10:36', [nondet]) :- phrase(time_text(10, 36), `kahtakymmentäneljää vaille kymmenen`).
+test('10:37', [nondet]) :- phrase(time_text(10, 37), `kahtakymmentäkolmea vaille kymmenen`).
+test('10:38', [nondet]) :- phrase(time_text(10, 38), `kahtakymmentäkahta vaille kymmenen`).
+test('10:39', [nondet]) :- phrase(time_text(10, 39), `kahtakymmentäyktä vaille kymmenen`).
+test('10:40', [nondet]) :- phrase(time_text(10, 40), `kahtakymmentänollaa vaille kymmenen`).
+test('10:41', [nondet]) :- phrase(time_text(10, 41), `yhdeksäätoista vaille kymmenen`).
+test('10:42', [nondet]) :- phrase(time_text(10, 42), `kahdeksaatoista vaille kymmenen`).
+test('10:43', [nondet]) :- phrase(time_text(10, 43), `seitsemäätoista vaille kymmenen`).
+test('10:44', [nondet]) :- phrase(time_text(10, 44), `kuuttatoista vaille kymmenen`).
+test('10:45', [nondet]) :- phrase(time_text(10, 45), `viittätoista vaille kymmenen`).
+test('10:46', [nondet]) :- phrase(time_text(10, 46), `neljäätoista vaille kymmenen`).
+test('10:47', [nondet]) :- phrase(time_text(10, 47), `kolmeatoista vaille kymmenen`).
+test('10:48', [nondet]) :- phrase(time_text(10, 48), `kahtatoista vaille kymmenen`).
+test('10:49', [nondet]) :- phrase(time_text(10, 49), `yktätoista vaille kymmenen`).
+test('10:50', [nondet]) :- phrase(time_text(10, 50), `kymmentä vaille kymmenen`).
+test('10:51', [nondet]) :- phrase(time_text(10, 51), `yhdeksää vaille kymmenen`).
+test('10:52', [nondet]) :- phrase(time_text(10, 52), `kahdeksaa vaille kymmenen`).
+test('10:53', [nondet]) :- phrase(time_text(10, 53), `seitsemää vaille kymmenen`).
+test('10:54', [nondet]) :- phrase(time_text(10, 54), `kuutta vaille kymmenen`).
+test('10:55', [nondet]) :- phrase(time_text(10, 55), `viittä vaille kymmenen`).
+test('10:56', [nondet]) :- phrase(time_text(10, 56), `neljää vaille kymmenen`).
+test('10:57', [nondet]) :- phrase(time_text(10, 57), `kolmea vaille kymmenen`).
+test('10:58', [nondet]) :- phrase(time_text(10, 58), `kahta vaille kymmenen`).
+test('10:59', [nondet]) :- phrase(time_text(10, 59), `yktä vaille kymmenen`).
+test('11:0', [nondet]) :- phrase(time_text(11, 0), `tasan yksitoista`).
+test('11:0', [nondet]) :- phrase(time_text(11, 0), `yksitoista`).
+test('11:1', [nondet]) :- phrase(time_text(11, 1), `yksi yli yksitoista`).
+test('11:2', [nondet]) :- phrase(time_text(11, 2), `kaksi yli yksitoista`).
+test('11:3', [nondet]) :- phrase(time_text(11, 3), `kolme yli yksitoista`).
+test('11:4', [nondet]) :- phrase(time_text(11, 4), `neljä yli yksitoista`).
+test('11:5', [nondet]) :- phrase(time_text(11, 5), `viisi yli yksitoista`).
+test('11:6', [nondet]) :- phrase(time_text(11, 6), `kuusi yli yksitoista`).
+test('11:7', [nondet]) :- phrase(time_text(11, 7), `seitsemän yli yksitoista`).
+test('11:8', [nondet]) :- phrase(time_text(11, 8), `kahdeksan yli yksitoista`).
+test('11:9', [nondet]) :- phrase(time_text(11, 9), `yhdeksän yli yksitoista`).
+test('11:10', [nondet]) :- phrase(time_text(11, 10), `kymmenen yli yksitoista`).
+test('11:11', [nondet]) :- phrase(time_text(11, 11), `yksitoista yli yksitoista`).
+test('11:12', [nondet]) :- phrase(time_text(11, 12), `kaksitoista yli yksitoista`).
+test('11:13', [nondet]) :- phrase(time_text(11, 13), `kolmetoista yli yksitoista`).
+test('11:14', [nondet]) :- phrase(time_text(11, 14), `neljätoista yli yksitoista`).
+test('11:15', [nondet]) :- phrase(time_text(11, 15), `vartin yli yksitoista`).
+test('11:15', [nondet]) :- phrase(time_text(11, 15), `viisitoista yli yksitoista`).
+test('11:16', [nondet]) :- phrase(time_text(11, 16), `kuusitoista yli yksitoista`).
+test('11:17', [nondet]) :- phrase(time_text(11, 17), `seitsemäntoista yli yksitoista`).
+test('11:18', [nondet]) :- phrase(time_text(11, 18), `kahdeksantoista yli yksitoista`).
+test('11:19', [nondet]) :- phrase(time_text(11, 19), `yhdeksäntoista yli yksitoista`).
+test('11:20', [nondet]) :- phrase(time_text(11, 20), `kaksikymmentänolla yli yksitoista`).
+test('11:21', [nondet]) :- phrase(time_text(11, 21), `kaksikymmentäyksi yli yksitoista`).
+test('11:22', [nondet]) :- phrase(time_text(11, 22), `kaksikymmentäkaksi yli yksitoista`).
+test('11:23', [nondet]) :- phrase(time_text(11, 23), `kaksikymmentäkolme yli yksitoista`).
+test('11:24', [nondet]) :- phrase(time_text(11, 24), `kaksikymmentäneljä yli yksitoista`).
+test('11:25', [nondet]) :- phrase(time_text(11, 25), `kaksikymmentäviisi yli yksitoista`).
+test('11:26', [nondet]) :- phrase(time_text(11, 26), `kaksikymmentäkuusi yli yksitoista`).
+test('11:27', [nondet]) :- phrase(time_text(11, 27), `kaksikymmentäseitsemän yli yksitoista`).
+test('11:28', [nondet]) :- phrase(time_text(11, 28), `kaksikymmentäkahdeksan yli yksitoista`).
+test('11:29', [nondet]) :- phrase(time_text(11, 29), `kaksikymmentäyhdeksän yli yksitoista`).
+test('11:30', [nondet]) :- phrase(time_text(11, 30), `puoli kaksitoista`).
+test('11:31', [nondet]) :- phrase(time_text(11, 31), `kahtakymmentäyhdeksää vaille yksitoista`).
+test('11:32', [nondet]) :- phrase(time_text(11, 32), `kahtakymmentäkahdeksaa vaille yksitoista`).
+test('11:33', [nondet]) :- phrase(time_text(11, 33), `kahtakymmentäseitsemää vaille yksitoista`).
+test('11:34', [nondet]) :- phrase(time_text(11, 34), `kahtakymmentäkuutta vaille yksitoista`).
+test('11:35', [nondet]) :- phrase(time_text(11, 35), `kahtakymmentäviittä vaille yksitoista`).
+test('11:36', [nondet]) :- phrase(time_text(11, 36), `kahtakymmentäneljää vaille yksitoista`).
+test('11:37', [nondet]) :- phrase(time_text(11, 37), `kahtakymmentäkolmea vaille yksitoista`).
+test('11:38', [nondet]) :- phrase(time_text(11, 38), `kahtakymmentäkahta vaille yksitoista`).
+test('11:39', [nondet]) :- phrase(time_text(11, 39), `kahtakymmentäyktä vaille yksitoista`).
+test('11:40', [nondet]) :- phrase(time_text(11, 40), `kahtakymmentänollaa vaille yksitoista`).
+test('11:41', [nondet]) :- phrase(time_text(11, 41), `yhdeksäätoista vaille yksitoista`).
+test('11:42', [nondet]) :- phrase(time_text(11, 42), `kahdeksaatoista vaille yksitoista`).
+test('11:43', [nondet]) :- phrase(time_text(11, 43), `seitsemäätoista vaille yksitoista`).
+test('11:44', [nondet]) :- phrase(time_text(11, 44), `kuuttatoista vaille yksitoista`).
+test('11:45', [nondet]) :- phrase(time_text(11, 45), `viittätoista vaille yksitoista`).
+test('11:46', [nondet]) :- phrase(time_text(11, 46), `neljäätoista vaille yksitoista`).
+test('11:47', [nondet]) :- phrase(time_text(11, 47), `kolmeatoista vaille yksitoista`).
+test('11:48', [nondet]) :- phrase(time_text(11, 48), `kahtatoista vaille yksitoista`).
+test('11:49', [nondet]) :- phrase(time_text(11, 49), `yktätoista vaille yksitoista`).
+test('11:50', [nondet]) :- phrase(time_text(11, 50), `kymmentä vaille yksitoista`).
+test('11:51', [nondet]) :- phrase(time_text(11, 51), `yhdeksää vaille yksitoista`).
+test('11:52', [nondet]) :- phrase(time_text(11, 52), `kahdeksaa vaille yksitoista`).
+test('11:53', [nondet]) :- phrase(time_text(11, 53), `seitsemää vaille yksitoista`).
+test('11:54', [nondet]) :- phrase(time_text(11, 54), `kuutta vaille yksitoista`).
+test('11:55', [nondet]) :- phrase(time_text(11, 55), `viittä vaille yksitoista`).
+test('11:56', [nondet]) :- phrase(time_text(11, 56), `neljää vaille yksitoista`).
+test('11:57', [nondet]) :- phrase(time_text(11, 57), `kolmea vaille yksitoista`).
+test('11:58', [nondet]) :- phrase(time_text(11, 58), `kahta vaille yksitoista`).
+test('11:59', [nondet]) :- phrase(time_text(11, 59), `yktä vaille yksitoista`).
+test('12:0', [nondet]) :- phrase(time_text(12, 0), `kaksitoista`).
+test('12:0', [nondet]) :- phrase(time_text(12, 0), `tasan kaksitoista`).
+test('12:1', [nondet]) :- phrase(time_text(12, 1), `yksi yli kaksitoista`).
+test('12:2', [nondet]) :- phrase(time_text(12, 2), `kaksi yli kaksitoista`).
+test('12:3', [nondet]) :- phrase(time_text(12, 3), `kolme yli kaksitoista`).
+test('12:4', [nondet]) :- phrase(time_text(12, 4), `neljä yli kaksitoista`).
+test('12:5', [nondet]) :- phrase(time_text(12, 5), `viisi yli kaksitoista`).
+test('12:6', [nondet]) :- phrase(time_text(12, 6), `kuusi yli kaksitoista`).
+test('12:7', [nondet]) :- phrase(time_text(12, 7), `seitsemän yli kaksitoista`).
+test('12:8', [nondet]) :- phrase(time_text(12, 8), `kahdeksan yli kaksitoista`).
+test('12:9', [nondet]) :- phrase(time_text(12, 9), `yhdeksän yli kaksitoista`).
+test('12:10', [nondet]) :- phrase(time_text(12, 10), `kymmenen yli kaksitoista`).
+test('12:11', [nondet]) :- phrase(time_text(12, 11), `yksitoista yli kaksitoista`).
+test('12:12', [nondet]) :- phrase(time_text(12, 12), `kaksitoista yli kaksitoista`).
+test('12:13', [nondet]) :- phrase(time_text(12, 13), `kolmetoista yli kaksitoista`).
+test('12:14', [nondet]) :- phrase(time_text(12, 14), `neljätoista yli kaksitoista`).
+test('12:15', [nondet]) :- phrase(time_text(12, 15), `vartin yli kaksitoista`).
+test('12:15', [nondet]) :- phrase(time_text(12, 15), `viisitoista yli kaksitoista`).
+test('12:16', [nondet]) :- phrase(time_text(12, 16), `kuusitoista yli kaksitoista`).
+test('12:17', [nondet]) :- phrase(time_text(12, 17), `seitsemäntoista yli kaksitoista`).
+test('12:18', [nondet]) :- phrase(time_text(12, 18), `kahdeksantoista yli kaksitoista`).
+test('12:19', [nondet]) :- phrase(time_text(12, 19), `yhdeksäntoista yli kaksitoista`).
+test('12:20', [nondet]) :- phrase(time_text(12, 20), `kaksikymmentänolla yli kaksitoista`).
+test('12:21', [nondet]) :- phrase(time_text(12, 21), `kaksikymmentäyksi yli kaksitoista`).
+test('12:22', [nondet]) :- phrase(time_text(12, 22), `kaksikymmentäkaksi yli kaksitoista`).
+test('12:23', [nondet]) :- phrase(time_text(12, 23), `kaksikymmentäkolme yli kaksitoista`).
+test('12:24', [nondet]) :- phrase(time_text(12, 24), `kaksikymmentäneljä yli kaksitoista`).
+test('12:25', [nondet]) :- phrase(time_text(12, 25), `kaksikymmentäviisi yli kaksitoista`).
+test('12:26', [nondet]) :- phrase(time_text(12, 26), `kaksikymmentäkuusi yli kaksitoista`).
+test('12:27', [nondet]) :- phrase(time_text(12, 27), `kaksikymmentäseitsemän yli kaksitoista`).
+test('12:28', [nondet]) :- phrase(time_text(12, 28), `kaksikymmentäkahdeksan yli kaksitoista`).
+test('12:29', [nondet]) :- phrase(time_text(12, 29), `kaksikymmentäyhdeksän yli kaksitoista`).
+test('12:30', [nondet]) :- phrase(time_text(12, 30), `puoli kolmetoista`).
+test('12:31', [nondet]) :- phrase(time_text(12, 31), `kahtakymmentäyhdeksää vaille kaksitoista`).
+test('12:32', [nondet]) :- phrase(time_text(12, 32), `kahtakymmentäkahdeksaa vaille kaksitoista`).
+test('12:33', [nondet]) :- phrase(time_text(12, 33), `kahtakymmentäseitsemää vaille kaksitoista`).
+test('12:34', [nondet]) :- phrase(time_text(12, 34), `kahtakymmentäkuutta vaille kaksitoista`).
+test('12:35', [nondet]) :- phrase(time_text(12, 35), `kahtakymmentäviittä vaille kaksitoista`).
+test('12:36', [nondet]) :- phrase(time_text(12, 36), `kahtakymmentäneljää vaille kaksitoista`).
+test('12:37', [nondet]) :- phrase(time_text(12, 37), `kahtakymmentäkolmea vaille kaksitoista`).
+test('12:38', [nondet]) :- phrase(time_text(12, 38), `kahtakymmentäkahta vaille kaksitoista`).
+test('12:39', [nondet]) :- phrase(time_text(12, 39), `kahtakymmentäyktä vaille kaksitoista`).
+test('12:40', [nondet]) :- phrase(time_text(12, 40), `kahtakymmentänollaa vaille kaksitoista`).
+test('12:41', [nondet]) :- phrase(time_text(12, 41), `yhdeksäätoista vaille kaksitoista`).
+test('12:42', [nondet]) :- phrase(time_text(12, 42), `kahdeksaatoista vaille kaksitoista`).
+test('12:43', [nondet]) :- phrase(time_text(12, 43), `seitsemäätoista vaille kaksitoista`).
+test('12:44', [nondet]) :- phrase(time_text(12, 44), `kuuttatoista vaille kaksitoista`).
+test('12:45', [nondet]) :- phrase(time_text(12, 45), `viittätoista vaille kaksitoista`).
+test('12:46', [nondet]) :- phrase(time_text(12, 46), `neljäätoista vaille kaksitoista`).
+test('12:47', [nondet]) :- phrase(time_text(12, 47), `kolmeatoista vaille kaksitoista`).
+test('12:48', [nondet]) :- phrase(time_text(12, 48), `kahtatoista vaille kaksitoista`).
+test('12:49', [nondet]) :- phrase(time_text(12, 49), `yktätoista vaille kaksitoista`).
+test('12:50', [nondet]) :- phrase(time_text(12, 50), `kymmentä vaille kaksitoista`).
+test('12:51', [nondet]) :- phrase(time_text(12, 51), `yhdeksää vaille kaksitoista`).
+test('12:52', [nondet]) :- phrase(time_text(12, 52), `kahdeksaa vaille kaksitoista`).
+test('12:53', [nondet]) :- phrase(time_text(12, 53), `seitsemää vaille kaksitoista`).
+test('12:54', [nondet]) :- phrase(time_text(12, 54), `kuutta vaille kaksitoista`).
+test('12:55', [nondet]) :- phrase(time_text(12, 55), `viittä vaille kaksitoista`).
+test('12:56', [nondet]) :- phrase(time_text(12, 56), `neljää vaille kaksitoista`).
+test('12:57', [nondet]) :- phrase(time_text(12, 57), `kolmea vaille kaksitoista`).
+test('12:58', [nondet]) :- phrase(time_text(12, 58), `kahta vaille kaksitoista`).
+test('12:59', [nondet]) :- phrase(time_text(12, 59), `yktä vaille kaksitoista`).
+test('13:0', [nondet]) :- phrase(time_text(13, 0), `kolmetoista`).
+test('13:0', [nondet]) :- phrase(time_text(13, 0), `tasan kolmetoista`).
+test('13:1', [nondet]) :- phrase(time_text(13, 1), `yksi yli kolmetoista`).
+test('13:2', [nondet]) :- phrase(time_text(13, 2), `kaksi yli kolmetoista`).
+test('13:3', [nondet]) :- phrase(time_text(13, 3), `kolme yli kolmetoista`).
+test('13:4', [nondet]) :- phrase(time_text(13, 4), `neljä yli kolmetoista`).
+test('13:5', [nondet]) :- phrase(time_text(13, 5), `viisi yli kolmetoista`).
+test('13:6', [nondet]) :- phrase(time_text(13, 6), `kuusi yli kolmetoista`).
+test('13:7', [nondet]) :- phrase(time_text(13, 7), `seitsemän yli kolmetoista`).
+test('13:8', [nondet]) :- phrase(time_text(13, 8), `kahdeksan yli kolmetoista`).
+test('13:9', [nondet]) :- phrase(time_text(13, 9), `yhdeksän yli kolmetoista`).
+test('13:10', [nondet]) :- phrase(time_text(13, 10), `kymmenen yli kolmetoista`).
+test('13:11', [nondet]) :- phrase(time_text(13, 11), `yksitoista yli kolmetoista`).
+test('13:12', [nondet]) :- phrase(time_text(13, 12), `kaksitoista yli kolmetoista`).
+test('13:13', [nondet]) :- phrase(time_text(13, 13), `kolmetoista yli kolmetoista`).
+test('13:14', [nondet]) :- phrase(time_text(13, 14), `neljätoista yli kolmetoista`).
+test('13:15', [nondet]) :- phrase(time_text(13, 15), `vartin yli kolmetoista`).
+test('13:15', [nondet]) :- phrase(time_text(13, 15), `viisitoista yli kolmetoista`).
+test('13:16', [nondet]) :- phrase(time_text(13, 16), `kuusitoista yli kolmetoista`).
+test('13:17', [nondet]) :- phrase(time_text(13, 17), `seitsemäntoista yli kolmetoista`).
+test('13:18', [nondet]) :- phrase(time_text(13, 18), `kahdeksantoista yli kolmetoista`).
+test('13:19', [nondet]) :- phrase(time_text(13, 19), `yhdeksäntoista yli kolmetoista`).
+test('13:20', [nondet]) :- phrase(time_text(13, 20), `kaksikymmentänolla yli kolmetoista`).
+test('13:21', [nondet]) :- phrase(time_text(13, 21), `kaksikymmentäyksi yli kolmetoista`).
+test('13:22', [nondet]) :- phrase(time_text(13, 22), `kaksikymmentäkaksi yli kolmetoista`).
+test('13:23', [nondet]) :- phrase(time_text(13, 23), `kaksikymmentäkolme yli kolmetoista`).
+test('13:24', [nondet]) :- phrase(time_text(13, 24), `kaksikymmentäneljä yli kolmetoista`).
+test('13:25', [nondet]) :- phrase(time_text(13, 25), `kaksikymmentäviisi yli kolmetoista`).
+test('13:26', [nondet]) :- phrase(time_text(13, 26), `kaksikymmentäkuusi yli kolmetoista`).
+test('13:27', [nondet]) :- phrase(time_text(13, 27), `kaksikymmentäseitsemän yli kolmetoista`).
+test('13:28', [nondet]) :- phrase(time_text(13, 28), `kaksikymmentäkahdeksan yli kolmetoista`).
+test('13:29', [nondet]) :- phrase(time_text(13, 29), `kaksikymmentäyhdeksän yli kolmetoista`).
+test('13:30', [nondet]) :- phrase(time_text(13, 30), `puoli neljätoista`).
+test('13:31', [nondet]) :- phrase(time_text(13, 31), `kahtakymmentäyhdeksää vaille kolmetoista`).
+test('13:32', [nondet]) :- phrase(time_text(13, 32), `kahtakymmentäkahdeksaa vaille kolmetoista`).
+test('13:33', [nondet]) :- phrase(time_text(13, 33), `kahtakymmentäseitsemää vaille kolmetoista`).
+test('13:34', [nondet]) :- phrase(time_text(13, 34), `kahtakymmentäkuutta vaille kolmetoista`).
+test('13:35', [nondet]) :- phrase(time_text(13, 35), `kahtakymmentäviittä vaille kolmetoista`).
+test('13:36', [nondet]) :- phrase(time_text(13, 36), `kahtakymmentäneljää vaille kolmetoista`).
+test('13:37', [nondet]) :- phrase(time_text(13, 37), `kahtakymmentäkolmea vaille kolmetoista`).
+test('13:38', [nondet]) :- phrase(time_text(13, 38), `kahtakymmentäkahta vaille kolmetoista`).
+test('13:39', [nondet]) :- phrase(time_text(13, 39), `kahtakymmentäyktä vaille kolmetoista`).
+test('13:40', [nondet]) :- phrase(time_text(13, 40), `kahtakymmentänollaa vaille kolmetoista`).
+test('13:41', [nondet]) :- phrase(time_text(13, 41), `yhdeksäätoista vaille kolmetoista`).
+test('13:42', [nondet]) :- phrase(time_text(13, 42), `kahdeksaatoista vaille kolmetoista`).
+test('13:43', [nondet]) :- phrase(time_text(13, 43), `seitsemäätoista vaille kolmetoista`).
+test('13:44', [nondet]) :- phrase(time_text(13, 44), `kuuttatoista vaille kolmetoista`).
+test('13:45', [nondet]) :- phrase(time_text(13, 45), `viittätoista vaille kolmetoista`).
+test('13:46', [nondet]) :- phrase(time_text(13, 46), `neljäätoista vaille kolmetoista`).
+test('13:47', [nondet]) :- phrase(time_text(13, 47), `kolmeatoista vaille kolmetoista`).
+test('13:48', [nondet]) :- phrase(time_text(13, 48), `kahtatoista vaille kolmetoista`).
+test('13:49', [nondet]) :- phrase(time_text(13, 49), `yktätoista vaille kolmetoista`).
+test('13:50', [nondet]) :- phrase(time_text(13, 50), `kymmentä vaille kolmetoista`).
+test('13:51', [nondet]) :- phrase(time_text(13, 51), `yhdeksää vaille kolmetoista`).
+test('13:52', [nondet]) :- phrase(time_text(13, 52), `kahdeksaa vaille kolmetoista`).
+test('13:53', [nondet]) :- phrase(time_text(13, 53), `seitsemää vaille kolmetoista`).
+test('13:54', [nondet]) :- phrase(time_text(13, 54), `kuutta vaille kolmetoista`).
+test('13:55', [nondet]) :- phrase(time_text(13, 55), `viittä vaille kolmetoista`).
+test('13:56', [nondet]) :- phrase(time_text(13, 56), `neljää vaille kolmetoista`).
+test('13:57', [nondet]) :- phrase(time_text(13, 57), `kolmea vaille kolmetoista`).
+test('13:58', [nondet]) :- phrase(time_text(13, 58), `kahta vaille kolmetoista`).
+test('13:59', [nondet]) :- phrase(time_text(13, 59), `yktä vaille kolmetoista`).
+test('14:0', [nondet]) :- phrase(time_text(14, 0), `neljätoista`).
+test('14:0', [nondet]) :- phrase(time_text(14, 0), `tasan neljätoista`).
+test('14:1', [nondet]) :- phrase(time_text(14, 1), `yksi yli neljätoista`).
+test('14:2', [nondet]) :- phrase(time_text(14, 2), `kaksi yli neljätoista`).
+test('14:3', [nondet]) :- phrase(time_text(14, 3), `kolme yli neljätoista`).
+test('14:4', [nondet]) :- phrase(time_text(14, 4), `neljä yli neljätoista`).
+test('14:5', [nondet]) :- phrase(time_text(14, 5), `viisi yli neljätoista`).
+test('14:6', [nondet]) :- phrase(time_text(14, 6), `kuusi yli neljätoista`).
+test('14:7', [nondet]) :- phrase(time_text(14, 7), `seitsemän yli neljätoista`).
+test('14:8', [nondet]) :- phrase(time_text(14, 8), `kahdeksan yli neljätoista`).
+test('14:9', [nondet]) :- phrase(time_text(14, 9), `yhdeksän yli neljätoista`).
+test('14:10', [nondet]) :- phrase(time_text(14, 10), `kymmenen yli neljätoista`).
+test('14:11', [nondet]) :- phrase(time_text(14, 11), `yksitoista yli neljätoista`).
+test('14:12', [nondet]) :- phrase(time_text(14, 12), `kaksitoista yli neljätoista`).
+test('14:13', [nondet]) :- phrase(time_text(14, 13), `kolmetoista yli neljätoista`).
+test('14:14', [nondet]) :- phrase(time_text(14, 14), `neljätoista yli neljätoista`).
+test('14:15', [nondet]) :- phrase(time_text(14, 15), `vartin yli neljätoista`).
+test('14:15', [nondet]) :- phrase(time_text(14, 15), `viisitoista yli neljätoista`).
+test('14:16', [nondet]) :- phrase(time_text(14, 16), `kuusitoista yli neljätoista`).
+test('14:17', [nondet]) :- phrase(time_text(14, 17), `seitsemäntoista yli neljätoista`).
+test('14:18', [nondet]) :- phrase(time_text(14, 18), `kahdeksantoista yli neljätoista`).
+test('14:19', [nondet]) :- phrase(time_text(14, 19), `yhdeksäntoista yli neljätoista`).
+test('14:20', [nondet]) :- phrase(time_text(14, 20), `kaksikymmentänolla yli neljätoista`).
+test('14:21', [nondet]) :- phrase(time_text(14, 21), `kaksikymmentäyksi yli neljätoista`).
+test('14:22', [nondet]) :- phrase(time_text(14, 22), `kaksikymmentäkaksi yli neljätoista`).
+test('14:23', [nondet]) :- phrase(time_text(14, 23), `kaksikymmentäkolme yli neljätoista`).
+test('14:24', [nondet]) :- phrase(time_text(14, 24), `kaksikymmentäneljä yli neljätoista`).
+test('14:25', [nondet]) :- phrase(time_text(14, 25), `kaksikymmentäviisi yli neljätoista`).
+test('14:26', [nondet]) :- phrase(time_text(14, 26), `kaksikymmentäkuusi yli neljätoista`).
+test('14:27', [nondet]) :- phrase(time_text(14, 27), `kaksikymmentäseitsemän yli neljätoista`).
+test('14:28', [nondet]) :- phrase(time_text(14, 28), `kaksikymmentäkahdeksan yli neljätoista`).
+test('14:29', [nondet]) :- phrase(time_text(14, 29), `kaksikymmentäyhdeksän yli neljätoista`).
+test('14:30', [nondet]) :- phrase(time_text(14, 30), `puoli viisitoista`).
+test('14:31', [nondet]) :- phrase(time_text(14, 31), `kahtakymmentäyhdeksää vaille neljätoista`).
+test('14:32', [nondet]) :- phrase(time_text(14, 32), `kahtakymmentäkahdeksaa vaille neljätoista`).
+test('14:33', [nondet]) :- phrase(time_text(14, 33), `kahtakymmentäseitsemää vaille neljätoista`).
+test('14:34', [nondet]) :- phrase(time_text(14, 34), `kahtakymmentäkuutta vaille neljätoista`).
+test('14:35', [nondet]) :- phrase(time_text(14, 35), `kahtakymmentäviittä vaille neljätoista`).
+test('14:36', [nondet]) :- phrase(time_text(14, 36), `kahtakymmentäneljää vaille neljätoista`).
+test('14:37', [nondet]) :- phrase(time_text(14, 37), `kahtakymmentäkolmea vaille neljätoista`).
+test('14:38', [nondet]) :- phrase(time_text(14, 38), `kahtakymmentäkahta vaille neljätoista`).
+test('14:39', [nondet]) :- phrase(time_text(14, 39), `kahtakymmentäyktä vaille neljätoista`).
+test('14:40', [nondet]) :- phrase(time_text(14, 40), `kahtakymmentänollaa vaille neljätoista`).
+test('14:41', [nondet]) :- phrase(time_text(14, 41), `yhdeksäätoista vaille neljätoista`).
+test('14:42', [nondet]) :- phrase(time_text(14, 42), `kahdeksaatoista vaille neljätoista`).
+test('14:43', [nondet]) :- phrase(time_text(14, 43), `seitsemäätoista vaille neljätoista`).
+test('14:44', [nondet]) :- phrase(time_text(14, 44), `kuuttatoista vaille neljätoista`).
+test('14:45', [nondet]) :- phrase(time_text(14, 45), `viittätoista vaille neljätoista`).
+test('14:46', [nondet]) :- phrase(time_text(14, 46), `neljäätoista vaille neljätoista`).
+test('14:47', [nondet]) :- phrase(time_text(14, 47), `kolmeatoista vaille neljätoista`).
+test('14:48', [nondet]) :- phrase(time_text(14, 48), `kahtatoista vaille neljätoista`).
+test('14:49', [nondet]) :- phrase(time_text(14, 49), `yktätoista vaille neljätoista`).
+test('14:50', [nondet]) :- phrase(time_text(14, 50), `kymmentä vaille neljätoista`).
+test('14:51', [nondet]) :- phrase(time_text(14, 51), `yhdeksää vaille neljätoista`).
+test('14:52', [nondet]) :- phrase(time_text(14, 52), `kahdeksaa vaille neljätoista`).
+test('14:53', [nondet]) :- phrase(time_text(14, 53), `seitsemää vaille neljätoista`).
+test('14:54', [nondet]) :- phrase(time_text(14, 54), `kuutta vaille neljätoista`).
+test('14:55', [nondet]) :- phrase(time_text(14, 55), `viittä vaille neljätoista`).
+test('14:56', [nondet]) :- phrase(time_text(14, 56), `neljää vaille neljätoista`).
+test('14:57', [nondet]) :- phrase(time_text(14, 57), `kolmea vaille neljätoista`).
+test('14:58', [nondet]) :- phrase(time_text(14, 58), `kahta vaille neljätoista`).
+test('14:59', [nondet]) :- phrase(time_text(14, 59), `yktä vaille neljätoista`).
+test('15:0', [nondet]) :- phrase(time_text(15, 0), `tasan viisitoista`).
+test('15:0', [nondet]) :- phrase(time_text(15, 0), `viisitoista`).
+test('15:1', [nondet]) :- phrase(time_text(15, 1), `yksi yli viisitoista`).
+test('15:2', [nondet]) :- phrase(time_text(15, 2), `kaksi yli viisitoista`).
+test('15:3', [nondet]) :- phrase(time_text(15, 3), `kolme yli viisitoista`).
+test('15:4', [nondet]) :- phrase(time_text(15, 4), `neljä yli viisitoista`).
+test('15:5', [nondet]) :- phrase(time_text(15, 5), `viisi yli viisitoista`).
+test('15:6', [nondet]) :- phrase(time_text(15, 6), `kuusi yli viisitoista`).
+test('15:7', [nondet]) :- phrase(time_text(15, 7), `seitsemän yli viisitoista`).
+test('15:8', [nondet]) :- phrase(time_text(15, 8), `kahdeksan yli viisitoista`).
+test('15:9', [nondet]) :- phrase(time_text(15, 9), `yhdeksän yli viisitoista`).
+test('15:10', [nondet]) :- phrase(time_text(15, 10), `kymmenen yli viisitoista`).
+test('15:11', [nondet]) :- phrase(time_text(15, 11), `yksitoista yli viisitoista`).
+test('15:12', [nondet]) :- phrase(time_text(15, 12), `kaksitoista yli viisitoista`).
+test('15:13', [nondet]) :- phrase(time_text(15, 13), `kolmetoista yli viisitoista`).
+test('15:14', [nondet]) :- phrase(time_text(15, 14), `neljätoista yli viisitoista`).
+test('15:15', [nondet]) :- phrase(time_text(15, 15), `vartin yli viisitoista`).
+test('15:15', [nondet]) :- phrase(time_text(15, 15), `viisitoista yli viisitoista`).
+test('15:16', [nondet]) :- phrase(time_text(15, 16), `kuusitoista yli viisitoista`).
+test('15:17', [nondet]) :- phrase(time_text(15, 17), `seitsemäntoista yli viisitoista`).
+test('15:18', [nondet]) :- phrase(time_text(15, 18), `kahdeksantoista yli viisitoista`).
+test('15:19', [nondet]) :- phrase(time_text(15, 19), `yhdeksäntoista yli viisitoista`).
+test('15:20', [nondet]) :- phrase(time_text(15, 20), `kaksikymmentänolla yli viisitoista`).
+test('15:21', [nondet]) :- phrase(time_text(15, 21), `kaksikymmentäyksi yli viisitoista`).
+test('15:22', [nondet]) :- phrase(time_text(15, 22), `kaksikymmentäkaksi yli viisitoista`).
+test('15:23', [nondet]) :- phrase(time_text(15, 23), `kaksikymmentäkolme yli viisitoista`).
+test('15:24', [nondet]) :- phrase(time_text(15, 24), `kaksikymmentäneljä yli viisitoista`).
+test('15:25', [nondet]) :- phrase(time_text(15, 25), `kaksikymmentäviisi yli viisitoista`).
+test('15:26', [nondet]) :- phrase(time_text(15, 26), `kaksikymmentäkuusi yli viisitoista`).
+test('15:27', [nondet]) :- phrase(time_text(15, 27), `kaksikymmentäseitsemän yli viisitoista`).
+test('15:28', [nondet]) :- phrase(time_text(15, 28), `kaksikymmentäkahdeksan yli viisitoista`).
+test('15:29', [nondet]) :- phrase(time_text(15, 29), `kaksikymmentäyhdeksän yli viisitoista`).
+test('15:30', [nondet]) :- phrase(time_text(15, 30), `puoli kuusitoista`).
+test('15:31', [nondet]) :- phrase(time_text(15, 31), `kahtakymmentäyhdeksää vaille viisitoista`).
+test('15:32', [nondet]) :- phrase(time_text(15, 32), `kahtakymmentäkahdeksaa vaille viisitoista`).
+test('15:33', [nondet]) :- phrase(time_text(15, 33), `kahtakymmentäseitsemää vaille viisitoista`).
+test('15:34', [nondet]) :- phrase(time_text(15, 34), `kahtakymmentäkuutta vaille viisitoista`).
+test('15:35', [nondet]) :- phrase(time_text(15, 35), `kahtakymmentäviittä vaille viisitoista`).
+test('15:36', [nondet]) :- phrase(time_text(15, 36), `kahtakymmentäneljää vaille viisitoista`).
+test('15:37', [nondet]) :- phrase(time_text(15, 37), `kahtakymmentäkolmea vaille viisitoista`).
+test('15:38', [nondet]) :- phrase(time_text(15, 38), `kahtakymmentäkahta vaille viisitoista`).
+test('15:39', [nondet]) :- phrase(time_text(15, 39), `kahtakymmentäyktä vaille viisitoista`).
+test('15:40', [nondet]) :- phrase(time_text(15, 40), `kahtakymmentänollaa vaille viisitoista`).
+test('15:41', [nondet]) :- phrase(time_text(15, 41), `yhdeksäätoista vaille viisitoista`).
+test('15:42', [nondet]) :- phrase(time_text(15, 42), `kahdeksaatoista vaille viisitoista`).
+test('15:43', [nondet]) :- phrase(time_text(15, 43), `seitsemäätoista vaille viisitoista`).
+test('15:44', [nondet]) :- phrase(time_text(15, 44), `kuuttatoista vaille viisitoista`).
+test('15:45', [nondet]) :- phrase(time_text(15, 45), `viittätoista vaille viisitoista`).
+test('15:46', [nondet]) :- phrase(time_text(15, 46), `neljäätoista vaille viisitoista`).
+test('15:47', [nondet]) :- phrase(time_text(15, 47), `kolmeatoista vaille viisitoista`).
+test('15:48', [nondet]) :- phrase(time_text(15, 48), `kahtatoista vaille viisitoista`).
+test('15:49', [nondet]) :- phrase(time_text(15, 49), `yktätoista vaille viisitoista`).
+test('15:50', [nondet]) :- phrase(time_text(15, 50), `kymmentä vaille viisitoista`).
+test('15:51', [nondet]) :- phrase(time_text(15, 51), `yhdeksää vaille viisitoista`).
+test('15:52', [nondet]) :- phrase(time_text(15, 52), `kahdeksaa vaille viisitoista`).
+test('15:53', [nondet]) :- phrase(time_text(15, 53), `seitsemää vaille viisitoista`).
+test('15:54', [nondet]) :- phrase(time_text(15, 54), `kuutta vaille viisitoista`).
+test('15:55', [nondet]) :- phrase(time_text(15, 55), `viittä vaille viisitoista`).
+test('15:56', [nondet]) :- phrase(time_text(15, 56), `neljää vaille viisitoista`).
+test('15:57', [nondet]) :- phrase(time_text(15, 57), `kolmea vaille viisitoista`).
+test('15:58', [nondet]) :- phrase(time_text(15, 58), `kahta vaille viisitoista`).
+test('15:59', [nondet]) :- phrase(time_text(15, 59), `yktä vaille viisitoista`).
+test('16:0', [nondet]) :- phrase(time_text(16, 0), `kuusitoista`).
+test('16:0', [nondet]) :- phrase(time_text(16, 0), `tasan kuusitoista`).
+test('16:1', [nondet]) :- phrase(time_text(16, 1), `yksi yli kuusitoista`).
+test('16:2', [nondet]) :- phrase(time_text(16, 2), `kaksi yli kuusitoista`).
+test('16:3', [nondet]) :- phrase(time_text(16, 3), `kolme yli kuusitoista`).
+test('16:4', [nondet]) :- phrase(time_text(16, 4), `neljä yli kuusitoista`).
+test('16:5', [nondet]) :- phrase(time_text(16, 5), `viisi yli kuusitoista`).
+test('16:6', [nondet]) :- phrase(time_text(16, 6), `kuusi yli kuusitoista`).
+test('16:7', [nondet]) :- phrase(time_text(16, 7), `seitsemän yli kuusitoista`).
+test('16:8', [nondet]) :- phrase(time_text(16, 8), `kahdeksan yli kuusitoista`).
+test('16:9', [nondet]) :- phrase(time_text(16, 9), `yhdeksän yli kuusitoista`).
+test('16:10', [nondet]) :- phrase(time_text(16, 10), `kymmenen yli kuusitoista`).
+test('16:11', [nondet]) :- phrase(time_text(16, 11), `yksitoista yli kuusitoista`).
+test('16:12', [nondet]) :- phrase(time_text(16, 12), `kaksitoista yli kuusitoista`).
+test('16:13', [nondet]) :- phrase(time_text(16, 13), `kolmetoista yli kuusitoista`).
+test('16:14', [nondet]) :- phrase(time_text(16, 14), `neljätoista yli kuusitoista`).
+test('16:15', [nondet]) :- phrase(time_text(16, 15), `vartin yli kuusitoista`).
+test('16:15', [nondet]) :- phrase(time_text(16, 15), `viisitoista yli kuusitoista`).
+test('16:16', [nondet]) :- phrase(time_text(16, 16), `kuusitoista yli kuusitoista`).
+test('16:17', [nondet]) :- phrase(time_text(16, 17), `seitsemäntoista yli kuusitoista`).
+test('16:18', [nondet]) :- phrase(time_text(16, 18), `kahdeksantoista yli kuusitoista`).
+test('16:19', [nondet]) :- phrase(time_text(16, 19), `yhdeksäntoista yli kuusitoista`).
+test('16:20', [nondet]) :- phrase(time_text(16, 20), `kaksikymmentänolla yli kuusitoista`).
+test('16:21', [nondet]) :- phrase(time_text(16, 21), `kaksikymmentäyksi yli kuusitoista`).
+test('16:22', [nondet]) :- phrase(time_text(16, 22), `kaksikymmentäkaksi yli kuusitoista`).
+test('16:23', [nondet]) :- phrase(time_text(16, 23), `kaksikymmentäkolme yli kuusitoista`).
+test('16:24', [nondet]) :- phrase(time_text(16, 24), `kaksikymmentäneljä yli kuusitoista`).
+test('16:25', [nondet]) :- phrase(time_text(16, 25), `kaksikymmentäviisi yli kuusitoista`).
+test('16:26', [nondet]) :- phrase(time_text(16, 26), `kaksikymmentäkuusi yli kuusitoista`).
+test('16:27', [nondet]) :- phrase(time_text(16, 27), `kaksikymmentäseitsemän yli kuusitoista`).
+test('16:28', [nondet]) :- phrase(time_text(16, 28), `kaksikymmentäkahdeksan yli kuusitoista`).
+test('16:29', [nondet]) :- phrase(time_text(16, 29), `kaksikymmentäyhdeksän yli kuusitoista`).
+test('16:30', [nondet]) :- phrase(time_text(16, 30), `puoli seitsemäntoista`).
+test('16:31', [nondet]) :- phrase(time_text(16, 31), `kahtakymmentäyhdeksää vaille kuusitoista`).
+test('16:32', [nondet]) :- phrase(time_text(16, 32), `kahtakymmentäkahdeksaa vaille kuusitoista`).
+test('16:33', [nondet]) :- phrase(time_text(16, 33), `kahtakymmentäseitsemää vaille kuusitoista`).
+test('16:34', [nondet]) :- phrase(time_text(16, 34), `kahtakymmentäkuutta vaille kuusitoista`).
+test('16:35', [nondet]) :- phrase(time_text(16, 35), `kahtakymmentäviittä vaille kuusitoista`).
+test('16:36', [nondet]) :- phrase(time_text(16, 36), `kahtakymmentäneljää vaille kuusitoista`).
+test('16:37', [nondet]) :- phrase(time_text(16, 37), `kahtakymmentäkolmea vaille kuusitoista`).
+test('16:38', [nondet]) :- phrase(time_text(16, 38), `kahtakymmentäkahta vaille kuusitoista`).
+test('16:39', [nondet]) :- phrase(time_text(16, 39), `kahtakymmentäyktä vaille kuusitoista`).
+test('16:40', [nondet]) :- phrase(time_text(16, 40), `kahtakymmentänollaa vaille kuusitoista`).
+test('16:41', [nondet]) :- phrase(time_text(16, 41), `yhdeksäätoista vaille kuusitoista`).
+test('16:42', [nondet]) :- phrase(time_text(16, 42), `kahdeksaatoista vaille kuusitoista`).
+test('16:43', [nondet]) :- phrase(time_text(16, 43), `seitsemäätoista vaille kuusitoista`).
+test('16:44', [nondet]) :- phrase(time_text(16, 44), `kuuttatoista vaille kuusitoista`).
+test('16:45', [nondet]) :- phrase(time_text(16, 45), `viittätoista vaille kuusitoista`).
+test('16:46', [nondet]) :- phrase(time_text(16, 46), `neljäätoista vaille kuusitoista`).
+test('16:47', [nondet]) :- phrase(time_text(16, 47), `kolmeatoista vaille kuusitoista`).
+test('16:48', [nondet]) :- phrase(time_text(16, 48), `kahtatoista vaille kuusitoista`).
+test('16:49', [nondet]) :- phrase(time_text(16, 49), `yktätoista vaille kuusitoista`).
+test('16:50', [nondet]) :- phrase(time_text(16, 50), `kymmentä vaille kuusitoista`).
+test('16:51', [nondet]) :- phrase(time_text(16, 51), `yhdeksää vaille kuusitoista`).
+test('16:52', [nondet]) :- phrase(time_text(16, 52), `kahdeksaa vaille kuusitoista`).
+test('16:53', [nondet]) :- phrase(time_text(16, 53), `seitsemää vaille kuusitoista`).
+test('16:54', [nondet]) :- phrase(time_text(16, 54), `kuutta vaille kuusitoista`).
+test('16:55', [nondet]) :- phrase(time_text(16, 55), `viittä vaille kuusitoista`).
+test('16:56', [nondet]) :- phrase(time_text(16, 56), `neljää vaille kuusitoista`).
+test('16:57', [nondet]) :- phrase(time_text(16, 57), `kolmea vaille kuusitoista`).
+test('16:58', [nondet]) :- phrase(time_text(16, 58), `kahta vaille kuusitoista`).
+test('16:59', [nondet]) :- phrase(time_text(16, 59), `yktä vaille kuusitoista`).
+test('17:0', [nondet]) :- phrase(time_text(17, 0), `seitsemäntoista`).
+test('17:0', [nondet]) :- phrase(time_text(17, 0), `tasan seitsemäntoista`).
+test('17:1', [nondet]) :- phrase(time_text(17, 1), `yksi yli seitsemäntoista`).
+test('17:2', [nondet]) :- phrase(time_text(17, 2), `kaksi yli seitsemäntoista`).
+test('17:3', [nondet]) :- phrase(time_text(17, 3), `kolme yli seitsemäntoista`).
+test('17:4', [nondet]) :- phrase(time_text(17, 4), `neljä yli seitsemäntoista`).
+test('17:5', [nondet]) :- phrase(time_text(17, 5), `viisi yli seitsemäntoista`).
+test('17:6', [nondet]) :- phrase(time_text(17, 6), `kuusi yli seitsemäntoista`).
+test('17:7', [nondet]) :- phrase(time_text(17, 7), `seitsemän yli seitsemäntoista`).
+test('17:8', [nondet]) :- phrase(time_text(17, 8), `kahdeksan yli seitsemäntoista`).
+test('17:9', [nondet]) :- phrase(time_text(17, 9), `yhdeksän yli seitsemäntoista`).
+test('17:10', [nondet]) :- phrase(time_text(17, 10), `kymmenen yli seitsemäntoista`).
+test('17:11', [nondet]) :- phrase(time_text(17, 11), `yksitoista yli seitsemäntoista`).
+test('17:12', [nondet]) :- phrase(time_text(17, 12), `kaksitoista yli seitsemäntoista`).
+test('17:13', [nondet]) :- phrase(time_text(17, 13), `kolmetoista yli seitsemäntoista`).
+test('17:14', [nondet]) :- phrase(time_text(17, 14), `neljätoista yli seitsemäntoista`).
+test('17:15', [nondet]) :- phrase(time_text(17, 15), `vartin yli seitsemäntoista`).
+test('17:15', [nondet]) :- phrase(time_text(17, 15), `viisitoista yli seitsemäntoista`).
+test('17:16', [nondet]) :- phrase(time_text(17, 16), `kuusitoista yli seitsemäntoista`).
+test('17:17', [nondet]) :- phrase(time_text(17, 17), `seitsemäntoista yli seitsemäntoista`).
+test('17:18', [nondet]) :- phrase(time_text(17, 18), `kahdeksantoista yli seitsemäntoista`).
+test('17:19', [nondet]) :- phrase(time_text(17, 19), `yhdeksäntoista yli seitsemäntoista`).
+test('17:20', [nondet]) :- phrase(time_text(17, 20), `kaksikymmentänolla yli seitsemäntoista`).
+test('17:21', [nondet]) :- phrase(time_text(17, 21), `kaksikymmentäyksi yli seitsemäntoista`).
+test('17:22', [nondet]) :- phrase(time_text(17, 22), `kaksikymmentäkaksi yli seitsemäntoista`).
+test('17:23', [nondet]) :- phrase(time_text(17, 23), `kaksikymmentäkolme yli seitsemäntoista`).
+test('17:24', [nondet]) :- phrase(time_text(17, 24), `kaksikymmentäneljä yli seitsemäntoista`).
+test('17:25', [nondet]) :- phrase(time_text(17, 25), `kaksikymmentäviisi yli seitsemäntoista`).
+test('17:26', [nondet]) :- phrase(time_text(17, 26), `kaksikymmentäkuusi yli seitsemäntoista`).
+test('17:27', [nondet]) :- phrase(time_text(17, 27), `kaksikymmentäseitsemän yli seitsemäntoista`).
+test('17:28', [nondet]) :- phrase(time_text(17, 28), `kaksikymmentäkahdeksan yli seitsemäntoista`).
+test('17:29', [nondet]) :- phrase(time_text(17, 29), `kaksikymmentäyhdeksän yli seitsemäntoista`).
+test('17:30', [nondet]) :- phrase(time_text(17, 30), `puoli kahdeksantoista`).
+test('17:31', [nondet]) :- phrase(time_text(17, 31), `kahtakymmentäyhdeksää vaille seitsemäntoista`).
+test('17:32', [nondet]) :- phrase(time_text(17, 32), `kahtakymmentäkahdeksaa vaille seitsemäntoista`).
+test('17:33', [nondet]) :- phrase(time_text(17, 33), `kahtakymmentäseitsemää vaille seitsemäntoista`).
+test('17:34', [nondet]) :- phrase(time_text(17, 34), `kahtakymmentäkuutta vaille seitsemäntoista`).
+test('17:35', [nondet]) :- phrase(time_text(17, 35), `kahtakymmentäviittä vaille seitsemäntoista`).
+test('17:36', [nondet]) :- phrase(time_text(17, 36), `kahtakymmentäneljää vaille seitsemäntoista`).
+test('17:37', [nondet]) :- phrase(time_text(17, 37), `kahtakymmentäkolmea vaille seitsemäntoista`).
+test('17:38', [nondet]) :- phrase(time_text(17, 38), `kahtakymmentäkahta vaille seitsemäntoista`).
+test('17:39', [nondet]) :- phrase(time_text(17, 39), `kahtakymmentäyktä vaille seitsemäntoista`).
+test('17:40', [nondet]) :- phrase(time_text(17, 40), `kahtakymmentänollaa vaille seitsemäntoista`).
+test('17:41', [nondet]) :- phrase(time_text(17, 41), `yhdeksäätoista vaille seitsemäntoista`).
+test('17:42', [nondet]) :- phrase(time_text(17, 42), `kahdeksaatoista vaille seitsemäntoista`).
+test('17:43', [nondet]) :- phrase(time_text(17, 43), `seitsemäätoista vaille seitsemäntoista`).
+test('17:44', [nondet]) :- phrase(time_text(17, 44), `kuuttatoista vaille seitsemäntoista`).
+test('17:45', [nondet]) :- phrase(time_text(17, 45), `viittätoista vaille seitsemäntoista`).
+test('17:46', [nondet]) :- phrase(time_text(17, 46), `neljäätoista vaille seitsemäntoista`).
+test('17:47', [nondet]) :- phrase(time_text(17, 47), `kolmeatoista vaille seitsemäntoista`).
+test('17:48', [nondet]) :- phrase(time_text(17, 48), `kahtatoista vaille seitsemäntoista`).
+test('17:49', [nondet]) :- phrase(time_text(17, 49), `yktätoista vaille seitsemäntoista`).
+test('17:50', [nondet]) :- phrase(time_text(17, 50), `kymmentä vaille seitsemäntoista`).
+test('17:51', [nondet]) :- phrase(time_text(17, 51), `yhdeksää vaille seitsemäntoista`).
+test('17:52', [nondet]) :- phrase(time_text(17, 52), `kahdeksaa vaille seitsemäntoista`).
+test('17:53', [nondet]) :- phrase(time_text(17, 53), `seitsemää vaille seitsemäntoista`).
+test('17:54', [nondet]) :- phrase(time_text(17, 54), `kuutta vaille seitsemäntoista`).
+test('17:55', [nondet]) :- phrase(time_text(17, 55), `viittä vaille seitsemäntoista`).
+test('17:56', [nondet]) :- phrase(time_text(17, 56), `neljää vaille seitsemäntoista`).
+test('17:57', [nondet]) :- phrase(time_text(17, 57), `kolmea vaille seitsemäntoista`).
+test('17:58', [nondet]) :- phrase(time_text(17, 58), `kahta vaille seitsemäntoista`).
+test('17:59', [nondet]) :- phrase(time_text(17, 59), `yktä vaille seitsemäntoista`).
+test('18:0', [nondet]) :- phrase(time_text(18, 0), `kahdeksantoista`).
+test('18:0', [nondet]) :- phrase(time_text(18, 0), `tasan kahdeksantoista`).
+test('18:1', [nondet]) :- phrase(time_text(18, 1), `yksi yli kahdeksantoista`).
+test('18:2', [nondet]) :- phrase(time_text(18, 2), `kaksi yli kahdeksantoista`).
+test('18:3', [nondet]) :- phrase(time_text(18, 3), `kolme yli kahdeksantoista`).
+test('18:4', [nondet]) :- phrase(time_text(18, 4), `neljä yli kahdeksantoista`).
+test('18:5', [nondet]) :- phrase(time_text(18, 5), `viisi yli kahdeksantoista`).
+test('18:6', [nondet]) :- phrase(time_text(18, 6), `kuusi yli kahdeksantoista`).
+test('18:7', [nondet]) :- phrase(time_text(18, 7), `seitsemän yli kahdeksantoista`).
+test('18:8', [nondet]) :- phrase(time_text(18, 8), `kahdeksan yli kahdeksantoista`).
+test('18:9', [nondet]) :- phrase(time_text(18, 9), `yhdeksän yli kahdeksantoista`).
+test('18:10', [nondet]) :- phrase(time_text(18, 10), `kymmenen yli kahdeksantoista`).
+test('18:11', [nondet]) :- phrase(time_text(18, 11), `yksitoista yli kahdeksantoista`).
+test('18:12', [nondet]) :- phrase(time_text(18, 12), `kaksitoista yli kahdeksantoista`).
+test('18:13', [nondet]) :- phrase(time_text(18, 13), `kolmetoista yli kahdeksantoista`).
+test('18:14', [nondet]) :- phrase(time_text(18, 14), `neljätoista yli kahdeksantoista`).
+test('18:15', [nondet]) :- phrase(time_text(18, 15), `vartin yli kahdeksantoista`).
+test('18:15', [nondet]) :- phrase(time_text(18, 15), `viisitoista yli kahdeksantoista`).
+test('18:16', [nondet]) :- phrase(time_text(18, 16), `kuusitoista yli kahdeksantoista`).
+test('18:17', [nondet]) :- phrase(time_text(18, 17), `seitsemäntoista yli kahdeksantoista`).
+test('18:18', [nondet]) :- phrase(time_text(18, 18), `kahdeksantoista yli kahdeksantoista`).
+test('18:19', [nondet]) :- phrase(time_text(18, 19), `yhdeksäntoista yli kahdeksantoista`).
+test('18:20', [nondet]) :- phrase(time_text(18, 20), `kaksikymmentänolla yli kahdeksantoista`).
+test('18:21', [nondet]) :- phrase(time_text(18, 21), `kaksikymmentäyksi yli kahdeksantoista`).
+test('18:22', [nondet]) :- phrase(time_text(18, 22), `kaksikymmentäkaksi yli kahdeksantoista`).
+test('18:23', [nondet]) :- phrase(time_text(18, 23), `kaksikymmentäkolme yli kahdeksantoista`).
+test('18:24', [nondet]) :- phrase(time_text(18, 24), `kaksikymmentäneljä yli kahdeksantoista`).
+test('18:25', [nondet]) :- phrase(time_text(18, 25), `kaksikymmentäviisi yli kahdeksantoista`).
+test('18:26', [nondet]) :- phrase(time_text(18, 26), `kaksikymmentäkuusi yli kahdeksantoista`).
+test('18:27', [nondet]) :- phrase(time_text(18, 27), `kaksikymmentäseitsemän yli kahdeksantoista`).
+test('18:28', [nondet]) :- phrase(time_text(18, 28), `kaksikymmentäkahdeksan yli kahdeksantoista`).
+test('18:29', [nondet]) :- phrase(time_text(18, 29), `kaksikymmentäyhdeksän yli kahdeksantoista`).
+test('18:30', [nondet]) :- phrase(time_text(18, 30), `puoli yhdeksäntoista`).
+test('18:31', [nondet]) :- phrase(time_text(18, 31), `kahtakymmentäyhdeksää vaille kahdeksantoista`).
+test('18:32', [nondet]) :- phrase(time_text(18, 32), `kahtakymmentäkahdeksaa vaille kahdeksantoista`).
+test('18:33', [nondet]) :- phrase(time_text(18, 33), `kahtakymmentäseitsemää vaille kahdeksantoista`).
+test('18:34', [nondet]) :- phrase(time_text(18, 34), `kahtakymmentäkuutta vaille kahdeksantoista`).
+test('18:35', [nondet]) :- phrase(time_text(18, 35), `kahtakymmentäviittä vaille kahdeksantoista`).
+test('18:36', [nondet]) :- phrase(time_text(18, 36), `kahtakymmentäneljää vaille kahdeksantoista`).
+test('18:37', [nondet]) :- phrase(time_text(18, 37), `kahtakymmentäkolmea vaille kahdeksantoista`).
+test('18:38', [nondet]) :- phrase(time_text(18, 38), `kahtakymmentäkahta vaille kahdeksantoista`).
+test('18:39', [nondet]) :- phrase(time_text(18, 39), `kahtakymmentäyktä vaille kahdeksantoista`).
+test('18:40', [nondet]) :- phrase(time_text(18, 40), `kahtakymmentänollaa vaille kahdeksantoista`).
+test('18:41', [nondet]) :- phrase(time_text(18, 41), `yhdeksäätoista vaille kahdeksantoista`).
+test('18:42', [nondet]) :- phrase(time_text(18, 42), `kahdeksaatoista vaille kahdeksantoista`).
+test('18:43', [nondet]) :- phrase(time_text(18, 43), `seitsemäätoista vaille kahdeksantoista`).
+test('18:44', [nondet]) :- phrase(time_text(18, 44), `kuuttatoista vaille kahdeksantoista`).
+test('18:45', [nondet]) :- phrase(time_text(18, 45), `viittätoista vaille kahdeksantoista`).
+test('18:46', [nondet]) :- phrase(time_text(18, 46), `neljäätoista vaille kahdeksantoista`).
+test('18:47', [nondet]) :- phrase(time_text(18, 47), `kolmeatoista vaille kahdeksantoista`).
+test('18:48', [nondet]) :- phrase(time_text(18, 48), `kahtatoista vaille kahdeksantoista`).
+test('18:49', [nondet]) :- phrase(time_text(18, 49), `yktätoista vaille kahdeksantoista`).
+test('18:50', [nondet]) :- phrase(time_text(18, 50), `kymmentä vaille kahdeksantoista`).
+test('18:51', [nondet]) :- phrase(time_text(18, 51), `yhdeksää vaille kahdeksantoista`).
+test('18:52', [nondet]) :- phrase(time_text(18, 52), `kahdeksaa vaille kahdeksantoista`).
+test('18:53', [nondet]) :- phrase(time_text(18, 53), `seitsemää vaille kahdeksantoista`).
+test('18:54', [nondet]) :- phrase(time_text(18, 54), `kuutta vaille kahdeksantoista`).
+test('18:55', [nondet]) :- phrase(time_text(18, 55), `viittä vaille kahdeksantoista`).
+test('18:56', [nondet]) :- phrase(time_text(18, 56), `neljää vaille kahdeksantoista`).
+test('18:57', [nondet]) :- phrase(time_text(18, 57), `kolmea vaille kahdeksantoista`).
+test('18:58', [nondet]) :- phrase(time_text(18, 58), `kahta vaille kahdeksantoista`).
+test('18:59', [nondet]) :- phrase(time_text(18, 59), `yktä vaille kahdeksantoista`).
+test('19:0', [nondet]) :- phrase(time_text(19, 0), `tasan yhdeksäntoista`).
+test('19:0', [nondet]) :- phrase(time_text(19, 0), `yhdeksäntoista`).
+test('19:1', [nondet]) :- phrase(time_text(19, 1), `yksi yli yhdeksäntoista`).
+test('19:2', [nondet]) :- phrase(time_text(19, 2), `kaksi yli yhdeksäntoista`).
+test('19:3', [nondet]) :- phrase(time_text(19, 3), `kolme yli yhdeksäntoista`).
+test('19:4', [nondet]) :- phrase(time_text(19, 4), `neljä yli yhdeksäntoista`).
+test('19:5', [nondet]) :- phrase(time_text(19, 5), `viisi yli yhdeksäntoista`).
+test('19:6', [nondet]) :- phrase(time_text(19, 6), `kuusi yli yhdeksäntoista`).
+test('19:7', [nondet]) :- phrase(time_text(19, 7), `seitsemän yli yhdeksäntoista`).
+test('19:8', [nondet]) :- phrase(time_text(19, 8), `kahdeksan yli yhdeksäntoista`).
+test('19:9', [nondet]) :- phrase(time_text(19, 9), `yhdeksän yli yhdeksäntoista`).
+test('19:10', [nondet]) :- phrase(time_text(19, 10), `kymmenen yli yhdeksäntoista`).
+test('19:11', [nondet]) :- phrase(time_text(19, 11), `yksitoista yli yhdeksäntoista`).
+test('19:12', [nondet]) :- phrase(time_text(19, 12), `kaksitoista yli yhdeksäntoista`).
+test('19:13', [nondet]) :- phrase(time_text(19, 13), `kolmetoista yli yhdeksäntoista`).
+test('19:14', [nondet]) :- phrase(time_text(19, 14), `neljätoista yli yhdeksäntoista`).
+test('19:15', [nondet]) :- phrase(time_text(19, 15), `vartin yli yhdeksäntoista`).
+test('19:15', [nondet]) :- phrase(time_text(19, 15), `viisitoista yli yhdeksäntoista`).
+test('19:16', [nondet]) :- phrase(time_text(19, 16), `kuusitoista yli yhdeksäntoista`).
+test('19:17', [nondet]) :- phrase(time_text(19, 17), `seitsemäntoista yli yhdeksäntoista`).
+test('19:18', [nondet]) :- phrase(time_text(19, 18), `kahdeksantoista yli yhdeksäntoista`).
+test('19:19', [nondet]) :- phrase(time_text(19, 19), `yhdeksäntoista yli yhdeksäntoista`).
+test('19:20', [nondet]) :- phrase(time_text(19, 20), `kaksikymmentänolla yli yhdeksäntoista`).
+test('19:21', [nondet]) :- phrase(time_text(19, 21), `kaksikymmentäyksi yli yhdeksäntoista`).
+test('19:22', [nondet]) :- phrase(time_text(19, 22), `kaksikymmentäkaksi yli yhdeksäntoista`).
+test('19:23', [nondet]) :- phrase(time_text(19, 23), `kaksikymmentäkolme yli yhdeksäntoista`).
+test('19:24', [nondet]) :- phrase(time_text(19, 24), `kaksikymmentäneljä yli yhdeksäntoista`).
+test('19:25', [nondet]) :- phrase(time_text(19, 25), `kaksikymmentäviisi yli yhdeksäntoista`).
+test('19:26', [nondet]) :- phrase(time_text(19, 26), `kaksikymmentäkuusi yli yhdeksäntoista`).
+test('19:27', [nondet]) :- phrase(time_text(19, 27), `kaksikymmentäseitsemän yli yhdeksäntoista`).
+test('19:28', [nondet]) :- phrase(time_text(19, 28), `kaksikymmentäkahdeksan yli yhdeksäntoista`).
+test('19:29', [nondet]) :- phrase(time_text(19, 29), `kaksikymmentäyhdeksän yli yhdeksäntoista`).
+test('19:30', [nondet]) :- phrase(time_text(19, 30), `puoli kaksikymmentänolla`).
+test('19:31', [nondet]) :- phrase(time_text(19, 31), `kahtakymmentäyhdeksää vaille yhdeksäntoista`).
+test('19:32', [nondet]) :- phrase(time_text(19, 32), `kahtakymmentäkahdeksaa vaille yhdeksäntoista`).
+test('19:33', [nondet]) :- phrase(time_text(19, 33), `kahtakymmentäseitsemää vaille yhdeksäntoista`).
+test('19:34', [nondet]) :- phrase(time_text(19, 34), `kahtakymmentäkuutta vaille yhdeksäntoista`).
+test('19:35', [nondet]) :- phrase(time_text(19, 35), `kahtakymmentäviittä vaille yhdeksäntoista`).
+test('19:36', [nondet]) :- phrase(time_text(19, 36), `kahtakymmentäneljää vaille yhdeksäntoista`).
+test('19:37', [nondet]) :- phrase(time_text(19, 37), `kahtakymmentäkolmea vaille yhdeksäntoista`).
+test('19:38', [nondet]) :- phrase(time_text(19, 38), `kahtakymmentäkahta vaille yhdeksäntoista`).
+test('19:39', [nondet]) :- phrase(time_text(19, 39), `kahtakymmentäyktä vaille yhdeksäntoista`).
+test('19:40', [nondet]) :- phrase(time_text(19, 40), `kahtakymmentänollaa vaille yhdeksäntoista`).
+test('19:41', [nondet]) :- phrase(time_text(19, 41), `yhdeksäätoista vaille yhdeksäntoista`).
+test('19:42', [nondet]) :- phrase(time_text(19, 42), `kahdeksaatoista vaille yhdeksäntoista`).
+test('19:43', [nondet]) :- phrase(time_text(19, 43), `seitsemäätoista vaille yhdeksäntoista`).
+test('19:44', [nondet]) :- phrase(time_text(19, 44), `kuuttatoista vaille yhdeksäntoista`).
+test('19:45', [nondet]) :- phrase(time_text(19, 45), `viittätoista vaille yhdeksäntoista`).
+test('19:46', [nondet]) :- phrase(time_text(19, 46), `neljäätoista vaille yhdeksäntoista`).
+test('19:47', [nondet]) :- phrase(time_text(19, 47), `kolmeatoista vaille yhdeksäntoista`).
+test('19:48', [nondet]) :- phrase(time_text(19, 48), `kahtatoista vaille yhdeksäntoista`).
+test('19:49', [nondet]) :- phrase(time_text(19, 49), `yktätoista vaille yhdeksäntoista`).
+test('19:50', [nondet]) :- phrase(time_text(19, 50), `kymmentä vaille yhdeksäntoista`).
+test('19:51', [nondet]) :- phrase(time_text(19, 51), `yhdeksää vaille yhdeksäntoista`).
+test('19:52', [nondet]) :- phrase(time_text(19, 52), `kahdeksaa vaille yhdeksäntoista`).
+test('19:53', [nondet]) :- phrase(time_text(19, 53), `seitsemää vaille yhdeksäntoista`).
+test('19:54', [nondet]) :- phrase(time_text(19, 54), `kuutta vaille yhdeksäntoista`).
+test('19:55', [nondet]) :- phrase(time_text(19, 55), `viittä vaille yhdeksäntoista`).
+test('19:56', [nondet]) :- phrase(time_text(19, 56), `neljää vaille yhdeksäntoista`).
+test('19:57', [nondet]) :- phrase(time_text(19, 57), `kolmea vaille yhdeksäntoista`).
+test('19:58', [nondet]) :- phrase(time_text(19, 58), `kahta vaille yhdeksäntoista`).
+test('19:59', [nondet]) :- phrase(time_text(19, 59), `yktä vaille yhdeksäntoista`).
+test('20:0', [nondet]) :- phrase(time_text(20, 0), `kaksikymmentänolla`).
+test('20:0', [nondet]) :- phrase(time_text(20, 0), `tasan kaksikymmentänolla`).
+test('20:1', [nondet]) :- phrase(time_text(20, 1), `yksi yli kaksikymmentänolla`).
+test('20:2', [nondet]) :- phrase(time_text(20, 2), `kaksi yli kaksikymmentänolla`).
+test('20:3', [nondet]) :- phrase(time_text(20, 3), `kolme yli kaksikymmentänolla`).
+test('20:4', [nondet]) :- phrase(time_text(20, 4), `neljä yli kaksikymmentänolla`).
+test('20:5', [nondet]) :- phrase(time_text(20, 5), `viisi yli kaksikymmentänolla`).
+test('20:6', [nondet]) :- phrase(time_text(20, 6), `kuusi yli kaksikymmentänolla`).
+test('20:7', [nondet]) :- phrase(time_text(20, 7), `seitsemän yli kaksikymmentänolla`).
+test('20:8', [nondet]) :- phrase(time_text(20, 8), `kahdeksan yli kaksikymmentänolla`).
+test('20:9', [nondet]) :- phrase(time_text(20, 9), `yhdeksän yli kaksikymmentänolla`).
+test('20:10', [nondet]) :- phrase(time_text(20, 10), `kymmenen yli kaksikymmentänolla`).
+test('20:11', [nondet]) :- phrase(time_text(20, 11), `yksitoista yli kaksikymmentänolla`).
+test('20:12', [nondet]) :- phrase(time_text(20, 12), `kaksitoista yli kaksikymmentänolla`).
+test('20:13', [nondet]) :- phrase(time_text(20, 13), `kolmetoista yli kaksikymmentänolla`).
+test('20:14', [nondet]) :- phrase(time_text(20, 14), `neljätoista yli kaksikymmentänolla`).
+test('20:15', [nondet]) :- phrase(time_text(20, 15), `vartin yli kaksikymmentänolla`).
+test('20:15', [nondet]) :- phrase(time_text(20, 15), `viisitoista yli kaksikymmentänolla`).
+test('20:16', [nondet]) :- phrase(time_text(20, 16), `kuusitoista yli kaksikymmentänolla`).
+test('20:17', [nondet]) :- phrase(time_text(20, 17), `seitsemäntoista yli kaksikymmentänolla`).
+test('20:18', [nondet]) :- phrase(time_text(20, 18), `kahdeksantoista yli kaksikymmentänolla`).
+test('20:19', [nondet]) :- phrase(time_text(20, 19), `yhdeksäntoista yli kaksikymmentänolla`).
+test('20:20', [nondet]) :- phrase(time_text(20, 20), `kaksikymmentänolla yli kaksikymmentänolla`).
+test('20:21', [nondet]) :- phrase(time_text(20, 21), `kaksikymmentäyksi yli kaksikymmentänolla`).
+test('20:22', [nondet]) :- phrase(time_text(20, 22), `kaksikymmentäkaksi yli kaksikymmentänolla`).
+test('20:23', [nondet]) :- phrase(time_text(20, 23), `kaksikymmentäkolme yli kaksikymmentänolla`).
+test('20:24', [nondet]) :- phrase(time_text(20, 24), `kaksikymmentäneljä yli kaksikymmentänolla`).
+test('20:25', [nondet]) :- phrase(time_text(20, 25), `kaksikymmentäviisi yli kaksikymmentänolla`).
+test('20:26', [nondet]) :- phrase(time_text(20, 26), `kaksikymmentäkuusi yli kaksikymmentänolla`).
+test('20:27', [nondet]) :- phrase(time_text(20, 27), `kaksikymmentäseitsemän yli kaksikymmentänolla`).
+test('20:28', [nondet]) :- phrase(time_text(20, 28), `kaksikymmentäkahdeksan yli kaksikymmentänolla`).
+test('20:29', [nondet]) :- phrase(time_text(20, 29), `kaksikymmentäyhdeksän yli kaksikymmentänolla`).
+test('20:30', [nondet]) :- phrase(time_text(20, 30), `puoli kaksikymmentäyksi`).
+test('20:31', [nondet]) :- phrase(time_text(20, 31), `kahtakymmentäyhdeksää vaille kaksikymmentänolla`).
+test('20:32', [nondet]) :- phrase(time_text(20, 32), `kahtakymmentäkahdeksaa vaille kaksikymmentänolla`).
+test('20:33', [nondet]) :- phrase(time_text(20, 33), `kahtakymmentäseitsemää vaille kaksikymmentänolla`).
+test('20:34', [nondet]) :- phrase(time_text(20, 34), `kahtakymmentäkuutta vaille kaksikymmentänolla`).
+test('20:35', [nondet]) :- phrase(time_text(20, 35), `kahtakymmentäviittä vaille kaksikymmentänolla`).
+test('20:36', [nondet]) :- phrase(time_text(20, 36), `kahtakymmentäneljää vaille kaksikymmentänolla`).
+test('20:37', [nondet]) :- phrase(time_text(20, 37), `kahtakymmentäkolmea vaille kaksikymmentänolla`).
+test('20:38', [nondet]) :- phrase(time_text(20, 38), `kahtakymmentäkahta vaille kaksikymmentänolla`).
+test('20:39', [nondet]) :- phrase(time_text(20, 39), `kahtakymmentäyktä vaille kaksikymmentänolla`).
+test('20:40', [nondet]) :- phrase(time_text(20, 40), `kahtakymmentänollaa vaille kaksikymmentänolla`).
+test('20:41', [nondet]) :- phrase(time_text(20, 41), `yhdeksäätoista vaille kaksikymmentänolla`).
+test('20:42', [nondet]) :- phrase(time_text(20, 42), `kahdeksaatoista vaille kaksikymmentänolla`).
+test('20:43', [nondet]) :- phrase(time_text(20, 43), `seitsemäätoista vaille kaksikymmentänolla`).
+test('20:44', [nondet]) :- phrase(time_text(20, 44), `kuuttatoista vaille kaksikymmentänolla`).
+test('20:45', [nondet]) :- phrase(time_text(20, 45), `viittätoista vaille kaksikymmentänolla`).
+test('20:46', [nondet]) :- phrase(time_text(20, 46), `neljäätoista vaille kaksikymmentänolla`).
+test('20:47', [nondet]) :- phrase(time_text(20, 47), `kolmeatoista vaille kaksikymmentänolla`).
+test('20:48', [nondet]) :- phrase(time_text(20, 48), `kahtatoista vaille kaksikymmentänolla`).
+test('20:49', [nondet]) :- phrase(time_text(20, 49), `yktätoista vaille kaksikymmentänolla`).
+test('20:50', [nondet]) :- phrase(time_text(20, 50), `kymmentä vaille kaksikymmentänolla`).
+test('20:51', [nondet]) :- phrase(time_text(20, 51), `yhdeksää vaille kaksikymmentänolla`).
+test('20:52', [nondet]) :- phrase(time_text(20, 52), `kahdeksaa vaille kaksikymmentänolla`).
+test('20:53', [nondet]) :- phrase(time_text(20, 53), `seitsemää vaille kaksikymmentänolla`).
+test('20:54', [nondet]) :- phrase(time_text(20, 54), `kuutta vaille kaksikymmentänolla`).
+test('20:55', [nondet]) :- phrase(time_text(20, 55), `viittä vaille kaksikymmentänolla`).
+test('20:56', [nondet]) :- phrase(time_text(20, 56), `neljää vaille kaksikymmentänolla`).
+test('20:57', [nondet]) :- phrase(time_text(20, 57), `kolmea vaille kaksikymmentänolla`).
+test('20:58', [nondet]) :- phrase(time_text(20, 58), `kahta vaille kaksikymmentänolla`).
+test('20:59', [nondet]) :- phrase(time_text(20, 59), `yktä vaille kaksikymmentänolla`).
+test('21:0', [nondet]) :- phrase(time_text(21, 0), `kaksikymmentäyksi`).
+test('21:0', [nondet]) :- phrase(time_text(21, 0), `tasan kaksikymmentäyksi`).
+test('21:1', [nondet]) :- phrase(time_text(21, 1), `yksi yli kaksikymmentäyksi`).
+test('21:2', [nondet]) :- phrase(time_text(21, 2), `kaksi yli kaksikymmentäyksi`).
+test('21:3', [nondet]) :- phrase(time_text(21, 3), `kolme yli kaksikymmentäyksi`).
+test('21:4', [nondet]) :- phrase(time_text(21, 4), `neljä yli kaksikymmentäyksi`).
+test('21:5', [nondet]) :- phrase(time_text(21, 5), `viisi yli kaksikymmentäyksi`).
+test('21:6', [nondet]) :- phrase(time_text(21, 6), `kuusi yli kaksikymmentäyksi`).
+test('21:7', [nondet]) :- phrase(time_text(21, 7), `seitsemän yli kaksikymmentäyksi`).
+test('21:8', [nondet]) :- phrase(time_text(21, 8), `kahdeksan yli kaksikymmentäyksi`).
+test('21:9', [nondet]) :- phrase(time_text(21, 9), `yhdeksän yli kaksikymmentäyksi`).
+test('21:10', [nondet]) :- phrase(time_text(21, 10), `kymmenen yli kaksikymmentäyksi`).
+test('21:11', [nondet]) :- phrase(time_text(21, 11), `yksitoista yli kaksikymmentäyksi`).
+test('21:12', [nondet]) :- phrase(time_text(21, 12), `kaksitoista yli kaksikymmentäyksi`).
+test('21:13', [nondet]) :- phrase(time_text(21, 13), `kolmetoista yli kaksikymmentäyksi`).
+test('21:14', [nondet]) :- phrase(time_text(21, 14), `neljätoista yli kaksikymmentäyksi`).
+test('21:15', [nondet]) :- phrase(time_text(21, 15), `vartin yli kaksikymmentäyksi`).
+test('21:15', [nondet]) :- phrase(time_text(21, 15), `viisitoista yli kaksikymmentäyksi`).
+test('21:16', [nondet]) :- phrase(time_text(21, 16), `kuusitoista yli kaksikymmentäyksi`).
+test('21:17', [nondet]) :- phrase(time_text(21, 17), `seitsemäntoista yli kaksikymmentäyksi`).
+test('21:18', [nondet]) :- phrase(time_text(21, 18), `kahdeksantoista yli kaksikymmentäyksi`).
+test('21:19', [nondet]) :- phrase(time_text(21, 19), `yhdeksäntoista yli kaksikymmentäyksi`).
+test('21:20', [nondet]) :- phrase(time_text(21, 20), `kaksikymmentänolla yli kaksikymmentäyksi`).
+test('21:21', [nondet]) :- phrase(time_text(21, 21), `kaksikymmentäyksi yli kaksikymmentäyksi`).
+test('21:22', [nondet]) :- phrase(time_text(21, 22), `kaksikymmentäkaksi yli kaksikymmentäyksi`).
+test('21:23', [nondet]) :- phrase(time_text(21, 23), `kaksikymmentäkolme yli kaksikymmentäyksi`).
+test('21:24', [nondet]) :- phrase(time_text(21, 24), `kaksikymmentäneljä yli kaksikymmentäyksi`).
+test('21:25', [nondet]) :- phrase(time_text(21, 25), `kaksikymmentäviisi yli kaksikymmentäyksi`).
+test('21:26', [nondet]) :- phrase(time_text(21, 26), `kaksikymmentäkuusi yli kaksikymmentäyksi`).
+test('21:27', [nondet]) :- phrase(time_text(21, 27), `kaksikymmentäseitsemän yli kaksikymmentäyksi`).
+test('21:28', [nondet]) :- phrase(time_text(21, 28), `kaksikymmentäkahdeksan yli kaksikymmentäyksi`).
+test('21:29', [nondet]) :- phrase(time_text(21, 29), `kaksikymmentäyhdeksän yli kaksikymmentäyksi`).
+test('21:30', [nondet]) :- phrase(time_text(21, 30), `puoli kaksikymmentäkaksi`).
+test('21:31', [nondet]) :- phrase(time_text(21, 31), `kahtakymmentäyhdeksää vaille kaksikymmentäyksi`).
+test('21:32', [nondet]) :- phrase(time_text(21, 32), `kahtakymmentäkahdeksaa vaille kaksikymmentäyksi`).
+test('21:33', [nondet]) :- phrase(time_text(21, 33), `kahtakymmentäseitsemää vaille kaksikymmentäyksi`).
+test('21:34', [nondet]) :- phrase(time_text(21, 34), `kahtakymmentäkuutta vaille kaksikymmentäyksi`).
+test('21:35', [nondet]) :- phrase(time_text(21, 35), `kahtakymmentäviittä vaille kaksikymmentäyksi`).
+test('21:36', [nondet]) :- phrase(time_text(21, 36), `kahtakymmentäneljää vaille kaksikymmentäyksi`).
+test('21:37', [nondet]) :- phrase(time_text(21, 37), `kahtakymmentäkolmea vaille kaksikymmentäyksi`).
+test('21:38', [nondet]) :- phrase(time_text(21, 38), `kahtakymmentäkahta vaille kaksikymmentäyksi`).
+test('21:39', [nondet]) :- phrase(time_text(21, 39), `kahtakymmentäyktä vaille kaksikymmentäyksi`).
+test('21:40', [nondet]) :- phrase(time_text(21, 40), `kahtakymmentänollaa vaille kaksikymmentäyksi`).
+test('21:41', [nondet]) :- phrase(time_text(21, 41), `yhdeksäätoista vaille kaksikymmentäyksi`).
+test('21:42', [nondet]) :- phrase(time_text(21, 42), `kahdeksaatoista vaille kaksikymmentäyksi`).
+test('21:43', [nondet]) :- phrase(time_text(21, 43), `seitsemäätoista vaille kaksikymmentäyksi`).
+test('21:44', [nondet]) :- phrase(time_text(21, 44), `kuuttatoista vaille kaksikymmentäyksi`).
+test('21:45', [nondet]) :- phrase(time_text(21, 45), `viittätoista vaille kaksikymmentäyksi`).
+test('21:46', [nondet]) :- phrase(time_text(21, 46), `neljäätoista vaille kaksikymmentäyksi`).
+test('21:47', [nondet]) :- phrase(time_text(21, 47), `kolmeatoista vaille kaksikymmentäyksi`).
+test('21:48', [nondet]) :- phrase(time_text(21, 48), `kahtatoista vaille kaksikymmentäyksi`).
+test('21:49', [nondet]) :- phrase(time_text(21, 49), `yktätoista vaille kaksikymmentäyksi`).
+test('21:50', [nondet]) :- phrase(time_text(21, 50), `kymmentä vaille kaksikymmentäyksi`).
+test('21:51', [nondet]) :- phrase(time_text(21, 51), `yhdeksää vaille kaksikymmentäyksi`).
+test('21:52', [nondet]) :- phrase(time_text(21, 52), `kahdeksaa vaille kaksikymmentäyksi`).
+test('21:53', [nondet]) :- phrase(time_text(21, 53), `seitsemää vaille kaksikymmentäyksi`).
+test('21:54', [nondet]) :- phrase(time_text(21, 54), `kuutta vaille kaksikymmentäyksi`).
+test('21:55', [nondet]) :- phrase(time_text(21, 55), `viittä vaille kaksikymmentäyksi`).
+test('21:56', [nondet]) :- phrase(time_text(21, 56), `neljää vaille kaksikymmentäyksi`).
+test('21:57', [nondet]) :- phrase(time_text(21, 57), `kolmea vaille kaksikymmentäyksi`).
+test('21:58', [nondet]) :- phrase(time_text(21, 58), `kahta vaille kaksikymmentäyksi`).
+test('21:59', [nondet]) :- phrase(time_text(21, 59), `yktä vaille kaksikymmentäyksi`).
+test('22:0', [nondet]) :- phrase(time_text(22, 0), `kaksikymmentäkaksi`).
+test('22:0', [nondet]) :- phrase(time_text(22, 0), `tasan kaksikymmentäkaksi`).
+test('22:1', [nondet]) :- phrase(time_text(22, 1), `yksi yli kaksikymmentäkaksi`).
+test('22:2', [nondet]) :- phrase(time_text(22, 2), `kaksi yli kaksikymmentäkaksi`).
+test('22:3', [nondet]) :- phrase(time_text(22, 3), `kolme yli kaksikymmentäkaksi`).
+test('22:4', [nondet]) :- phrase(time_text(22, 4), `neljä yli kaksikymmentäkaksi`).
+test('22:5', [nondet]) :- phrase(time_text(22, 5), `viisi yli kaksikymmentäkaksi`).
+test('22:6', [nondet]) :- phrase(time_text(22, 6), `kuusi yli kaksikymmentäkaksi`).
+test('22:7', [nondet]) :- phrase(time_text(22, 7), `seitsemän yli kaksikymmentäkaksi`).
+test('22:8', [nondet]) :- phrase(time_text(22, 8), `kahdeksan yli kaksikymmentäkaksi`).
+test('22:9', [nondet]) :- phrase(time_text(22, 9), `yhdeksän yli kaksikymmentäkaksi`).
+test('22:10', [nondet]) :- phrase(time_text(22, 10), `kymmenen yli kaksikymmentäkaksi`).
+test('22:11', [nondet]) :- phrase(time_text(22, 11), `yksitoista yli kaksikymmentäkaksi`).
+test('22:12', [nondet]) :- phrase(time_text(22, 12), `kaksitoista yli kaksikymmentäkaksi`).
+test('22:13', [nondet]) :- phrase(time_text(22, 13), `kolmetoista yli kaksikymmentäkaksi`).
+test('22:14', [nondet]) :- phrase(time_text(22, 14), `neljätoista yli kaksikymmentäkaksi`).
+test('22:15', [nondet]) :- phrase(time_text(22, 15), `vartin yli kaksikymmentäkaksi`).
+test('22:15', [nondet]) :- phrase(time_text(22, 15), `viisitoista yli kaksikymmentäkaksi`).
+test('22:16', [nondet]) :- phrase(time_text(22, 16), `kuusitoista yli kaksikymmentäkaksi`).
+test('22:17', [nondet]) :- phrase(time_text(22, 17), `seitsemäntoista yli kaksikymmentäkaksi`).
+test('22:18', [nondet]) :- phrase(time_text(22, 18), `kahdeksantoista yli kaksikymmentäkaksi`).
+test('22:19', [nondet]) :- phrase(time_text(22, 19), `yhdeksäntoista yli kaksikymmentäkaksi`).
+test('22:20', [nondet]) :- phrase(time_text(22, 20), `kaksikymmentänolla yli kaksikymmentäkaksi`).
+test('22:21', [nondet]) :- phrase(time_text(22, 21), `kaksikymmentäyksi yli kaksikymmentäkaksi`).
+test('22:22', [nondet]) :- phrase(time_text(22, 22), `kaksikymmentäkaksi yli kaksikymmentäkaksi`).
+test('22:23', [nondet]) :- phrase(time_text(22, 23), `kaksikymmentäkolme yli kaksikymmentäkaksi`).
+test('22:24', [nondet]) :- phrase(time_text(22, 24), `kaksikymmentäneljä yli kaksikymmentäkaksi`).
+test('22:25', [nondet]) :- phrase(time_text(22, 25), `kaksikymmentäviisi yli kaksikymmentäkaksi`).
+test('22:26', [nondet]) :- phrase(time_text(22, 26), `kaksikymmentäkuusi yli kaksikymmentäkaksi`).
+test('22:27', [nondet]) :- phrase(time_text(22, 27), `kaksikymmentäseitsemän yli kaksikymmentäkaksi`).
+test('22:28', [nondet]) :- phrase(time_text(22, 28), `kaksikymmentäkahdeksan yli kaksikymmentäkaksi`).
+test('22:29', [nondet]) :- phrase(time_text(22, 29), `kaksikymmentäyhdeksän yli kaksikymmentäkaksi`).
+test('22:30', [nondet]) :- phrase(time_text(22, 30), `puoli kaksikymmentäkolme`).
+test('22:31', [nondet]) :- phrase(time_text(22, 31), `kahtakymmentäyhdeksää vaille kaksikymmentäkaksi`).
+test('22:32', [nondet]) :- phrase(time_text(22, 32), `kahtakymmentäkahdeksaa vaille kaksikymmentäkaksi`).
+test('22:33', [nondet]) :- phrase(time_text(22, 33), `kahtakymmentäseitsemää vaille kaksikymmentäkaksi`).
+test('22:34', [nondet]) :- phrase(time_text(22, 34), `kahtakymmentäkuutta vaille kaksikymmentäkaksi`).
+test('22:35', [nondet]) :- phrase(time_text(22, 35), `kahtakymmentäviittä vaille kaksikymmentäkaksi`).
+test('22:36', [nondet]) :- phrase(time_text(22, 36), `kahtakymmentäneljää vaille kaksikymmentäkaksi`).
+test('22:37', [nondet]) :- phrase(time_text(22, 37), `kahtakymmentäkolmea vaille kaksikymmentäkaksi`).
+test('22:38', [nondet]) :- phrase(time_text(22, 38), `kahtakymmentäkahta vaille kaksikymmentäkaksi`).
+test('22:39', [nondet]) :- phrase(time_text(22, 39), `kahtakymmentäyktä vaille kaksikymmentäkaksi`).
+test('22:40', [nondet]) :- phrase(time_text(22, 40), `kahtakymmentänollaa vaille kaksikymmentäkaksi`).
+test('22:41', [nondet]) :- phrase(time_text(22, 41), `yhdeksäätoista vaille kaksikymmentäkaksi`).
+test('22:42', [nondet]) :- phrase(time_text(22, 42), `kahdeksaatoista vaille kaksikymmentäkaksi`).
+test('22:43', [nondet]) :- phrase(time_text(22, 43), `seitsemäätoista vaille kaksikymmentäkaksi`).
+test('22:44', [nondet]) :- phrase(time_text(22, 44), `kuuttatoista vaille kaksikymmentäkaksi`).
+test('22:45', [nondet]) :- phrase(time_text(22, 45), `viittätoista vaille kaksikymmentäkaksi`).
+test('22:46', [nondet]) :- phrase(time_text(22, 46), `neljäätoista vaille kaksikymmentäkaksi`).
+test('22:47', [nondet]) :- phrase(time_text(22, 47), `kolmeatoista vaille kaksikymmentäkaksi`).
+test('22:48', [nondet]) :- phrase(time_text(22, 48), `kahtatoista vaille kaksikymmentäkaksi`).
+test('22:49', [nondet]) :- phrase(time_text(22, 49), `yktätoista vaille kaksikymmentäkaksi`).
+test('22:50', [nondet]) :- phrase(time_text(22, 50), `kymmentä vaille kaksikymmentäkaksi`).
+test('22:51', [nondet]) :- phrase(time_text(22, 51), `yhdeksää vaille kaksikymmentäkaksi`).
+test('22:52', [nondet]) :- phrase(time_text(22, 52), `kahdeksaa vaille kaksikymmentäkaksi`).
+test('22:53', [nondet]) :- phrase(time_text(22, 53), `seitsemää vaille kaksikymmentäkaksi`).
+test('22:54', [nondet]) :- phrase(time_text(22, 54), `kuutta vaille kaksikymmentäkaksi`).
+test('22:55', [nondet]) :- phrase(time_text(22, 55), `viittä vaille kaksikymmentäkaksi`).
+test('22:56', [nondet]) :- phrase(time_text(22, 56), `neljää vaille kaksikymmentäkaksi`).
+test('22:57', [nondet]) :- phrase(time_text(22, 57), `kolmea vaille kaksikymmentäkaksi`).
+test('22:58', [nondet]) :- phrase(time_text(22, 58), `kahta vaille kaksikymmentäkaksi`).
+test('22:59', [nondet]) :- phrase(time_text(22, 59), `yktä vaille kaksikymmentäkaksi`).
+test('23:0', [nondet]) :- phrase(time_text(23, 0), `kaksikymmentäkolme`).
+test('23:0', [nondet]) :- phrase(time_text(23, 0), `tasan kaksikymmentäkolme`).
+test('23:1', [nondet]) :- phrase(time_text(23, 1), `yksi yli kaksikymmentäkolme`).
+test('23:2', [nondet]) :- phrase(time_text(23, 2), `kaksi yli kaksikymmentäkolme`).
+test('23:3', [nondet]) :- phrase(time_text(23, 3), `kolme yli kaksikymmentäkolme`).
+test('23:4', [nondet]) :- phrase(time_text(23, 4), `neljä yli kaksikymmentäkolme`).
+test('23:5', [nondet]) :- phrase(time_text(23, 5), `viisi yli kaksikymmentäkolme`).
+test('23:6', [nondet]) :- phrase(time_text(23, 6), `kuusi yli kaksikymmentäkolme`).
+test('23:7', [nondet]) :- phrase(time_text(23, 7), `seitsemän yli kaksikymmentäkolme`).
+test('23:8', [nondet]) :- phrase(time_text(23, 8), `kahdeksan yli kaksikymmentäkolme`).
+test('23:9', [nondet]) :- phrase(time_text(23, 9), `yhdeksän yli kaksikymmentäkolme`).
+test('23:10', [nondet]) :- phrase(time_text(23, 10), `kymmenen yli kaksikymmentäkolme`).
+test('23:11', [nondet]) :- phrase(time_text(23, 11), `yksitoista yli kaksikymmentäkolme`).
+test('23:12', [nondet]) :- phrase(time_text(23, 12), `kaksitoista yli kaksikymmentäkolme`).
+test('23:13', [nondet]) :- phrase(time_text(23, 13), `kolmetoista yli kaksikymmentäkolme`).
+test('23:14', [nondet]) :- phrase(time_text(23, 14), `neljätoista yli kaksikymmentäkolme`).
+test('23:15', [nondet]) :- phrase(time_text(23, 15), `vartin yli kaksikymmentäkolme`).
+test('23:15', [nondet]) :- phrase(time_text(23, 15), `viisitoista yli kaksikymmentäkolme`).
+test('23:16', [nondet]) :- phrase(time_text(23, 16), `kuusitoista yli kaksikymmentäkolme`).
+test('23:17', [nondet]) :- phrase(time_text(23, 17), `seitsemäntoista yli kaksikymmentäkolme`).
+test('23:18', [nondet]) :- phrase(time_text(23, 18), `kahdeksantoista yli kaksikymmentäkolme`).
+test('23:19', [nondet]) :- phrase(time_text(23, 19), `yhdeksäntoista yli kaksikymmentäkolme`).
+test('23:20', [nondet]) :- phrase(time_text(23, 20), `kaksikymmentänolla yli kaksikymmentäkolme`).
+test('23:21', [nondet]) :- phrase(time_text(23, 21), `kaksikymmentäyksi yli kaksikymmentäkolme`).
+test('23:22', [nondet]) :- phrase(time_text(23, 22), `kaksikymmentäkaksi yli kaksikymmentäkolme`).
+test('23:23', [nondet]) :- phrase(time_text(23, 23), `kaksikymmentäkolme yli kaksikymmentäkolme`).
+test('23:24', [nondet]) :- phrase(time_text(23, 24), `kaksikymmentäneljä yli kaksikymmentäkolme`).
+test('23:25', [nondet]) :- phrase(time_text(23, 25), `kaksikymmentäviisi yli kaksikymmentäkolme`).
+test('23:26', [nondet]) :- phrase(time_text(23, 26), `kaksikymmentäkuusi yli kaksikymmentäkolme`).
+test('23:27', [nondet]) :- phrase(time_text(23, 27), `kaksikymmentäseitsemän yli kaksikymmentäkolme`).
+test('23:28', [nondet]) :- phrase(time_text(23, 28), `kaksikymmentäkahdeksan yli kaksikymmentäkolme`).
+test('23:29', [nondet]) :- phrase(time_text(23, 29), `kaksikymmentäyhdeksän yli kaksikymmentäkolme`).
+test('23:30', [nondet]) :- phrase(time_text(23, 30), `puoli nolla`).
+test('23:31', [nondet]) :- phrase(time_text(23, 31), `kahtakymmentäyhdeksää vaille kaksikymmentäkolme`).
+test('23:32', [nondet]) :- phrase(time_text(23, 32), `kahtakymmentäkahdeksaa vaille kaksikymmentäkolme`).
+test('23:33', [nondet]) :- phrase(time_text(23, 33), `kahtakymmentäseitsemää vaille kaksikymmentäkolme`).
+test('23:34', [nondet]) :- phrase(time_text(23, 34), `kahtakymmentäkuutta vaille kaksikymmentäkolme`).
+test('23:35', [nondet]) :- phrase(time_text(23, 35), `kahtakymmentäviittä vaille kaksikymmentäkolme`).
+test('23:36', [nondet]) :- phrase(time_text(23, 36), `kahtakymmentäneljää vaille kaksikymmentäkolme`).
+test('23:37', [nondet]) :- phrase(time_text(23, 37), `kahtakymmentäkolmea vaille kaksikymmentäkolme`).
+test('23:38', [nondet]) :- phrase(time_text(23, 38), `kahtakymmentäkahta vaille kaksikymmentäkolme`).
+test('23:39', [nondet]) :- phrase(time_text(23, 39), `kahtakymmentäyktä vaille kaksikymmentäkolme`).
+test('23:40', [nondet]) :- phrase(time_text(23, 40), `kahtakymmentänollaa vaille kaksikymmentäkolme`).
+test('23:41', [nondet]) :- phrase(time_text(23, 41), `yhdeksäätoista vaille kaksikymmentäkolme`).
+test('23:42', [nondet]) :- phrase(time_text(23, 42), `kahdeksaatoista vaille kaksikymmentäkolme`).
+test('23:43', [nondet]) :- phrase(time_text(23, 43), `seitsemäätoista vaille kaksikymmentäkolme`).
+test('23:44', [nondet]) :- phrase(time_text(23, 44), `kuuttatoista vaille kaksikymmentäkolme`).
+test('23:45', [nondet]) :- phrase(time_text(23, 45), `viittätoista vaille kaksikymmentäkolme`).
+test('23:46', [nondet]) :- phrase(time_text(23, 46), `neljäätoista vaille kaksikymmentäkolme`).
+test('23:47', [nondet]) :- phrase(time_text(23, 47), `kolmeatoista vaille kaksikymmentäkolme`).
+test('23:48', [nondet]) :- phrase(time_text(23, 48), `kahtatoista vaille kaksikymmentäkolme`).
+test('23:49', [nondet]) :- phrase(time_text(23, 49), `yktätoista vaille kaksikymmentäkolme`).
+test('23:50', [nondet]) :- phrase(time_text(23, 50), `kymmentä vaille kaksikymmentäkolme`).
+test('23:51', [nondet]) :- phrase(time_text(23, 51), `yhdeksää vaille kaksikymmentäkolme`).
+test('23:52', [nondet]) :- phrase(time_text(23, 52), `kahdeksaa vaille kaksikymmentäkolme`).
+test('23:53', [nondet]) :- phrase(time_text(23, 53), `seitsemää vaille kaksikymmentäkolme`).
+test('23:54', [nondet]) :- phrase(time_text(23, 54), `kuutta vaille kaksikymmentäkolme`).
+test('23:55', [nondet]) :- phrase(time_text(23, 55), `viittä vaille kaksikymmentäkolme`).
+test('23:56', [nondet]) :- phrase(time_text(23, 56), `neljää vaille kaksikymmentäkolme`).
+test('23:57', [nondet]) :- phrase(time_text(23, 57), `kolmea vaille kaksikymmentäkolme`).
+test('23:58', [nondet]) :- phrase(time_text(23, 58), `kahta vaille kaksikymmentäkolme`).
+test('23:59', [nondet]) :- phrase(time_text(23, 59), `yktä vaille kaksikymmentäkolme`).
 
 :- end_tests(time).
