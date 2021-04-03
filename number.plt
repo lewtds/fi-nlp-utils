@@ -1,6 +1,8 @@
 :- begin_tests(number).
 :- use_module(number).
 
-test(years) :- true.
+test('123456789123456789123456789') :-
+  phrase(cardinal_number(Form, 123_456_789_123_456_789_123_456_789),
+    `satakaksikymmentäkolmebiljoonaaneljäsataaviisikymmentäkuusimiljardiaseitsemänsataakahdeksankymmentäyhdeksänmiljoonaasatakaksikymmentäkolmetuhattaneljäsataaviisikymmentäkuusibiljoonaaseitsemänsataakahdeksankymmentäyhdeksänmiljardiasatakaksikymmentäkolmemiljoonaaneljäsataaviisikymmentäkuusituhattaseitsemänsataakahdeksankymmentäyhdeksän`).
 
 :- end_tests(number).

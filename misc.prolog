@@ -11,11 +11,11 @@ print_current_time :-
 
 
 print_test_cases :-
-   setof({H, M, A}, T^(phrase(time_text(H, M), T), atom_codes(A, T)), Cases),
+   setof({H, M, T}, (phrase(time_text(H, M), T)), Cases),
    maplist(print_test_case, Cases).
 
-print_test_case({H, M, Atom}) :-
-   format("test('~d:~d') :- phrase(time_text(~d, ~d), `~s`).~n", [H, M, H, M, Atom]).
+print_test_case({H, M, T}) :-
+   format("test('~d:~d', [nondet]) :- phrase(time_text(~d, ~d), `~s`).~n", [H, M, H, M, T]).
 
 train_number(Low, High) :-
   % get a random number
