@@ -92,26 +92,26 @@ cardinal_number({nominative, plural}, 1000) --> "tuhannet".
 cardinal_number({genitive, plural}, 1000) --> "tuhansien".
 cardinal_number({partitive, plural}, 1000) --> "tuhansia".
 
-cardinal_number({nominative, singular}, 1000000) --> "miljoona".
-cardinal_number({genitive, singular}, 1000000) --> "miljoonan".
-cardinal_number({partitive, singular}, 1000000) --> "miljoonaa".
-cardinal_number({nominative, plural}, 1000000) --> "miljoonat".
-cardinal_number({genitive, plural}, 1000000) --> "miljoonien".
-cardinal_number({partitive, plural}, 1000000) --> "miljoonia".
+cardinal_number({nominative, singular}, 1_000_000) --> "miljoona".
+cardinal_number({genitive, singular}, 1_000_000) --> "miljoonan".
+cardinal_number({partitive, singular}, 1_000_000) --> "miljoonaa".
+cardinal_number({nominative, plural}, 1_000_000) --> "miljoonat".
+cardinal_number({genitive, plural}, 1_000_000) --> "miljoonien".
+cardinal_number({partitive, plural}, 1_000_000) --> "miljoonia".
 
-cardinal_number({nominative, singular}, 1000000000) --> "miljardi".
-cardinal_number({genitive, singular}, 1000000000) --> "miljardin".
-cardinal_number({partitive, singular}, 1000000000) --> "miljardia".
-cardinal_number({nominative, plural}, 1000000000) --> "miljardit".
-cardinal_number({genitive, plural}, 1000000000) --> "miljardien".
-cardinal_number({partitive, plural}, 1000000000) --> "miljardeja".
+cardinal_number({nominative, singular}, 1_000_000_000) --> "miljardi".
+cardinal_number({genitive, singular}, 1_000_000_000) --> "miljardin".
+cardinal_number({partitive, singular}, 1_000_000_000) --> "miljardia".
+cardinal_number({nominative, plural}, 1_000_000_000) --> "miljardit".
+cardinal_number({genitive, plural}, 1_000_000_000) --> "miljardien".
+cardinal_number({partitive, plural}, 1_000_000_000) --> "miljardeja".
 
-cardinal_number({nominative, singular}, 1000000000000) --> "biljoona".
-cardinal_number({genitive, singular}, 1000000000000) --> "biljoonan".
-cardinal_number({partitive, singular}, 1000000000000) --> "biljoonaa".
-cardinal_number({nominative, plural}, 1000000000000) --> "biljoonat".
-cardinal_number({genitive, plural}, 1000000000000) --> "biljoonien".
-cardinal_number({partitive, plural}, 1000000000000) --> "biljoonia".
+cardinal_number({nominative, singular}, 1_000_000_000_000) --> "biljoona".
+cardinal_number({genitive, singular}, 1_000_000_000_000) --> "biljoonan".
+cardinal_number({partitive, singular}, 1_000_000_000_000) --> "biljoonaa".
+cardinal_number({nominative, plural}, 1_000_000_000_000) --> "biljoonat".
+cardinal_number({genitive, plural}, 1_000_000_000_000) --> "biljoonien".
+cardinal_number({partitive, plural}, 1_000_000_000_000) --> "biljoonia".
 
 
 % 11 -> 19
@@ -187,33 +187,33 @@ cardinal_number({Case, Plurality}, N) -->
   cardinal_number({Case, Plurality}, B).
 
 cardinal_number(Form, N) -->
-  { N #= 1000000000 + B, B in 1..999999999 },
-  cardinal_number(Form, 1000000000), "-",
+  { N #= 1_000_000_000 + B, B in 1..999999999 },
+  cardinal_number(Form, 1_000_000_000), "-",
   cardinal_number(Form, B).
 
 cardinal_number({Case, Plurality}, N) -->
   { N #= A * 1000000, A in 2..999 },
   cardinal_number({Case, Plurality}, A), "-",
-  cardinal_number({partitive, Plurality}, 1000000000).
+  cardinal_number({partitive, Plurality}, 1_000_000_000).
 
 cardinal_number({Case, Plurality}, N) -->
-  { N #= A * 1000000000 + B, A in 2..999, B in 1..999999999 },
+  { N #= A * 1_000_000_000 + B, A in 2..999, B in 1..999999999 },
   cardinal_number({Case, Plurality}, A), "-",
-  cardinal_number({partitive, Plurality}, 1000000000), "-",
+  cardinal_number({partitive, Plurality}, 1_000_000_000), "-",
   cardinal_number({Case, Plurality}, B).
 
 cardinal_number(Form, N) -->
-  { N #= 1000000000000 + B, B in 1..999999999999 },
-  cardinal_number(Form, 1000000000000), "-",
+  { N #= 1_000_000_000_000 + B, B in 1..999999999999 },
+  cardinal_number(Form, 1_000_000_000_000), "-",
   cardinal_number(Form, B).
 
 cardinal_number({Case, Plurality}, N) -->
   { N #= A * 1000000, A in 2..999 },
   cardinal_number({Case, Plurality}, A), "-",
-  cardinal_number({partitive, Plurality}, 1000000000000).
+  cardinal_number({partitive, Plurality}, 1_000_000_000_000).
 
 cardinal_number({Case, Plurality}, N) -->
-  { N #= A * 1000000000000 + B, A in 2..999, B in 1..999999999999 },
+  { N #= A * 1_000_000_000_000 + B, A in 2..999, B in 1..999999999999 },
   cardinal_number({Case, Plurality}, A), "-",
-  cardinal_number({partitive, Plurality}, 1000000000000), "-",
+  cardinal_number({partitive, Plurality}, 1_000_000_000_000), "-",
   cardinal_number({Case, Plurality}, B).
