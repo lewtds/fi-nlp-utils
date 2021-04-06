@@ -29,12 +29,12 @@ next_24h_wrapped(23, 0).
 next_12h_wrapped(H, N) :- H in 1..11, N #= H + 1.
 next_12h_wrapped(12, 1).
 
-hour_text(H) --> {valid_24h(H)}, cardinal_number({nominative, singular}, H).
+hour_text(H) --> {valid_24h(H)}, number(cardinal, {nominative, singular}, H).
 
 valid_12h(H) :- H in 1..12.
 valid_24h(H) :- H in 0..23.
 
 first_half_minute_text(15) --> "vartin".
-first_half_minute_text(M) --> cardinal_number({nominative, singular}, M).
+first_half_minute_text(M) --> number(cardinal, {nominative, singular}, M).
 
-second_half_minute_text(M) --> cardinal_number({partitive, singular}, M).
+second_half_minute_text(M) --> number(cardinal, {partitive, singular}, M).

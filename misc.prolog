@@ -19,14 +19,18 @@ print_test_case({H, M, T}) :-
 
 train_number(Low, High) :-
   % get a random number
-  random(Low, High, R),
-  format("~d~n", R),
+  random(Low, High, Rand),
+  format("~d~n", Rand),
+
+  random_member(NumberType, [cardinal, ordinal]),
+  random_member(Case, [nominative, genitive, partitive]),
+  random_member(Plurality, [singular, plural]),
 
   % phrase it (there might be multiple forms)
-  phrase(number:cardinal_number(Form, R), T),
+  phrase(number:number(NumberType, {Case, Plurality}, Rand), T),
 
   % print that phrase and say it out loud
-  format("~w~n", [Form]),
+  format("~w~n", [{NumberType, Case, Plurality}]),
   get_single_char(_),
 
   format(atom(A), "say -v Satu '~s'", [T]),
